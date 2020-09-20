@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<project title="Documentation candidate Henrique Borges" version="v2.9.0">
+<project title="Maitha api documentation" version="v2.9.0">
   <partials/>
   <file path="DTO/Layers/LayerInterface.php" generated-path="DTO.Layers.LayerInterface.html" hash="bd22d1863ee102860cd301a95bc59bd8" package="Default">
     <docblock line="0">
@@ -707,16 +707,83 @@
     </parse_markers>
     <source>eJyFUktvwjAMvudX+DBBiwa9w8ZeMA1pEgfYLmNCprgQLU2jJEVCiP++FPqADjFfGtXfy07uHtRaMYkxGYUhwZNSszdr1WxCesNDMrNPFHyJlifS9BhLzQlmMB3PJihogBZdL2i1GLTgRaAxMOAmTFJpXxP9TFyuhrESyZbIITLQo3P7wdU/hg4ZsPCqHnB3oJikrTCVwkha0pEbjO0YuDpEzMol2KCGIn3+Mzh8leYbtAQ3ppqtRq6nmViMIghdZKvT0Ca6kyNLN4Ua49Kv0j53TheChxClMszSw3xeSnp/qf6Bcxwsqxu75qbdL9pwfzpBBtiziy6b47rI87uwSBJRl6V81WYYIxfv3Fgn7YJFfOU1UfFOCWj6vYrmnoo+MLIg59Ha/RXZj6Lv+fmCs+KRx+UctcatV0ncXkrhl6SsGo1LmK9K49vfnRE02VRLcNulKvWe1doRCkNX14dKia1Xv4wggOl4MO7CqHifBRBisutk2ck19+wX39AR2w==</source>
   </file>
-  <file path="Services/Validations/DiscountByTotalValue.php" generated-path="Services.Validations.DiscountByTotalValue.html" hash="a0c2859cb83bc5b0a35eef076c667ee6" package="Default">
+  <file path="Services/Validations/DiscountByTotalValue.php" generated-path="Services.Validations.DiscountByTotalValue.html" hash="406f26275d1b034347df2483d07103da" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
       <tag name="package" line="0" description="Default"/>
     </docblock>
+    <namespace-alias name="Discount">\App\Http\Document\Discount</namespace-alias>
+    <namespace-alias name="SaleData">\App\Http\DTO\SaleData</namespace-alias>
+    <namespace-alias name="Value">\App\Http\Services\Validations\NamesMap\Value</namespace-alias>
+    <namespace-alias name="Money">\Money\Money</namespace-alias>
+    <class final="false" abstract="false" namespace="App\Http\Services\Validations" line="17" package="App\Http\Services\Validations">
+      <extends/>
+      <implements>\App\Http\Services\Validations\DiscountValidationInterface</implements>
+      <name>DiscountByTotalValue</name>
+      <full_name>\App\Http\Services\Validations\DiscountByTotalValue</full_name>
+      <docblock line="17">
+        <description>Class DiscountByTotalValue</description>
+        <long-description></long-description>
+        <tag name="author" line="17" description="Henrique Borges da Silva" link="mailto:hborgesdasilva9294@gmail.com"/>
+        <tag name="package" line="17" description="App\Http\Services\Validations"/>
+      </docblock>
+      <property static="false" visibility="private" namespace="App\Http\Services\Validations" line="24" package="App\Http\Services\Validations">
+        <name>$saleData</name>
+        <full_name>\App\Http\Services\Validations\DiscountByTotalValue::saleData</full_name>
+        <default></default>
+        <docblock line="24">
+          <description>Sale data</description>
+          <long-description></long-description>
+          <tag name="var" line="24" description="" type="\App\Http\DTO\SaleData" variable="">
+            <type>\App\Http\DTO\SaleData</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\Services\Validations" line="31" package="App\Http\Services\Validations">
+        <name>__construct</name>
+        <full_name>\App\Http\Services\Validations\DiscountByTotalValue::__construct()</full_name>
+        <docblock line="31">
+          <description>DiscountByTotalValue constructor.</description>
+          <long-description></long-description>
+          <tag name="param" line="31" description="" type="\App\Http\DTO\SaleData" variable="$saleData">
+            <type>\App\Http\DTO\SaleData</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$saleData</name>
+          <default></default>
+          <type>\App\Http\DTO\SaleData</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\Services\Validations" line="43" package="App\Http\Services\Validations">
+        <name>validate</name>
+        <full_name>\App\Http\Services\Validations\DiscountByTotalValue::validate()</full_name>
+        <docblock line="43">
+          <description>Validate discount rule</description>
+          <long-description></long-description>
+          <tag name="summary" line="43" description="Validate if the sale matches the rule of the sale's total value"/>
+          <tag name="return" line="43" description="" type="boolean">
+            <type>boolean</type>
+          </tag>
+          <tag name="inherited_from" description="\App\Http\Services\Validations\DiscountValidationInterface::validate()" refers="\App\Http\Services\Validations\DiscountValidationInterface::validate()" link="/classes/App.Http.Services.Validations.DiscountValidationInterface.html#method_validate"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\Services\Validations" line="59" package="App\Http\Services\Validations">
+        <name>apply</name>
+        <full_name>\App\Http\Services\Validations\DiscountByTotalValue::apply()</full_name>
+        <docblock line="59">
+          <description>Applies the discount</description>
+          <long-description></long-description>
+          <tag name="summary" line="59" description="Applies the discount for this rule"/>
+          <tag name="inherited_from" description="\App\Http\Services\Validations\DiscountValidationInterface::apply()" refers="\App\Http\Services\Validations\DiscountValidationInterface::apply()" link="/classes/App.Http.Services.Validations.DiscountValidationInterface.html#method_apply"/>
+        </docblock>
+      </method>
+    </class>
     <parse_markers>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
     </parse_markers>
-    <source>eJyNVctu4jAU3ecrvKhEUrXAdGZTaJnyqlqpLVWhnQ0SuiQOiSbEru1khEb8+9jOEwNlvIDi+zr3nHvdm580oFYMa8wpuBj1KZ0/CEHnU8zS0MV8/gFR6IEIScy7lpXwms+IuMkax2I+CrlLklh0DftsMp9ChEcgwDAdSj9/UTCegarLBGcRzyTGm7n+lOVb5+cWOkfDCDhHRdXBZkYERDpIWpXDHSQiIAw94JiFnwlGA8JWmCMP0DSMUkA3wVLfeMDV7+ur6x93qzWEUdMl616RRVLyG1YnYEvPluUeRYTCNY2woqmyV9GPscDMl8xbfy0kj25QHVk9BYYK+vLLlv6mLExBYHTGS3LN4INIXIlWsMQVhDVzx7IYBQbrslyVerdwsoxCF/lJ7CrwaLEoU9r7oY6OyfpS50wEIb/sFWZ0W29AOWz32siJkiT6SAQYKX+0BuEGUkx1wRJ5QSpjQ16rhlGaTcNukwyLhMVoSUj0ZV9pXtZ2OpVzrRGeLLMqt9l8djqDtyfb6O+yt8Jimiy1ALajf/bXShTbcbpVMo30nrBCssxHprZrubWAnc70fTCbzPpPi4/+0/t4cT95W4wep8PJ+8vM2a1QFZDU2SVi6cOw7IzNAognbPyZSGyHgOvar8A4Zgo7VX/ZR7BelLXUaUi8DcdxaoSpk3MvhwVX2LaWYfYh4nhnGkxtgNJoY+/NFsXMxZq2nKrX8dtw/DLTHJW0FWTV6PcJkwMlsDfNKcp25dYc14qV+zxCE5OFn9DeVKMA20NtRdMOT2dezu0QIjeJpFaeBMPkjVcFttC3dltOtO1HBIRzpIkLdOV0jexaSK/Q76s2TfHlnqdqWPbxORe56GaxYklObYaaTgbyETHg7SUsasv/LGpBYvynfOlstQAci+q9+xWKoLQaEHbSqnNCXgOXcyD+v2ufmiSV5FiFbOGKzNg7KMcRcBuKJ74tX2w/XNkNoGFTSioDViHmTViSFF9+b7fbjfq4ZjIa8MHz9MNcwOB2XRjHXO+ttbX+ATn3mlM=</source>
+    <source>eJyNVU1v4jAQvedX+FCJpGqB7e6l0LLlq2qltlSFdi9IaEgcYm2+6jhZoRX/fcdOQoKBsj60YM+8eTPv2dz8jL3YMEIIaBKDTUk/jucPQsTzKeUZs2ky/wCfOSBYFCZdw0iTWswostOAhmI+YokdpaHoauezyXwKPh2BAO3oEPz8RdJ4hlhupjTPeI5Cup6rv1i+dX5ukHMy9CFJSFl1sJ5FAnyVhKcy4A5S4UWcPNCQs8+UkkHEVzQhDpAp8zMgN95S7TiQyO/XV9c/7lYBML9pR0GvRMGR/IbVCdoY2TLso4wIC2KfyjFV51X2Yygod3Hyxl+D4FINynVO5OSQsIBio9y/y4CTcqzFZkv9jznLQFBylmyHroMeZGhjF4Kntoh4Uy8WA4dgW66C3i2cLn1mEzcNbdkUWSy2kOZ+qqVy8n7lOhMeSy575TG5rTcgAzZ7bRQDxPkU/RCe+lTnnqRBAHxdRTOXCI8SiU4CELaHlpAbMplE1WEDt+V4SJZ7aheWU5HykCyjyP9yCllR1rQ6VXCt7SRd5lVuc5d3OoO3J1ObxmVvRcU0XSq5TEt97QeyZdOyuhWYYnof8VLgPGYXWqnd6UzfB7PJrP+0+Og/vY8X95O3xehxOpy8v8xqiDgrc0sRy3KKrfCZB+GEjz9TJHOIqar2CjyhXJKN5Sdzi/kF053GLhpIt2FZVm1cchWTR2PRiujG0I5d8BN6zDl4lX1WyF6a55hvDsUSF58V2XjdcYf1B0xfm3tujym3qZKm0ON1/DYcv8yUEFttSkVqEmNlNK2gzrRQJb+9t/oFqoS4LzKUFnn6CX/pBijJ9khbirGrZDmTIfh26qM9HCTDccepElvkW7uNQzVdPwJhHWniglxZXQ1deccpXfJVm7rf8OXJpD/3+VkXJLeWXqy8iKdun7wQHPBZ0+jtAZa18TcQYc2Q/tm+vThlBKKieoF/MeFtTzUKO7BynZBX42UdyP/v2qecJEGOVcjvcolMnYNyHCG3junENfE3xGUrswExa6KkmLDC29iEZZTRy+/tdrtRt2suo0YfHEc9/iWNxKwLY+mPyMbYGP8AUr/JlQ==</source>
   </file>
   <file path="Services/Validations/DiscountByValueOfCategory.php" generated-path="Services.Validations.DiscountByValueOfCategory.html" hash="8501b6fc97c14c15ed8043c1601b9763" package="Default">
     <docblock line="0">
@@ -1451,7 +1518,6 @@
         <long-description></long-description>
         <tag name="summary" line="19" description="CartsController class"/>
         <tag name="package" line="19" description="App\Http\Controllers"/>
-        <tag name="inherited_from" description="\App\Http\Controllers\Controller" refers="\App\Http\Controllers\Controller" link="/classes/App.Http.Controllers.Controller.html"/>
       </docblock>
       <property static="false" visibility="private" namespace="App\Http\Controllers" line="26" package="App\Http\Controllers">
         <name>$saleDataBuilder</name>
@@ -1706,77 +1772,6 @@
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
     </parse_markers>
     <source>eJyNU8Fum0AQvfMVUylSwKrrqOolcuomkSulUqpUtZVefBnDAKsCS3eXJKjyv2d2bTAGW/JevDBv3pv3Bt98K9PS8wrMSZcYEtyV5erBmHI1Xz6tHrEmpaeeV+luRYZVToVZzYUOZVWYaa/OnQvMaI4GuXcyGnkwsuWsBpMSRLs2kIV71oxlhAXdYmVSqeCBCiX+VQT3UiWkIUJYiOwF4SZduzcRavt8/fn6y22So8g+hTKfNSy6ynNUNSyZXbExWWixFpkwNciYNYWGMEOtgS9GAp41GsfzF5OjCXF94m0Zm0ysXUEKRF5mZNPS4LA/CkMq5qS9/x7wcenYM4LvbxRWhpxwnMnX46Pt0E1TxyubyYnji6wt2pJFgDELOoZmtGdSIhYhGsEuMzsUvGAmImTt11SE6T6GEAtYk5tCUNSXLlFhDs2q4ULvbjvAxP2W1ToTIcRVETpBO5g/7AkceJuJPRdupGZkDV/30PEsIfN8UPYD/tDa1lQkKWnTVLn3arqvRvvXBb22qViKFpPjW6e7bRnPNJm73F6bMkX+VVc8loqQI/T7BlD3PAUdt/aIuN/kjA7kApgNLPa5TsRwFv10yNSL44DlEL5pnzbdjRhpMBvs8KcsqP6FSpPyg/GstDdfG8X8flfTgZeWgrde0R9h0v3Wgo9wef/78bIzt4j9D6IwjsYpd5xyQ3CY1YnhFtXaSXYD2XQs7cH8TbTjnGHwQPyU2+FaWp/BAYGT3w66NXKkvDCK/9tJfSTUuqSnmMl3y9p4G+8dqz7k1w==</source>
-  </file>
-  <file path="Controllers/Controller.php" generated-path="Controllers.Controller.html" hash="93f39e3ae3e34b6d01fd079bcd8cb6d8" package="Default">
-    <docblock line="0">
-      <description></description>
-      <long-description></long-description>
-      <tag name="package" line="0" description="Default"/>
-    </docblock>
-    <namespace-alias name="ValidatesRequests">\Illuminate\Foundation\Validation\ValidatesRequests</namespace-alias>
-    <namespace-alias name="BaseController">\Illuminate\Routing\Controller</namespace-alias>
-    <class final="false" abstract="false" namespace="App\Http\Controllers" line="7" package="Default">
-      <extends>\Illuminate\Routing\Controller</extends>
-      <name>Controller</name>
-      <full_name>\App\Http\Controllers\Controller</full_name>
-      <docblock line="7">
-        <description></description>
-        <long-description></long-description>
-        <tag name="package" line="7" description="Default"/>
-      </docblock>
-    </class>
-    <parse_markers>
-      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="7" code="PPC:ERR-50005">No summary for class \App\Http\Controllers\Controller</error>
-    </parse_markers>
-    <source>eJxtjcEKwkAMRO/5ivyHgqggeu3B015CG3QhzcYmCwXx311P1uKchmFm3nZndwOlkd2oZ9ybpXOEpWPRmIoIT74BqM54EaljVgpOp1J1oMhF05Uk/1r2jh+VPdpwtetKjay3xTmS44Gcv0mj9ULuuCjxHKzDuglPwKYP4w/6BW/ANVGr</source>
-  </file>
-  <file path="Controllers/UsersController.php" generated-path="Controllers.UsersController.html" hash="3c5e40001967b4ac8bd1b0a9249ab96a" package="Default">
-    <docblock line="0">
-      <description></description>
-      <long-description></long-description>
-      <tag name="package" line="0" description="Default"/>
-    </docblock>
-    <namespace-alias name="JsonResponse">\Illuminate\Http\JsonResponse</namespace-alias>
-    <namespace-alias name="Factory">\Illuminate\Validation\Factory</namespace-alias>
-    <namespace-alias name="ValidationException">\Illuminate\Validation\ValidationException</namespace-alias>
-    <class final="false" abstract="false" namespace="App\Http\Controllers" line="8" package="Default">
-      <extends>\App\Http\Controllers\Controller</extends>
-      <name>UsersController</name>
-      <full_name>\App\Http\Controllers\UsersController</full_name>
-      <docblock line="8">
-        <description></description>
-        <long-description></long-description>
-        <tag name="package" line="8" description="Default"/>
-        <tag name="inherited_from" description="\App\Http\Controllers\Controller" refers="\App\Http\Controllers\Controller" link="/classes/App.Http.Controllers.Controller.html"/>
-      </docblock>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\Controllers" line="10" package="Default">
-        <name>information</name>
-        <full_name>\App\Http\Controllers\UsersController::information()</full_name>
-        <docblock line="10">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$validator</name>
-          <default></default>
-          <type>\Illuminate\Validation\Factory</type>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$email</name>
-          <default></default>
-          <type>\App\Http\Controllers\string</type>
-        </argument>
-      </method>
-    </class>
-    <parse_markers>
-      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="8" code="PPC:ERR-50005">No summary for class \App\Http\Controllers\UsersController</error>
-      <error line="10" code="PPC:ERR-50015">Argument $validator is missing from the Docblock of information</error>
-      <error line="10" code="PPC:ERR-50015">Argument $email is missing from the Docblock of information</error>
-      <error line="10" code="PPC:ERR-50008">No summary for method information()</error>
-    </parse_markers>
-    <source>eJx9Uk1PAjEQve+vGBOS7SYr8cBJBWMMRD140OgFNqSUWWjotrXtCsTw3+1+wC4fcU4z0zev7017/6CXOpA0Q6spQ3jUevLsnJ48KemMEgKNvQuC3CK8CJFnXFKHFeLVKvnux5S0eHeK+KKCz6njSk5GlDlltv9BmnS4YaiLxF/KBLUWPq2X0KgB3DiUcwtNK/gNwIfOZ4IzSHPJCgLgMlUmK1lJrQE6P9VNysRgneFyAR3MKBfRLbT9lIQVbRHNGPRbxfUgoyskTGV+d46EJVMYxTCuU+gPfG7wO+cG52EMdT9JIu9vz85TIG3S1EMsiaKWgCLc0qg1SFzDhXW1CDz1fmTXXOJtaqG2iNZbYEqmfEFCqnn30A/bmuhMGTflKbmixtDtdIXbKW64dZZUC4tbjN5x76bn3b0pByOVy3n3iMygy40spbeXTI7sjY+qIkL/KS1dYLnG8CNnzNfdMD4Het+0WvbZWXnevEYt/jKM22FtaY+tDY6rseR87qSVHKr6FXbBLvgDK2MAww==</source>
   </file>
   <package name="App" full_name="App">
     <package name="Http" full_name="App\Http">
