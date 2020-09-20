@@ -1,0 +1,39 @@
+<?php
+namespace App\Http\Services\Validations;
+
+use App\Http\DTO\SaleData;
+
+/**
+ * Class DiscountForNewUsers
+ *
+ * @package App\Http\Services\Validations
+ */
+class DiscountForNewUsers implements DiscountValidationInterface
+{
+    /**
+     * @var SaleData
+     */
+    private $saleData;
+
+    /**
+     * DiscountForNewUsers constructors.
+     *
+     * @param SaleData $saleData
+     */
+    public function __construct(SaleData $saleData)
+    {
+        $this->saleData = $saleData;
+    }
+
+    public function validate(): bool
+    {
+        // TODO: Implement validate() method.
+        return false;
+    }
+
+    public function apply()
+    {
+        // TODO: Implement apply() method.
+    }
+}
+

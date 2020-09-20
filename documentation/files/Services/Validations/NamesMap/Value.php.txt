@@ -1,0 +1,39 @@
+<?php
+namespace App\Http\Services\Validations\NamesMap;
+
+/**
+ * Values for discount verification and application
+ *
+ * @summary The containing values in this class are determinant for the discount verification and application.
+    These values can all be modified in it's own constant for maintaining purposes.
+ *
+ * @package App\Http\Services\Validations\NamesMap
+ */
+class Value
+{
+    /**
+     * Subtotal to determine value for discount (applicable on rule above_3000)
+     */
+    const SUBTOTAL_VALUE_FOR_DISCOUNT = "3000";
+
+    /**
+     * Percent to apply for discount (applicable on rule above_3000)
+     */
+    const PERCENT_FOR_SUBTOTAL_DISCOUNT = 15;
+
+    /**
+     * Percent to apply for employee discount (applicable on rule employee)
+     */
+    const PERCENT_FOR_EMPLOYEE_DISCOUNT = 20;
+
+    /**
+     * Amount of products for free (applicable on rule take-3-pay-2)
+     */
+    const AMOUNT_OF_PRODUCTS_FOR_FREE = 1;
+
+    /**
+     * Amount of products to determine discount (applicable on rule take-3-pay-2)
+     */
+    const AMOUNT_OF_PRODUCTS_BOUGHT = 3;
+}
+

@@ -1,0 +1,70 @@
+<?php
+namespace App\Http\Services\Validations;
+
+use App\Http\Document\Discount;
+use App\Http\DTO\SaleData;
+use App\Http\Services\Validations\NamesMap\Value;
+use Money\Money;
+
+/**
+ * Class DiscountByTotalValue
+ *
+ * @author Henrique Borges da Silva <hborgesdasilva9294@gmail.com>
+ *
+ * @package App\Http\Services\Validations
+ */
+class DiscountByTotalValue implements DiscountValidationInterface
+{
+    /**
+     * @var SaleData
+     */
+    private $saleData;
+
+    /**
+     * DiscountByTotalValue constructor.
+     *
+     * @param SaleData $saleData
+     */
+    public function __construct(SaleData $saleData)
+    {
+        $this->saleData = $saleData;
+    }
+
+    /**
+     * Validate if the sale matches the rule of the sale's total value
+     *
+     * @return bool
+     */
+    public function validate(): bool
+    {
+        $subtotal = Money::BRL($this->saleData->getSubTotal()->getAmount());
+        $valueForDiscountAmount = (Money::BRL(Value::SUBTOTAL_VALUE_FOR_DISCOUNT))->getAmount();
+        if ($subtotal->greaterThanOrEqual($this->saleData->getMoneyParser()->parse($valueForDiscountAmount,
+            'BRL'))) {
+            return true;
+        }
+        return false;
+    }
+
+    public function apply()
+    {
+        $percent = Value::PERCENT_FOR_SUBTOTAL_DISCOUNT;
+        $formattedSubtotalValue = $this->saleData->getMoneyFormatter()->format($this->saleData->getSubTotal());
+        if ($percent > 0) {
+
+            $discountCalculated = round($percent / 100 * (float)$formattedSubtotalValue, 2);
+
+            $parsedDiscount = $this->saleData->getMoneyParser()->parse(strval($discountCalculated), 'BRL');
+
+            $total = $this->saleData->getSubTotal()->subtract($parsedDiscount);
+
+            $discountDTO = (new Discount())->setTotalValueWithDiscount($this->saleData
+                ->getMoneyFormatter()->format($parsedDiscount))
+                ->setTotalValueWithDiscount($this->saleData->getMoneyFormatter()->format($total))
+                ->setAmountDiscounted($discountCalculated)
+                ->setTypeOf(config('api.strategies.above-3000'));
+            $this->saleData->addValidDiscounts($discountDTO);
+        }
+    }
+}
+

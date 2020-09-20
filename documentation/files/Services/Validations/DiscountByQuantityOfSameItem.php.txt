@@ -1,0 +1,128 @@
+<?php
+namespace App\Http\Services\Validations;
+
+use App\Http\Document\Discount;
+use App\Http\DTO\SaleData;
+use App\Http\Services\Validations\NamesMap\Value;
+
+/**
+ * Class DiscountByQuantityOfSameItem
+ *
+ * @author Henrique Borges da Silva <hborgesdasilva9294@gmail.com>
+ *
+ * @package App\Http\Services\Validations
+ */
+class DiscountByQuantityOfSameItem implements DiscountValidationInterface
+{
+    /**
+     * Sale data
+     *
+     * @description Sale data
+     *
+     * @var SaleData
+     */
+    private $saleData;
+
+    /**
+     * DiscountByQuantityOfSameItem constructor.
+     *
+     * @param SaleData $saleData
+     */
+    public function __construct(SaleData $saleData)
+    {
+        $this->saleData = $saleData;
+    }
+
+    /**
+     * Validate the discount
+     *
+     * @summary Validate if the sale matches the rule of the quantity of same item
+     *
+     * @return bool
+     */
+    public function validate(): bool
+    {
+        $productsWithPromotion = array_filter($this->saleData->getProducts(), function ($product) {
+            return in_array($product->getId(), config('api.promotional.products'))
+                && $product->getQuantity() >= Value::AMOUNT_OF_PRODUCTS_BOUGHT;
+        });
+
+        $this->saleData->setPromotionalProducts($productsWithPromotion);
+        return !empty($productsWithPromotion);
+    }
+
+    /**
+     * Apply the discount
+     *
+     * @summary Apply the discount to valid discounts
+     *
+     */
+    public function apply()
+    {
+        /**
+         * Calculate the price of each product separately with discount
+         *
+         * @var array $priceOfEachProductWithDiscount
+         */
+        $priceOfEachProductWithDiscount = array_map(function ($product) {
+            if ($product->getQuantity() >= 2) {
+                if ($product->getQuantity() % Value::AMOUNT_OF_PRODUCTS_BOUGHT == 0) {
+                    $amountBought = $product->getQuantity();
+                } else {
+                    $amountBought = $this->getPreviousMultiplier($product->getQuantity());
+                }
+                $amountForFree = ($amountBought
+                        * Value::AMOUNT_OF_PRODUCTS_FOR_FREE)
+                    / Value::AMOUNT_OF_PRODUCTS_BOUGHT;
+                return array('priceWithDiscount' => $product->getUnitPrice()
+                    * ($product->getQuantity()
+                        - $amountForFree),
+                    'totalPrice' => $product->getUnitPrice()
+                        * ($product->getQuantity()));
+            }
+        }, $this->saleData->getPromotionalProducts());
+
+        $totalPriceInRule = 0;
+        $priceWithDiscountInRule = 0;
+        foreach ($priceOfEachProductWithDiscount as $productPrices) {
+            $totalPriceInRule = $productPrices['totalPrice']
+                ? $totalPriceInRule
+                + $productPrices['totalPrice']
+                : 0;;
+            $priceWithDiscountInRule = $productPrices['priceWithDiscount']
+                ? $priceWithDiscountInRule
+                + $productPrices['priceWithDiscount']
+                : 0;
+        }
+        $totalDiscounted = $this->saleData->getMoneyParser()->parse(strval($totalPriceInRule
+            - $priceWithDiscountInRule),
+            'BRL');
+
+        $totalWithDiscount = $this->saleData->getSubTotal()->subtract($totalDiscounted);
+
+        $discountDTO = (new Discount())
+            ->setAmountDiscounted($this->saleData->getMoneyFormatter()->format($totalDiscounted))
+            ->setTotalValueWithDiscount($this->saleData->getMoneyFormatter()->format($totalWithDiscount))
+            ->setTypeOf(config('api.strategies.take-3-pay-2'));
+
+        $this->saleData->addValidDiscounts($discountDTO);
+    }
+
+    /**
+     * Get previous multiplier
+     *
+     * @summary Get the previous multiplier of the amount of products based on a number parameter
+     *
+     * @param $number
+     *
+     * @return int
+     */
+    private function getPreviousMultiplier($number)
+    {
+        while ($number % Value::AMOUNT_OF_PRODUCTS_BOUGHT != 0) {
+            $number = $number + 1;
+        }
+        return $number;
+    }
+}
+

@@ -1,0 +1,69 @@
+<?php
+namespace App\Http\DTO;
+
+use Money\MoneyFormatter;
+use Money\MoneyParser;
+
+/**
+ * Abstract class that contains Sale Data class main parameters
+ *
+ * @author Henrique Borges da Silva <hborgesdasilva9294@gmail.com>
+ *
+ * @package App\Http\DTO
+ */
+abstract class SaleDataParameters
+{
+    /**
+     * @var MoneyParser $moneyParser MoneyParser
+     *
+     * @object MoneyParser
+     */
+    private $moneyParser;
+
+    /**
+     * @var MoneyFormatter MoneyFormatter
+     *
+     * @object MoneyFormatter
+     */
+    private $moneyFormatter;
+
+    /**
+     * SaleDataParameters constructor.
+     *
+     * @ignore
+     *
+     * @param MoneyParser $moneyParser
+     *
+     * @param MoneyFormatter $moneyFormatter
+     */
+    public function __construct(MoneyParser $moneyParser, MoneyFormatter $moneyFormatter)
+    {
+        $this->moneyParser = $moneyParser;
+        $this->moneyFormatter = $moneyFormatter;
+    }
+
+    /**
+     * Retrieve MoneyParser object
+     *
+     * @description MoneyParser is used in sales data scope to parse money values
+     *
+     * @return MoneyParser
+     */
+    public function getMoneyParser(): MoneyParser
+    {
+        return $this->moneyParser;
+    }
+
+    /**
+     * Retrieve MoneyFormatter object
+     *
+     * @description MoneyFormatter is used in sales data scope to format money values
+     *
+     * @return MoneyFormatter
+     */
+    public function getMoneyFormatter(): MoneyFormatter
+    {
+        return $this->moneyFormatter;
+    }
+}
+

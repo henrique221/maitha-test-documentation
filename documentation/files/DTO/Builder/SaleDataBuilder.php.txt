@@ -1,0 +1,71 @@
+<?php
+namespace App\Http\DTO\Builder;
+
+use App\Http\Document\Product;
+use App\Http\DTO\SaleData;
+use Money\MoneyFormatter;
+use Money\MoneyParser;
+
+/**
+ * Class SaleDataBuilder
+ *
+ * @author Henrique Borges da Silva <hborgesdasilva9294@gmail.com>
+ *
+ * @package App\Http\DTO\Builder
+ */
+class SaleDataBuilder
+{
+    /**
+     * Money parser object
+     *
+     * @var MoneyParser
+     */
+    private $moneyParser;
+
+    /**
+     * Money formatter object
+     *
+     * @var MoneyFormatter
+     */
+    private $moneyFormatter;
+
+    /**
+     * SaleDataBuilder constructor.
+     *
+     * @param MoneyParser $moneyParser
+     *
+     * @param MoneyFormatter $moneyFormatter
+     */
+    public function __construct(MoneyParser $moneyParser, MoneyFormatter $moneyFormatter)
+    {
+        $this->moneyParser = $moneyParser;
+        $this->moneyFormatter = $moneyFormatter;
+    }
+
+    /**
+     * Build the sale data passing the request in the parameter
+     *
+     * @param $request
+     *
+     * @return SaleData
+     */
+    public function build($request)
+    {
+        $saleData = new SaleData($this->moneyParser, $this->moneyFormatter);
+        $products = [];
+
+        foreach ($request->get('products') as $requestProduct) {
+            $product = new Product();
+            $product->setId($requestProduct['id'] ?: null);
+            $product->setCategoryId($requestProduct['categoryId'] ?: null);
+            $product->setQuantity($requestProduct['quantity'] ?: null);
+            $product->setUnitPrice($requestProduct['unitPrice'] ?: null);
+            $products[] = $product;
+        }
+
+        $saleData->setUserEmail($request->get('userEmail'))
+            ->setProducts($products);
+        return $saleData;
+    }
+}
+

@@ -1,0 +1,46 @@
+<?php
+namespace App\Http\Services\Validations;
+
+use App\Http\DTO\SaleData;
+
+/**
+ * Class DiscountByValueOfCategory
+ *
+ * @author Henrique Borges da Silva <hborgesdasilva9294@gmail.com>
+ *
+ * @package App\Http\Services\Validations
+ */
+class DiscountByValueOfCategory implements DiscountValidationInterface
+{
+    /**
+     * Sale data
+     *
+     * @var SaleData
+     */
+    private $saleData;
+
+    /**
+     * DiscountByValueOfCategory constructor.
+     *
+     * @param SaleData $saleData
+     */
+    public function __construct(SaleData $saleData)
+    {
+        $this->saleData = $saleData;
+    }
+
+    /**
+     * @return bool
+     */
+    public function validate(): bool
+    {
+        // TODO: Implement validate() method.
+        return false;
+    }
+
+    public function apply()
+    {
+        // TODO: Implement apply() method.
+    }
+}
+

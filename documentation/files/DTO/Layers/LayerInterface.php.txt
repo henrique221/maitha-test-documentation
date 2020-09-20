@@ -1,0 +1,26 @@
+<?php
+namespace App\Http\DTO\Layers;
+
+use App\Http\DTO\SaleData;
+
+/**
+ * Interface LayerInterface
+ *
+ * @author Henrique Borges da Silva <hborgesdasilva9294@gmail.com>
+ *
+ * @summary Layers are like steps of execution based on objects and services that are executed in a specific scope.
+ *
+ * @package App\Http\DTO\Layers
+ */
+interface LayerInterface
+{
+    /**
+     * Execute the flow of the layer
+     *
+     * @summary Executes the flow of the layer
+     *
+     * @param SaleData $saleData
+     */
+    public function exec(SaleData $saleData);
+}
+

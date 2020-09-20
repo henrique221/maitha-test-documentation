@@ -1,0 +1,48 @@
+<?php
+namespace App\Http\DTO\Layers;
+
+use App\Http\DTO\SaleData;
+
+/**
+ * Verify the discounts
+ *
+ * @author Henrique Borges da Silva <hborgesdasilva9294@gmail.com>
+ *
+ * @summary The responsibility of this class is to call classes for each type of discount rule and
+    verify the valid discounts to be applied.
+ *
+ * @package App\Http\DTO\Layers
+ */
+class DiscountVerification implements LayerInterface
+{
+    /**
+     * Execute the flow to verify and apply the discount
+     *
+     * @summary This method is executed to call the responsible services for each kind of discount rule and
+        apply the discount in case it is valid.
+     *
+     * @param SaleData $saleData
+     */
+    public function exec(SaleData $saleData)
+    {
+        /**
+         * Array containing all possible discounts
+         *
+         * @var array $discountTypes
+         */
+        $discountTypes = config('api.discounts');
+        foreach ($discountTypes as $discountType) {
+            $discountClassName = str_replace('_', '', ucwords($discountType, "\_"));
+            $discountClass = "App\\Http\\Services\\Validations\\" . $discountClassName;
+
+            if (class_exists($discountClass)) {
+                $rule = new $discountClass($saleData);
+
+                if ($rule->validate()) {
+                    $rule->apply();
+                }
+            }
+        }
+    }
+}
+

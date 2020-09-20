@@ -1,0 +1,34 @@
+<?php
+namespace App\Http\Services\Validations;
+
+use App\Http\DTO\SaleData;
+
+/**
+ * Interface DiscountValidationInterface
+ *
+ * @package App\Http\Services\Validations
+ */
+interface DiscountValidationInterface
+{
+    /**
+     * DiscountValidationInterface constructor.
+     *
+     * @ignore
+     *
+     * @param SaleData $saleData
+     */
+    public function __construct(SaleData $saleData);
+
+    /**
+     * Validate the discount
+     *
+     * @return bool
+     */
+    public function validate(): bool;
+
+    /**
+     * Apply the discount
+     */
+    public function apply();
+}
+

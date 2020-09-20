@@ -1,0 +1,191 @@
+<?xml version="1.0"?>
+<checkstyle version="1.3.0">
+  <file name="Controllers/Controller.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="7" severity="error" message="No summary for class \App\Http\Controllers\Controller" source="phpDocumentor.file.PPC:ERR-50005"/>
+  </file>
+  <file name="Controllers/CartsController.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="12" severity="error" message="No summary for class \App\Http\Controllers\CartsController" source="phpDocumentor.file.PPC:ERR-50005"/>
+    <error line="28" severity="error" message="Argument $request is missing from the Docblock of calculateDiscount" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="28" severity="error" message="No summary for method calculateDiscount()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="17" severity="error" message="No summary for property $saleDataBuilder" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="Controllers/UsersController.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="8" severity="error" message="No summary for class \App\Http\Controllers\UsersController" source="phpDocumentor.file.PPC:ERR-50005"/>
+    <error line="10" severity="error" message="Argument $validator is missing from the Docblock of information" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="10" severity="error" message="Argument $email is missing from the Docblock of information" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="10" severity="error" message="No summary for method information()" source="phpDocumentor.file.PPC:ERR-50008"/>
+  </file>
+  <file name="Kernel.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="13" severity="error" message="No summary for class \App\Http\Kernel" source="phpDocumentor.file.PPC:ERR-50005"/>
+  </file>
+  <file name="Middleware/TrimStrings.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="6" severity="error" message="No summary for class \App\Http\Middleware\TrimStrings" source="phpDocumentor.file.PPC:ERR-50005"/>
+  </file>
+  <file name="Middleware/CheckForMaintenanceMode.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="6" severity="error" message="No summary for class \App\Http\Middleware\CheckForMaintenanceMode" source="phpDocumentor.file.PPC:ERR-50005"/>
+  </file>
+  <file name="Middleware/TrustProxies.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="7" severity="error" message="No summary for class \App\Http\Middleware\TrustProxies" source="phpDocumentor.file.PPC:ERR-50005"/>
+  </file>
+  <file name="Document/Discount.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="7" severity="error" message="No summary for class \App\Http\Document\Discount" source="phpDocumentor.file.PPC:ERR-50005"/>
+    <error line="29" severity="error" message="No summary for method setTotalValueWithDiscount()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="38" severity="error" message="No summary for method getTotalValueWithDiscount()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="48" severity="error" message="No summary for method setTypeOf()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="57" severity="error" message="No summary for method getTypeOf()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="67" severity="error" message="No summary for method setAmountDiscounted()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="76" severity="error" message="No summary for method getAmountDiscounted()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="81" severity="error" message="No summary for method jsonSerialize()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="12" severity="error" message="No summary for property $totalValueWithDiscount" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="17" severity="error" message="No summary for property $amountDiscounted" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="22" severity="error" message="No summary for property $typeOf" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="Document/Product.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="6" severity="error" message="No summary for class \App\Http\Document\Product" source="phpDocumentor.file.PPC:ERR-50005"/>
+    <error line="33" severity="error" message="No summary for method setId()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="42" severity="error" message="No summary for method getId()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="52" severity="error" message="No summary for method setCategoryId()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="61" severity="error" message="No summary for method getCategoryId()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="71" severity="error" message="No summary for method setQuantity()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="80" severity="error" message="No summary for method getQuantity()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="90" severity="error" message="No summary for method setUnitPrice()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="99" severity="error" message="No summary for method getUnitPrice()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="104" severity="error" message="No summary for method jsonSerialize()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="11" severity="error" message="No summary for property $id" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="16" severity="error" message="No summary for property $categoryId" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="21" severity="error" message="No summary for property $quantity" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="26" severity="error" message="No summary for property $unitPrice" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="Services/Validations/DiscountForNewUsers.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="6" severity="error" message="No summary for class \App\Http\Services\Validations\DiscountForNewUsers" source="phpDocumentor.file.PPC:ERR-50005"/>
+    <error line="22" severity="error" message="No summary for method validate()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="28" severity="error" message="No summary for method apply()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="11" severity="error" message="No summary for property $saleData" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="Services/Validations/DiscountByValueOfCategory.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="6" severity="error" message="No summary for class \App\Http\Services\Validations\DiscountByValueOfCategory" source="phpDocumentor.file.PPC:ERR-50005"/>
+    <error line="22" severity="error" message="No summary for method validate()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="28" severity="error" message="No summary for method apply()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="11" severity="error" message="No summary for property $saleData" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="Services/Validations/DiscountByTotalValue.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+  </file>
+  <file name="Services/Validations/DiscountValidationInterface.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="6" severity="error" message="No summary for interface \App\Http\Services\Validations\DiscountValidationInterface" source="phpDocumentor.file.PPC:ERR-50009"/>
+    <error line="8" severity="error" message="Argument $saleData is missing from the Docblock of __construct" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="8" severity="error" message="No summary for method __construct()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="10" severity="error" message="No summary for method validate()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="12" severity="error" message="No summary for method apply()" source="phpDocumentor.file.PPC:ERR-50008"/>
+  </file>
+  <file name="Services/Validations/DiscountForBeingEmployee.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="6" severity="error" message="No summary for class \App\Http\Services\Validations\DiscountForBeingEmployee" source="phpDocumentor.file.PPC:ERR-50005"/>
+    <error line="22" severity="error" message="No summary for method validate()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="34" severity="error" message="No summary for method apply()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="11" severity="error" message="No summary for property $saleData" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="Services/Validations/DiscountByQuantityOfSameItem.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="8" severity="error" message="No summary for class \App\Http\Services\Validations\DiscountByQuantityOfSameItem" source="phpDocumentor.file.PPC:ERR-50005"/>
+    <error line="24" severity="error" message="No summary for method validate()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="35" severity="error" message="No summary for method apply()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="81" severity="error" message="Argument $number is missing from the Docblock of getPreviousMultiplier" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="81" severity="error" message="No summary for method getPreviousMultiplier()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="13" severity="error" message="No summary for property $saleData" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="Services/Validations/NamesMap/Value.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="4" severity="error" message="No summary for class \App\Http\Services\Validations\NamesMap\Value" source="phpDocumentor.file.PPC:ERR-50005"/>
+  </file>
+  <file name="Requests/CartDiscountRequest.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="6" severity="error" message="No summary for class \App\Http\Requests\CartDiscountRequest" source="phpDocumentor.file.PPC:ERR-50005"/>
+    <error line="8" severity="error" message="No summary for method authorize()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="13" severity="error" message="No summary for method rules()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="25" severity="error" message="No summary for method messages()" source="phpDocumentor.file.PPC:ERR-50008"/>
+  </file>
+  <file name="DTO/SaleDataParameters.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="45" severity="error" message="No summary for method getMoneyParser()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="53" severity="error" message="No summary for method getMoneyFormatter()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="22" severity="error" message="No summary for property $moneyParser" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="27" severity="error" message="No summary for property $moneyFormatter" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="DTO/SaleData.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="10" severity="error" message="No summary for class \App\Http\DTO\SaleData" source="phpDocumentor.file.PPC:ERR-50005"/>
+    <error line="62" severity="error" message="No summary for method setUserEmail()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="71" severity="error" message="No summary for method getUserEmail()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="81" severity="error" message="No summary for method setProducts()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="90" severity="error" message="No summary for method getProducts()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="100" severity="error" message="No summary for method addLayer()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="109" severity="error" message="No summary for method getLayers()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="119" severity="error" message="No summary for method setSubTotal()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="128" severity="error" message="No summary for method getSubTotal()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="138" severity="error" message="No summary for method setTotal()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="147" severity="error" message="No summary for method getTotal()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="157" severity="error" message="No summary for method setDiscount()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="166" severity="error" message="No summary for method getDiscount()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="176" severity="error" message="No summary for method setStrategy()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="185" severity="error" message="No summary for method getStrategy()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="195" severity="error" message="No summary for method addValidDiscounts()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="204" severity="error" message="No summary for method getValidDiscounts()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="214" severity="error" message="No summary for method setPromotionalProducts()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="223" severity="error" message="No summary for method getPromotionalProducts()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="228" severity="error" message="No summary for method run()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="238" severity="error" message="No summary for method jsonSerialize()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="15" severity="error" message="No summary for property $userEmail" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="20" severity="error" message="No summary for property $products" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="25" severity="error" message="No summary for property $subTotal" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="30" severity="error" message="No summary for property $total" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="35" severity="error" message="No summary for property $discount" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="40" severity="error" message="No summary for property $strategy" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="45" severity="error" message="No summary for property $promotionalProducts" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="50" severity="error" message="No summary for property $validDiscounts" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="55" severity="error" message="No summary for property $layers" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="DTO/Layers/CalculateSubTotal.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="7" severity="error" message="No summary for class \App\Http\DTO\Layers\CalculateSubTotal" source="phpDocumentor.file.PPC:ERR-50005"/>
+    <error line="9" severity="error" message="Argument $saleData is missing from the Docblock of exec" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="9" severity="error" message="No summary for method exec()" source="phpDocumentor.file.PPC:ERR-50008"/>
+  </file>
+  <file name="DTO/Layers/DiscountApplier.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="8" severity="error" message="No summary for class \App\Http\DTO\Layers\DiscountApplier" source="phpDocumentor.file.PPC:ERR-50005"/>
+    <error line="10" severity="error" message="Argument $saleData is missing from the Docblock of exec" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="10" severity="error" message="No summary for method exec()" source="phpDocumentor.file.PPC:ERR-50008"/>
+  </file>
+  <file name="DTO/Layers/DiscountVerification.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="6" severity="error" message="No summary for class \App\Http\DTO\Layers\DiscountVerification" source="phpDocumentor.file.PPC:ERR-50005"/>
+    <error line="13" severity="error" message="No summary for method exec()" source="phpDocumentor.file.PPC:ERR-50008"/>
+  </file>
+  <file name="DTO/Layers/LayerInterface.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="6" severity="error" message="No summary for interface \App\Http\DTO\Layers\LayerInterface" source="phpDocumentor.file.PPC:ERR-50009"/>
+    <error line="8" severity="error" message="Argument $saleData is missing from the Docblock of exec" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="8" severity="error" message="No summary for method exec()" source="phpDocumentor.file.PPC:ERR-50008"/>
+  </file>
+  <file name="DTO/Builder/SaleDataBuilder.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="9" severity="error" message="No summary for class \App\Http\DTO\Builder\SaleDataBuilder" source="phpDocumentor.file.PPC:ERR-50005"/>
+    <error line="33" severity="error" message="Argument $request is missing from the Docblock of build" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="33" severity="error" message="No summary for method build()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="14" severity="error" message="No summary for property $moneyParser" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="19" severity="error" message="No summary for property $moneyFormatter" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+</checkstyle>

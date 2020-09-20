@@ -1,0 +1,320 @@
+<?php
+
+namespace App\Http\DTO;
+
+use App\Http\Document\Discount;
+use App\Http\DTO\Layers\LayerInterface;
+use Money\Money;
+use JsonSerializable;
+
+/**
+ * Main sale data class
+ *
+ * @summary Main sale flow class that contains all necessary parameters for the sale's scope.
+ *
+ * @author Henrique Borges da Silva <hborgesdasilva9294@gmail.com>
+ *
+ * @package App\Http\DTO
+ */
+class SaleData extends SaleDataParameters implements JsonSerializable
+{
+    /**
+     * @var string $userEmail User Email
+     */
+    private $userEmail;
+
+    /**
+     * @var array $products Products
+     */
+    private $products;
+
+    /**
+     * @var Money|null $subTotal Subtotal
+     */
+    private $subTotal;
+
+    /**
+     * @var Money/string $total Total
+     */
+    private $total;
+
+    /**
+     * @var Money|string $discount Discount
+     *
+     * @object Money
+     *
+     */
+    private $discount;
+
+    /**
+     * @var string $strategy Strategy
+     */
+    private $strategy;
+
+    /**
+     * @var array|null $promotionalProducts Promotional Products
+     */
+    private $promotionalProducts;
+
+    /**
+     * @var Discount[] $validDiscounts Array of possible valid discounts
+     *
+     * @array Discount
+     *
+     */
+    private $validDiscounts = [];
+
+    /**
+     * @summary Layers are steps of execution based on objects and services that are executed in a specific scope
+     *
+     * @var LayerInterface[] $layers
+     */
+    private $layers = [];
+
+    /**
+     * Set user email
+     *
+     * @param string $userEmail
+     *
+     * @return SaleData
+     */
+    public function setUserEmail(string $userEmail): SaleData
+    {
+        $this->userEmail = $userEmail;
+        return $this;
+    }
+
+    /**
+     * Get user email
+     *
+     * @return string
+     */
+    public function getUserEmail(): string
+    {
+        return $this->userEmail;
+    }
+
+    /**
+     * Set products
+     *
+     * @param array $products
+     *
+     * @return SaleData
+     */
+    public function setProducts(array $products): SaleData
+    {
+        $this->products = $products;
+        return $this;
+    }
+
+    /**
+     * Get products
+     *
+     * @return array
+     */
+    public function getProducts(): array
+    {
+        return $this->products;
+    }
+
+    /**
+     * Add a layer
+     *
+     * @param LayerInterface $layer
+     *
+     * @return SaleData
+     */
+    public function addLayer(LayerInterface $layer): SaleData
+    {
+        $this->layers[] = $layer;
+        return $this;
+    }
+
+    /**
+     * Get layers
+     *
+     * @return LayerInterface[]
+     */
+    public function getLayers(): array
+    {
+        return $this->layers;
+    }
+
+    /**
+     * Set sub-total
+     *
+     * @param Money|null $subTotal
+     *
+     * @return SaleData
+     */
+    public function setSubTotal(Money $subTotal)
+    {
+        $this->subTotal = $subTotal;
+        return $this;
+    }
+
+    /**
+     * Get sub-total
+     *
+     * @return Money|null
+     */
+    public function getSubTotal()
+    {
+        return $this->subTotal;
+    }
+
+    /**
+     * Set total
+     *
+     * @param Money $total
+     *
+     * @return SaleData
+     */
+    public function setTotal(Money $total): SaleData
+    {
+        $this->total = $total;
+        return $this;
+    }
+
+    /**
+     * Get total
+     *
+     * @return Money|string
+     */
+    public function getTotal()
+    {
+        return $this->total;
+    }
+
+    /**
+     * Set discount
+     *
+     * @param Money|string $discount
+     *
+     * @return SaleData
+     */
+    public function setDiscount($discount): SaleData
+    {
+        $this->discount = $discount;
+        return $this;
+    }
+
+    /**
+     * Get discount
+     *
+     * @return Money|string
+     */
+    public function getDiscount()
+    {
+        return $this->discount;
+    }
+
+    /**
+     * Set strategy
+     *
+     * @param string|null $strategy
+     *
+     * @return SaleData
+     */
+    public function setStrategy(string $strategy): SaleData
+    {
+        $this->strategy = $strategy;
+        return $this;
+    }
+
+    /**
+     * Get strategy
+     *
+     * @return string
+     */
+    public function getStrategy()
+    {
+        return $this->strategy;
+    }
+
+    /**
+     * Add valid discounts
+     *
+     * @param Discount|null $validDiscounts
+     *
+     * @return SaleData
+     */
+    public function addValidDiscounts(Discount $validDiscounts): SaleData
+    {
+        $this->validDiscounts[] = $validDiscounts;
+        return $this;
+    }
+
+    /**
+     * Get valid discounts
+     *
+     * @description The discount is validated on the DiscountVerification layer
+     *
+     * @return array|null
+     */
+    public function getValidDiscounts()
+    {
+        return $this->validDiscounts;
+    }
+
+    /**
+     * Set promotional products
+     *
+     * @param array|null $promotionalProducts
+     *
+     * @return SaleData
+     */
+    public function setPromotionalProducts(array $promotionalProducts): SaleData
+    {
+        $this->promotionalProducts = $promotionalProducts;
+        return $this;
+    }
+
+    /**
+     * Get promotional products
+     *
+     * @return array|null
+     */
+    public function getPromotionalProducts()
+    {
+        return $this->promotionalProducts;
+    }
+
+    /**
+     * Run the layers
+     *
+     * @summary Start executing every layer added on the scope.
+     */
+
+    public function run()
+    {
+        foreach ($this->layers as $layer) {
+            $response = $layer->exec($this);
+            if ($response) {
+                return $response;
+            }
+        }
+    }
+
+    /**
+     * Serialize
+     *
+     * @summary Serialize every object value
+     *
+     * @return array
+     */
+    public function jsonSerialize()
+    {
+        return array(
+            "subtotal" => !$this->getSubTotal() ? null : $this->getMoneyFormatter()->format($this->getSubTotal()),
+            "discount" => !$this->getDiscount()
+                ? $this->getDiscount()
+                : $this->getMoneyFormatter()->format($this->getDiscount()),
+            "total" => !$this->getTotal()
+                ? null
+                : $this->getMoneyFormatter()->format($this->getTotal()),
+            "strategy" => $this->getStrategy()
+        );
+    }
+}
+

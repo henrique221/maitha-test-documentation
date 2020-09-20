@@ -1,0 +1,150 @@
+<?php
+namespace App\Http\Document;
+
+use JsonSerializable;
+
+/**
+ * Class Product
+ *
+ * @author Henrique Borges da Silva <hborgesdasilva9294@gmail.com>
+ *
+ * @description This class is used to instantiate the products from the sale scope
+ *
+ * @package App\Http\Document
+ */
+class Product implements JsonSerializable
+{
+    /**
+     * Id of the product
+     *
+     * @var string $id
+     */
+    private $id;
+
+    /**
+     * Category id
+     * @var string $categoryId
+     */
+    private $categoryId;
+
+    /**
+     * Quantity of products
+     *
+     * @var integer $quantity
+     */
+    private $quantity;
+
+    /**
+     * Price of each product
+     *
+     * @var string $unitPrice
+     */
+    private $unitPrice;
+
+    /**
+     * Set the product Id
+     *
+     * @param string $id
+     *
+     * @return Product
+     */
+    public function setId(string $id): Product
+    {
+        $this->id = $id;
+        return $this;
+    }
+
+    /**
+     * Get the product id
+     *
+     * @return string
+     */
+    public function getId(): string
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set the product's category id
+     *
+     * @param string $categoryId
+     *
+     * @return Product
+     */
+    public function setCategoryId(string $categoryId): Product
+    {
+        $this->categoryId = $categoryId;
+        return $this;
+    }
+
+    /**
+     * Get the id of the product's category
+     *
+     * @return string
+     */
+    public function getCategoryId(): string
+    {
+        return $this->categoryId;
+    }
+
+    /**
+     * Set quantity of products
+     *
+     * @param int $quantity
+     *
+     * @return Product
+     */
+    public function setQuantity(int $quantity): Product
+    {
+        $this->quantity = $quantity;
+        return $this;
+    }
+
+    /**
+     * Get the quantity of products bought
+     *
+     * @Description Example: "2"
+     *
+     * @return int
+     */
+    public function getQuantity(): int
+    {
+        return $this->quantity;
+    }
+
+    /**
+     * Set the price of the single product
+     *
+     * @param string $unitPrice
+     *
+     * @return Product
+     */
+    public function setUnitPrice(string $unitPrice): Product
+    {
+        $this->unitPrice = $unitPrice;
+        return $this;
+    }
+
+    /**
+     * Get the price of the single product
+     *
+     * @description Example: "12.3"
+     *
+     * @return string
+     */
+    public function getUnitPrice(): string
+    {
+        return $this->unitPrice;
+    }
+
+    /**
+     * @ignore
+     *
+     * @return array|mixed
+     */
+    public function jsonSerialize()
+    {
+        return get_object_vars($this);
+    }
+}
+

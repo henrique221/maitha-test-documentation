@@ -1,0 +1,123 @@
+<?php
+namespace App\Http\Document;
+
+use JsonSerializable;
+
+/**
+ * Class Discount
+ *
+ * @author Henrique Borges da Silva <hborgesdasilva9294@gmail.com>
+ *
+ * @description This class is used to instantiate the discounts calculated in the flow
+ *
+ * @package App\Http\Document
+ */
+class Discount implements JsonSerializable
+{
+    /**
+     * Total value with discount applied
+     *
+     * @var string $totalValueWithDiscount
+     */
+    private $totalValueWithDiscount = "0";
+
+    /**
+     * Amount discounted
+     *
+     * @var string $amountDiscounted
+     */
+    private $amountDiscounted;
+
+    /**
+     * Type of discount
+     *
+     * @var string $typeOf
+     */
+    private $typeOf = 'none';
+
+    /**
+     * Set the total value calculated with discount
+     *
+     * @param string $totalValueWithDiscount
+     *
+     * @return Discount
+     */
+    public function setTotalValueWithDiscount(string $totalValueWithDiscount): Discount
+    {
+        $this->totalValueWithDiscount = $totalValueWithDiscount;
+        return $this;
+    }
+
+    /**
+     * Get total value with discount
+     *
+     * @description Example: "10.32"
+     *
+     * @return string
+     */
+    public function getTotalValueWithDiscount(): string
+    {
+        return $this->totalValueWithDiscount;
+    }
+
+    /**
+     * Set the type of discount
+     *
+     * @param string $typeOf
+     *
+     * @return Discount
+     */
+    public function setTypeOf(string $typeOf): Discount
+    {
+        $this->typeOf = $typeOf;
+        return $this;
+    }
+
+    /**
+     * Get the type of discount
+     *
+     * @description Example: "get-3-pay-2"
+     *
+     * @return string
+     */
+    public function getTypeOf(): string
+    {
+        return $this->typeOf;
+    }
+
+    /**
+     * Set the value of the discount (Not the total price value)
+     *
+     * @param string $amountDiscounted
+     *
+     * @return Discount
+     */
+    public function setAmountDiscounted(string $amountDiscounted): Discount
+    {
+        $this->amountDiscounted = $amountDiscounted;
+        return $this;
+    }
+
+    /**
+     * Get the value of the discount
+     *
+     * @return string
+     */
+    public function getAmountDiscounted(): string
+    {
+        return $this->amountDiscounted;
+    }
+
+    /**
+     * Serialize the object Discount
+     *
+     * @ignore
+     *
+     * @return array|mixed
+     */
+    public function jsonSerialize()
+    {
+        return get_object_vars($this);
+    }
+}
+

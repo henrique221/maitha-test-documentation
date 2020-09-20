@@ -1,0 +1,94 @@
+<?php
+namespace App\Http\Controllers;
+
+use App\Http\DTO\Layers\CalculateSubTotal;
+use App\Http\DTO\Layers\DiscountApplier;
+use App\Http\DTO\Layers\DiscountVerification;
+use App\Http\Requests\CartDiscountRequest;
+use App\Http\DTO\Builder\SaleDataBuilder;
+use Illuminate\Http\JsonResponse;
+use Symfony\Component\HttpFoundation\Response;
+
+/**
+ * Carts controller
+ *
+ * @summary CartsController class
+ *
+ * @package App\Http\Controllers
+ */
+class CartsController extends Controller
+{
+    /**
+     * Sale data builder
+     *
+     * @var SaleDataBuilder $saleDataBuilder
+     */
+    private $saleDataBuilder;
+
+    /**
+     * CartsController constructor.
+     *
+     * @param SaleDataBuilder $saleDataBuilder
+     */
+    public function __construct(SaleDataBuilder $saleDataBuilder)
+    {
+        $this->saleDataBuilder = $saleDataBuilder;
+    }
+
+    /**
+     * Endpoint that receives a requisition with the user and products bought data.
+     *
+     * @author Henrique Borges da Silva <hborgesdasilva9294@gmail.com>
+     *
+     * @param CartDiscountRequest $request
+     *
+     * @return JsonResponse
+     *
+     * @method POST
+     *
+     * @url api/v1/cart/discount
+     *
+     * @body {
+        {
+            "userEmail": "boitata@boitata.com",
+            "products": [
+                {
+                    "id": "b8be61e7-c170-5623-9ff7-00b2d83f91a5",
+                    "categoryId": "c4a760a8-dbcf-5254-a0d9-6a4474bd1b62",
+                    "quantity": 3,
+                    "unitPrice": "45.19"
+                }
+            ]
+        }
+     * }
+     */
+    public function calculateDiscount(CartDiscountRequest $request): JsonResponse
+    {
+        try {
+            $salesData = $this->saleDataBuilder->build($request);
+            $salesData->addLayer(new CalculateSubTotal());
+            $salesData->addLayer(new DiscountVerification());
+            $salesData->addLayer(new DiscountApplier());
+            $salesData->run();
+
+            return new JsonResponse(
+                [
+                    'message' => 'Success.',
+                    'data' => $salesData,
+                ]
+            );
+        } catch (\Exception $exception) {
+            return new JsonResponse(
+                array(
+                    'message' => $exception->getMessage(),
+                    'file' => $exception->getFile(),
+                    'line' => $exception->getLine(),
+                    'code' => $exception->getCode(),
+                    'trace' => $exception->getTrace()
+                ),
+                Response::HTTP_INTERNAL_SERVER_ERROR
+            );
+        }
+    }
+}
+

@@ -1,0 +1,35 @@
+<?php
+namespace App\Http\DTO\Layers;
+
+use App\Http\DTO\SaleData;
+use Money\Money;
+
+/**
+ * Calculate SubTotal
+ *
+ * @author Henrique Borges da Silva <hborgesdasilva9294@gmail.com>
+ *
+ * @summary The responsibility of this class is to calculate the subtotal of the sale
+ *
+ * @package App\Http\DTO\Layers
+ */
+class CalculateSubTotal implements LayerInterface
+{
+    /**
+     * This method is executed to calculate the subtotal of the sale (Not considering the discounts)
+     *
+     * @param SaleData $saleData
+     */
+    public function exec(SaleData $saleData)
+    {
+        $subtotal = Money::BRL(0);
+
+        foreach ($saleData->getProducts() as $product) {
+            $unitPrice = $saleData->getMoneyParser()->parse($product->getUnitPrice(), 'BRL');
+            $amount = $unitPrice->multiply($product->getQuantity());
+            $subtotal = $subtotal->add($amount);
+        }
+        $saleData->setSubTotal($subtotal);
+    }
+}
+

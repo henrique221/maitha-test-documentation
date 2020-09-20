@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<phpdoc>
+    <title>Documentation candidate Henrique Borges</title>
+    <transformations>
+        <template name="responsive" />
+    </transformations>
+    <parser>
+        <target>documentation</target>
+    </parser>
+    <transformer>
+        <target>documentation</target>
+    </transformer>
+    <files>
+        <directory>../candidate-henrique-borges/app/Http/Controllers</directory>
+        <directory>../candidate-henrique-borges/app/Http/DTO</directory>
+        <directory>../candidate-henrique-borges/app/Http/Document</directory>
+        <directory>../candidate-henrique-borges/app/Http/Services</directory>
+        <ignore>../candidate-henrique-borges/app/Http/Controllers/Controller.php</ignore>
+        <ignore>../candidate-henrique-borges/app/Http/Controllers/UsersController.php</ignore>
+    </files>
+    <encoding>utf8</encoding>
+</phpdoc>

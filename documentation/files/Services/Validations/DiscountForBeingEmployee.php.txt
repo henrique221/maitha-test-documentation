@@ -1,0 +1,45 @@
+<?php
+namespace App\Http\Services\Validations;
+
+use App\Http\DTO\SaleData;
+
+/**
+ * Class DiscountForBeingEmployee
+ *
+ * @package App\Http\Services\Validations
+ */
+class DiscountForBeingEmployee implements DiscountValidationInterface
+{
+    /**
+     * @var SaleData
+     */
+    private $saleData;
+
+    /**
+     * DiscountForBeingStaff constructor.
+     *
+     * @param SaleData $saleData
+     */
+    public function __construct(SaleData $saleData)
+    {
+        $this->saleData = $saleData;
+    }
+
+    public function validate(): bool
+    {
+        $employeesEmailList = config('api.employees');
+        $userEmail = $this->saleData->getUserEmail();
+
+        if(in_array($userEmail, $employeesEmailList)
+            && $employeesEmailList[$userEmail]){
+            return true;
+        }
+        return false;
+    }
+
+    public function apply()
+    {
+        // TODO: Implement apply() method.
+    }
+}
+

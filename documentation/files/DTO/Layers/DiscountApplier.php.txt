@@ -1,0 +1,53 @@
+<?php
+
+namespace App\Http\DTO\Layers;
+
+use App\Http\Document\Discount;
+use App\Http\DTO\SaleData;
+
+/**
+ * Apply the discount on the sale
+ *
+ * @author Henrique Borges da Silva <hborgesdasilva9294@gmail.com>
+ *
+ * @summary The responsibility of this class is to apply the discount on the sale
+ *
+ * @package App\Http\DTO\Layers
+ */
+class DiscountApplier implements LayerInterface
+{
+    /**
+     * Execute the flow to apply the discount
+     *
+     * @summary This method is executed after the DiscountVerification layer validate which discount can be applied
+     *
+     * @param SaleData $saleData
+     */
+    public function exec(SaleData $saleData)
+    {
+        $validDiscounts = $saleData->getValidDiscounts();
+
+        $highestDiscount = 0;
+        $discount = new Discount();
+        $maxDiscount = $discount->setAmountDiscounted(0);
+
+        foreach ($validDiscounts as $validDiscount) {
+            if ($validDiscount->getAmountDiscounted() > $highestDiscount) {
+                $highestDiscount = $validDiscount->getAmountDiscounted();
+                $maxDiscount = $validDiscount;
+            }
+        };
+
+        $total = $saleData->getMoneyParser()->parse(strval($maxDiscount->getTotalValueWithDiscount()), 'BRL');
+        if(!intval($total->getAmount())){
+            $total = $saleData->getSubTotal();
+        }
+
+        $saleData->setDiscount($saleData->getMoneyParser()->parse(
+            strval($maxDiscount->getAmountDiscounted()), 'BRL'))
+            ->setTotal($total)
+            ->setStrategy($maxDiscount->getTypeOf());
+
+    }
+}
+
