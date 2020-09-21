@@ -22,7 +22,7 @@
 <li><a>Namespaces</a></li>
 <li><a href="../namespaces/App.html"><i class="icon-th"></i> App</a></li>
 <li><a>Packages</a></li>
-<li><a href="../packages/App.html"><i class="icon-folder-open"></i> App</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
 </ul>
 </li>
 <li class="dropdown" id="charts-menu">
@@ -33,7 +33,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">19</span></a></li>
+                <span class="label label-info">65</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
@@ -63,7 +63,8 @@
 <li class="nav-header">
 <i title="Methods" class="icon-custom icon-method"></i> Methods
                     <ul>
-<li class="method public inherited"><a href="#method___construct" title="__construct() :: SaleDataParameters constructor."><span class="description">SaleDataParameters constructor.</span><pre>__construct()</pre></a></li>
+<li class="method public inherited"><a href="#method___construct" title="__construct() :: "><span class="description">__construct()
+        </span><pre>__construct()</pre></a></li>
 <li class="method public "><a href="#method_addLayer" title="addLayer() :: Add a layer"><span class="description">Add a layer</span><pre>addLayer()</pre></a></li>
 <li class="method public inherited"><a href="#method_addValidDiscounts" title="addValidDiscounts() :: Add valid discounts"><span class="description">Add valid discounts</span><pre>addValidDiscounts()</pre></a></li>
 <li class="method public inherited"><a href="#method_getDiscount" title="getDiscount() :: Get discount"><span class="description">Get discount</span><pre>getDiscount()</pre></a></li>
@@ -134,19 +135,11 @@ requests during the execution of the flow"><span class="description"></span><pre
 <div xmlns:php="http://php.net/xsl" class="element class">
 <p class="short_description">Main sale data class</p>
 <div class="details">
-<div class="long_description"></div>
+<div class="long_description"><p>Main sale flow class that contains all necessary parameters for the sale's scope.</p></div>
 <table class="table table-bordered">
 <tr>
-<th>summary</th>
-<td>Main sale flow class that contains all necessary parameters for the sale's scope.</td>
-</tr>
-<tr>
-<th>author</th>
-<td><a href="mailto:hborgesdasilva9294@gmail.com">Henrique Borges da Silva</a></td>
-</tr>
-<tr>
 <th>package</th>
-<td><a href="../packages/App.Http.DTO.html">App\Http\DTO</a></td>
+<td><a href="../packages/Default.html">Default</a></td>
 </tr>
 <tr>
 <th>inherited_from</th>
@@ -156,52 +149,36 @@ requests during the execution of the flow"><span class="description"></span><pre
 <h3>
 <i title="Methods" class="icon-custom icon-method"></i> Methods</h3>
 <a id="method___construct"></a><div class="element clickable method public method___construct inherited" data-toggle="collapse" data-target=".method___construct .collapse" title="public">
-<h2>SaleDataParameters constructor.</h2>
+<h2>__construct()
+        </h2>
 <pre>__construct(\Money\MoneyParser $moneyParser, \Money\MoneyFormatter $moneyFormatter, \App\Http\Services\helpers\RequestDispatcher $requestDispatcher) </pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$moneyParser</h4>
-<code>\Money\MoneyParser</code>
-</div>
-<div class="subelement argument">
-<h4>$moneyFormatter</h4>
-<code>\Money\MoneyFormatter</code>
-</div>
-<div class="subelement argument">
-<h4>$requestDispatcher</h4>
-<code>\App\Http\Services\helpers\RequestDispatcher</code>
-</div>
+<div class="subelement argument"><h4>$moneyParser</h4></div>
+<div class="subelement argument"><h4>$moneyFormatter</h4></div>
+<div class="subelement argument"><h4>$requestDispatcher</h4></div>
 </div></div>
 </div>
 <a id="method_addLayer"></a><div class="element clickable method public method_addLayer " data-toggle="collapse" data-target=".method_addLayer .collapse" title="public">
 <h2>Add a layer</h2>
-<pre>addLayer(\App\Http\DTO\Layers\LayerInterface $layer) : \App\Http\DTO\SaleData</pre>
+<pre>addLayer(\App\Http\DTO\Layers\LayerInterface $layer) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$layer</h4>
-<code>\App\Http\DTO\Layers\LayerInterface</code>
-</div>
-<h3>Returns</h3>
-<div class="subelement response"><code>\App\Http\DTO\SaleData</code></div>
+<div class="subelement argument"><h4>$layer</h4></div>
 </div></div>
 </div>
 <a id="method_addValidDiscounts"></a><div class="element clickable method public method_addValidDiscounts inherited" data-toggle="collapse" data-target=".method_addValidDiscounts .collapse" title="public">
 <h2>Add valid discounts</h2>
-<pre>addValidDiscounts(\App\Http\Document\Discount|null $validDiscounts) : \App\Http\DTO\Mapping\DiscountParameters | \App\Http\DTO\SaleData</pre>
+<pre>addValidDiscounts(\App\Http\Document\Discount $validDiscounts) : \App\Http\DTO\Mapping\DiscountParameters | \App\Http\DTO\SaleData</pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$validDiscounts</h4>
-<code>\App\Http\Document\Discount</code><code>null</code>
-</div>
+<div class="subelement argument"><h4>$validDiscounts</h4></div>
 <h3>Returns</h3>
 <div class="subelement response">
 <code>\App\Http\DTO\Mapping\DiscountParameters</code><code>\App\Http\DTO\SaleData</code>
@@ -232,7 +209,7 @@ requests during the execution of the flow"><span class="description"></span><pre
 </div>
 <a id="method_getMoneyFormatter"></a><div class="element clickable method public method_getMoneyFormatter inherited" data-toggle="collapse" data-target=".method_getMoneyFormatter .collapse" title="public">
 <h2>Retrieve MoneyFormatter object</h2>
-<pre>getMoneyFormatter() : \Money\MoneyFormatter</pre>
+<pre>getMoneyFormatter() </pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
@@ -240,13 +217,11 @@ requests during the execution of the flow"><span class="description"></span><pre
 <th>description</th>
 <td>MoneyFormatter is used in sales data scope to format money values</td>
 </tr></table>
-<h3>Returns</h3>
-<div class="subelement response"><code>\Money\MoneyFormatter</code></div>
 </div></div>
 </div>
 <a id="method_getMoneyParser"></a><div class="element clickable method public method_getMoneyParser inherited" data-toggle="collapse" data-target=".method_getMoneyParser .collapse" title="public">
 <h2>Retrieve MoneyParser object</h2>
-<pre>getMoneyParser() : \Money\MoneyParser</pre>
+<pre>getMoneyParser() </pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
@@ -254,8 +229,6 @@ requests during the execution of the flow"><span class="description"></span><pre
 <th>description</th>
 <td>MoneyParser is used in sales data scope to parse money values</td>
 </tr></table>
-<h3>Returns</h3>
-<div class="subelement response"><code>\Money\MoneyParser</code></div>
 </div></div>
 </div>
 <a id="method_getProducts"></a><div class="element clickable method public method_getProducts " data-toggle="collapse" data-target=".method_getProducts .collapse" title="public">
@@ -292,13 +265,9 @@ requests during the execution of the flow"><span class="description"></span><pre
 </div>
 <a id="method_getRequestDispatcher"></a><div class="element clickable method public method_getRequestDispatcher inherited" data-toggle="collapse" data-target=".method_getRequestDispatcher .collapse" title="public">
 <h2>RequestDispatcher</h2>
-<pre>getRequestDispatcher() : \App\Http\Services\helpers\RequestDispatcher</pre>
+<pre>getRequestDispatcher() </pre>
 <div class="labels"><span class="label">Inherited</span></div>
-<div class="row collapse"><div class="detail-description">
-<div class="long_description"></div>
-<h3>Returns</h3>
-<div class="subelement response"><code>\App\Http\Services\helpers\RequestDispatcher</code></div>
-</div></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
 <a id="method_getStrategy"></a><div class="element clickable method public method_getStrategy inherited" data-toggle="collapse" data-target=".method_getStrategy .collapse" title="public">
 <h2>Get strategy</h2>
@@ -336,13 +305,9 @@ requests during the execution of the flow"><span class="description"></span><pre
 </div>
 <a id="method_getUserEmail"></a><div class="element clickable method public method_getUserEmail " data-toggle="collapse" data-target=".method_getUserEmail .collapse" title="public">
 <h2>Get user email</h2>
-<pre>getUserEmail() : string</pre>
+<pre>getUserEmail() </pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description">
-<div class="long_description"></div>
-<h3>Returns</h3>
-<div class="subelement response"><code>string</code></div>
-</div></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
 <a id="method_getValidDiscounts"></a><div class="element clickable method public method_getValidDiscounts inherited" data-toggle="collapse" data-target=".method_getValidDiscounts .collapse" title="public">
 <h2>Get valid discounts</h2>
@@ -365,11 +330,7 @@ requests during the execution of the flow"><span class="description"></span><pre
 <pre>jsonSerialize() : array</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<div class="long_description"></div>
-<table class="table table-bordered"><tr>
-<th>summary</th>
-<td>Serialize every object value</td>
-</tr></table>
+<div class="long_description"><p>Serialize every object value</p></div>
 <h3>Returns</h3>
 <div class="subelement response"><code>array</code></div>
 </div></div>
@@ -378,13 +339,7 @@ requests during the execution of the flow"><span class="description"></span><pre
 <h2>Run the layers</h2>
 <pre>run() </pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description">
-<div class="long_description"></div>
-<table class="table table-bordered"><tr>
-<th>summary</th>
-<td>Start executing every layer added on the scope.</td>
-</tr></table>
-</div></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"><p>Start executing every layer added on the scope.</p></div></div></div>
 </div>
 <a id="method_setDiscount"></a><div class="element clickable method public method_setDiscount inherited" data-toggle="collapse" data-target=".method_setDiscount .collapse" title="public">
 <h2>Set discount</h2>
@@ -405,7 +360,7 @@ requests during the execution of the flow"><span class="description"></span><pre
 </div>
 <a id="method_setProducts"></a><div class="element clickable method public method_setProducts " data-toggle="collapse" data-target=".method_setProducts .collapse" title="public">
 <h2>Set products</h2>
-<pre>setProducts(array $products) : \App\Http\DTO\SaleData</pre>
+<pre>setProducts(array $products) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
@@ -414,8 +369,6 @@ requests during the execution of the flow"><span class="description"></span><pre
 <h4>$products</h4>
 <code>array</code>
 </div>
-<h3>Returns</h3>
-<div class="subelement response"><code>\App\Http\DTO\SaleData</code></div>
 </div></div>
 </div>
 <a id="method_setPromotionalProducts"></a><div class="element clickable method public method_setPromotionalProducts inherited" data-toggle="collapse" data-target=".method_setPromotionalProducts .collapse" title="public">
@@ -454,15 +407,12 @@ requests during the execution of the flow"><span class="description"></span><pre
 </div>
 <a id="method_setStrategy"></a><div class="element clickable method public method_setStrategy inherited" data-toggle="collapse" data-target=".method_setStrategy .collapse" title="public">
 <h2>Set strategy</h2>
-<pre>setStrategy(string|null $strategy) : \App\Http\DTO\Mapping\DiscountParameters | \App\Http\DTO\SaleData</pre>
+<pre>setStrategy(\App\Http\DTO\Mapping\string $strategy) : \App\Http\DTO\Mapping\DiscountParameters | \App\Http\DTO\SaleData</pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$strategy</h4>
-<code>string</code><code>null</code>
-</div>
+<div class="subelement argument"><h4>$strategy</h4></div>
 <h3>Returns</h3>
 <div class="subelement response">
 <code>\App\Http\DTO\Mapping\DiscountParameters</code><code>\App\Http\DTO\SaleData</code>
@@ -471,47 +421,34 @@ requests during the execution of the flow"><span class="description"></span><pre
 </div>
 <a id="method_setSubTotal"></a><div class="element clickable method public method_setSubTotal " data-toggle="collapse" data-target=".method_setSubTotal .collapse" title="public">
 <h2>Set sub-total</h2>
-<pre>setSubTotal(\Money\Money|null $subTotal) : \App\Http\DTO\SaleData</pre>
+<pre>setSubTotal(\Money\Money $subTotal) : \App\Http\DTO\SaleData</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$subTotal</h4>
-<code>\Money\Money</code><code>null</code>
-</div>
+<div class="subelement argument"><h4>$subTotal</h4></div>
 <h3>Returns</h3>
 <div class="subelement response"><code>\App\Http\DTO\SaleData</code></div>
 </div></div>
 </div>
 <a id="method_setTotal"></a><div class="element clickable method public method_setTotal " data-toggle="collapse" data-target=".method_setTotal .collapse" title="public">
 <h2>Set total</h2>
-<pre>setTotal(\Money\Money $total) : \App\Http\DTO\SaleData</pre>
+<pre>setTotal(\Money\Money $total) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$total</h4>
-<code>\Money\Money</code>
-</div>
-<h3>Returns</h3>
-<div class="subelement response"><code>\App\Http\DTO\SaleData</code></div>
+<div class="subelement argument"><h4>$total</h4></div>
 </div></div>
 </div>
 <a id="method_setUserEmail"></a><div class="element clickable method public method_setUserEmail " data-toggle="collapse" data-target=".method_setUserEmail .collapse" title="public">
 <h2>Set user email</h2>
-<pre>setUserEmail(string $userEmail) : \App\Http\DTO\SaleData</pre>
+<pre>setUserEmail(\App\Http\DTO\string $userEmail) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$userEmail</h4>
-<code>string</code>
-</div>
-<h3>Returns</h3>
-<div class="subelement response"><code>\App\Http\DTO\SaleData</code></div>
+<div class="subelement argument"><h4>$userEmail</h4></div>
 </div></div>
 </div>
 <h3>
@@ -540,13 +477,7 @@ requests during the execution of the flow"><span class="description"></span><pre
 <div class="subelement argument"><code>array()</code></div>
 </div></div>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description">
-<div class="long_description"></div>
-<table class="table table-bordered"><tr>
-<th>summary</th>
-<td>Layers are steps of execution based on objects and services that are executed in a specific scope</td>
-</tr></table>
-</div></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"><p>Layers are steps of execution based on objects and services that are executed in a specific scope</p></div></div></div>
 </div>
 <a id="property_moneyFormatter"> </a><div class="element clickable property private property_moneyFormatter" data-toggle="collapse" data-target=".property_moneyFormatter .collapse" title="private">
 <h2>MoneyFormatter</h2>
@@ -684,7 +615,7 @@ requests during the execution of the flow</h2>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor v2.9.0</a> and<br>
-            generated on 2020-09-20T21:59:22-03:00.<br></footer></div>
+            generated on 2020-09-20T23:10:53-03:00.<br></footer></div>
 </div>
 </body>
 </html>

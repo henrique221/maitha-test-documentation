@@ -22,7 +22,7 @@
 <li><a>Namespaces</a></li>
 <li><a href="../namespaces/App.html"><i class="icon-th"></i> App</a></li>
 <li><a>Packages</a></li>
-<li><a href="../packages/App.html"><i class="icon-folder-open"></i> App</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
 </ul>
 </li>
 <li class="dropdown" id="charts-menu">
@@ -33,7 +33,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">19</span></a></li>
+                <span class="label label-info">65</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
@@ -101,38 +101,30 @@
 </li>
 </ul>
 <div xmlns:php="http://php.net/xsl" class="element class">
-<p class="short_description">Class Discount</p>
+<p class="short_description"></p>
 <div class="details">
 <div class="long_description"></div>
 <table class="table table-bordered">
-<tr>
-<th>author</th>
-<td><a href="mailto:hborgesdasilva9294@gmail.com">Henrique Borges da Silva</a></td>
-</tr>
 <tr>
 <th>description</th>
 <td>This class is used to instantiate the discounts calculated in the flow</td>
 </tr>
 <tr>
 <th>package</th>
-<td><a href="../packages/App.Http.Document.html">App\Http\Document</a></td>
+<td><a href="../packages/Default.html">Default</a></td>
 </tr>
 </table>
 <h3>
 <i title="Methods" class="icon-custom icon-method"></i> Methods</h3>
 <a id="method_getAmountDiscounted"></a><div class="element clickable method public method_getAmountDiscounted " data-toggle="collapse" data-target=".method_getAmountDiscounted .collapse" title="public">
 <h2>Get the value of the discount</h2>
-<pre>getAmountDiscounted() : string</pre>
+<pre>getAmountDiscounted() </pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description">
-<div class="long_description"></div>
-<h3>Returns</h3>
-<div class="subelement response"><code>string</code></div>
-</div></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
 <a id="method_getTotalValueWithDiscount"></a><div class="element clickable method public method_getTotalValueWithDiscount " data-toggle="collapse" data-target=".method_getTotalValueWithDiscount .collapse" title="public">
 <h2>Get total value with discount</h2>
-<pre>getTotalValueWithDiscount() : string</pre>
+<pre>getTotalValueWithDiscount() </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
@@ -140,13 +132,11 @@
 <th>description</th>
 <td>Example: "10.32"</td>
 </tr></table>
-<h3>Returns</h3>
-<div class="subelement response"><code>string</code></div>
 </div></div>
 </div>
 <a id="method_getTypeOf"></a><div class="element clickable method public method_getTypeOf " data-toggle="collapse" data-target=".method_getTypeOf .collapse" title="public">
 <h2>Get the type of discount</h2>
-<pre>getTypeOf() : string</pre>
+<pre>getTypeOf() </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
@@ -154,53 +144,36 @@
 <th>description</th>
 <td>Example: "get-3-pay-2"</td>
 </tr></table>
-<h3>Returns</h3>
-<div class="subelement response"><code>string</code></div>
 </div></div>
 </div>
 <a id="method_setAmountDiscounted"></a><div class="element clickable method public method_setAmountDiscounted " data-toggle="collapse" data-target=".method_setAmountDiscounted .collapse" title="public">
 <h2>Set the value of the discount (Not the total price value)</h2>
-<pre>setAmountDiscounted(string $amountDiscounted) : \App\Http\Document\Discount</pre>
+<pre>setAmountDiscounted(\App\Http\Document\string $amountDiscounted) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$amountDiscounted</h4>
-<code>string</code>
-</div>
-<h3>Returns</h3>
-<div class="subelement response"><code>\App\Http\Document\Discount</code></div>
+<div class="subelement argument"><h4>$amountDiscounted</h4></div>
 </div></div>
 </div>
 <a id="method_setTotalValueWithDiscount"></a><div class="element clickable method public method_setTotalValueWithDiscount " data-toggle="collapse" data-target=".method_setTotalValueWithDiscount .collapse" title="public">
 <h2>Set the total value calculated with discount</h2>
-<pre>setTotalValueWithDiscount(string $totalValueWithDiscount) : \App\Http\Document\Discount</pre>
+<pre>setTotalValueWithDiscount(\App\Http\Document\string $totalValueWithDiscount) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$totalValueWithDiscount</h4>
-<code>string</code>
-</div>
-<h3>Returns</h3>
-<div class="subelement response"><code>\App\Http\Document\Discount</code></div>
+<div class="subelement argument"><h4>$totalValueWithDiscount</h4></div>
 </div></div>
 </div>
 <a id="method_setTypeOf"></a><div class="element clickable method public method_setTypeOf " data-toggle="collapse" data-target=".method_setTypeOf .collapse" title="public">
 <h2>Set the type of discount</h2>
-<pre>setTypeOf(string $typeOf) : \App\Http\Document\Discount</pre>
+<pre>setTypeOf(\App\Http\Document\string $typeOf) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$typeOf</h4>
-<code>string</code>
-</div>
-<h3>Returns</h3>
-<div class="subelement response"><code>\App\Http\Document\Discount</code></div>
+<div class="subelement argument"><h4>$typeOf</h4></div>
 </div></div>
 </div>
 <h3>
@@ -220,7 +193,7 @@
 <pre>$totalValueWithDiscount : string</pre>
 <div class="row collapse"><div class="detail-description">
 <h3>Default</h3>
-<div class="subelement argument"><code>"0"</code></div>
+<div class="subelement argument"><code>'0'</code></div>
 </div></div>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
@@ -242,7 +215,7 @@
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor v2.9.0</a> and<br>
-            generated on 2020-09-20T21:59:22-03:00.<br></footer></div>
+            generated on 2020-09-20T23:10:53-03:00.<br></footer></div>
 </div>
 </body>
 </html>
