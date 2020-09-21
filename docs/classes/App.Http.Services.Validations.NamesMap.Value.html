@@ -23,6 +23,7 @@
 <li><a href="../namespaces/App.html"><i class="icon-th"></i> App</a></li>
 <li><a>Packages</a></li>
 <li><a href="../packages/App.html"><i class="icon-folder-open"></i> App</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
 </ul>
 </li>
 <li class="dropdown" id="charts-menu">
@@ -33,7 +34,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">26</span></a></li>
+                <span class="label label-info">33</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
@@ -62,11 +63,15 @@
 <ul xmlns:php="http://php.net/xsl" class="side-nav nav nav-list"><li class="nav-header">
 <i title="Constants" class="icon-custom icon-constant"></i> Constants
                     <ul>
-<li class="constant  "><a href="#constant_AMOUNT_OF_PRODUCTS_BOUGHT" title="AMOUNT_OF_PRODUCTS_BOUGHT() :: Amount of products to determine discount (applicable on rule take-3-pay-2)"><span class="description">Amount of products to determine discount (applicable on rule take-3-pay-2)</span><pre>AMOUNT_OF_PRODUCTS_BOUGHT</pre></a></li>
+<li class="constant  "><a href="#constant_AMOUNT_OF_DISCOUNT_FOR_NEW_USER" title="AMOUNT_OF_DISCOUNT_FOR_NEW_USER() :: Amount of discount for new user in R$ (applicable on rule new-user)"><span class="description">Amount of discount for new user in R$ (applicable on rule new-user)</span><pre>AMOUNT_OF_DISCOUNT_FOR_NEW_USER</pre></a></li>
+<li class="constant  "><a href="#constant_AMOUNT_OF_PRODUCTS_BOUGHT_FOR_DISCOUNT" title="AMOUNT_OF_PRODUCTS_BOUGHT_FOR_DISCOUNT() :: Amount of products to determine discount (applicable on rule take-3-pay-2)"><span class="description">Amount of products to determine discount (applicable on rule take-3-pay-2)</span><pre>AMOUNT_OF_PRODUCTS_BOUGHT_FOR_DISCOUNT</pre></a></li>
 <li class="constant  "><a href="#constant_AMOUNT_OF_PRODUCTS_FOR_FREE" title="AMOUNT_OF_PRODUCTS_FOR_FREE() :: Amount of products for free (applicable on rule take-3-pay-2)"><span class="description">Amount of products for free (applicable on rule take-3-pay-2)</span><pre>AMOUNT_OF_PRODUCTS_FOR_FREE</pre></a></li>
 <li class="constant  "><a href="#constant_PERCENT_FOR_EMPLOYEE_DISCOUNT" title="PERCENT_FOR_EMPLOYEE_DISCOUNT() :: Percent to apply for employee discount (applicable on rule employee)"><span class="description">Percent to apply for employee discount (applicable on rule employee)</span><pre>PERCENT_FOR_EMPLOYEE_DISCOUNT</pre></a></li>
+<li class="constant  "><a href="#constant_PERCENT_FOR_SAME_CATEGORY_DISCOUNT" title="PERCENT_FOR_SAME_CATEGORY_DISCOUNT() :: Percent to apply for same-category discount"><span class="description">Percent to apply for same-category discount</span><pre>PERCENT_FOR_SAME_CATEGORY_DISCOUNT</pre></a></li>
 <li class="constant  "><a href="#constant_PERCENT_FOR_SUBTOTAL_DISCOUNT" title="PERCENT_FOR_SUBTOTAL_DISCOUNT() :: Percent to apply for discount (applicable on rule above_3000)"><span class="description">Percent to apply for discount (applicable on rule above_3000)</span><pre>PERCENT_FOR_SUBTOTAL_DISCOUNT</pre></a></li>
+<li class="constant  "><a href="#constant_PRICE_TO_CONSIDER_NEW_USER_DISCOUNT" title="PRICE_TO_CONSIDER_NEW_USER_DISCOUNT() :: "><span class="description">PRICE_TO_CONSIDER_NEW_USER_DISCOUNT</span><pre>PRICE_TO_CONSIDER_NEW_USER_DISCOUNT</pre></a></li>
 <li class="constant  "><a href="#constant_SUBTOTAL_VALUE_FOR_DISCOUNT" title="SUBTOTAL_VALUE_FOR_DISCOUNT() :: Subtotal to determine value for discount (applicable on rule above_3000)"><span class="description">Subtotal to determine value for discount (applicable on rule above_3000)</span><pre>SUBTOTAL_VALUE_FOR_DISCOUNT</pre></a></li>
+<li class="constant  "><a href="#constant_USER_API_URL" title="USER_API_URL() :: User api url"><span class="description">User api url</span><pre>USER_API_URL</pre></a></li>
 </ul>
 </li></ul>
 </div>
@@ -109,9 +114,15 @@ These values can all be modified in it's own constant for maintaining purposes.<
 </table>
 <h3>
 <i title="Constants" class="icon-custom icon-constant"></i> Constants</h3>
-<a id="constant_AMOUNT_OF_PRODUCTS_BOUGHT"> </a><div class="element clickable constant  constant_AMOUNT_OF_PRODUCTS_BOUGHT" data-toggle="collapse" data-target=".constant_AMOUNT_OF_PRODUCTS_BOUGHT .collapse" title="">
+<a id="constant_AMOUNT_OF_DISCOUNT_FOR_NEW_USER"> </a><div class="element clickable constant  constant_AMOUNT_OF_DISCOUNT_FOR_NEW_USER" data-toggle="collapse" data-target=".constant_AMOUNT_OF_DISCOUNT_FOR_NEW_USER .collapse" title="">
+<h2>Amount of discount for new user in R$ (applicable on rule new-user)</h2>
+<pre>AMOUNT_OF_DISCOUNT_FOR_NEW_USER = 25 </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_AMOUNT_OF_PRODUCTS_BOUGHT_FOR_DISCOUNT"> </a><div class="element clickable constant  constant_AMOUNT_OF_PRODUCTS_BOUGHT_FOR_DISCOUNT" data-toggle="collapse" data-target=".constant_AMOUNT_OF_PRODUCTS_BOUGHT_FOR_DISCOUNT .collapse" title="">
 <h2>Amount of products to determine discount (applicable on rule take-3-pay-2)</h2>
-<pre>AMOUNT_OF_PRODUCTS_BOUGHT = 3 </pre>
+<pre>AMOUNT_OF_PRODUCTS_BOUGHT_FOR_DISCOUNT = 3 </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
@@ -127,15 +138,33 @@ These values can all be modified in it's own constant for maintaining purposes.<
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
+<a id="constant_PERCENT_FOR_SAME_CATEGORY_DISCOUNT"> </a><div class="element clickable constant  constant_PERCENT_FOR_SAME_CATEGORY_DISCOUNT" data-toggle="collapse" data-target=".constant_PERCENT_FOR_SAME_CATEGORY_DISCOUNT .collapse" title="">
+<h2>Percent to apply for same-category discount</h2>
+<pre>PERCENT_FOR_SAME_CATEGORY_DISCOUNT = 40 </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
 <a id="constant_PERCENT_FOR_SUBTOTAL_DISCOUNT"> </a><div class="element clickable constant  constant_PERCENT_FOR_SUBTOTAL_DISCOUNT" data-toggle="collapse" data-target=".constant_PERCENT_FOR_SUBTOTAL_DISCOUNT .collapse" title="">
 <h2>Percent to apply for discount (applicable on rule above_3000)</h2>
 <pre>PERCENT_FOR_SUBTOTAL_DISCOUNT = 15 </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
+<a id="constant_PRICE_TO_CONSIDER_NEW_USER_DISCOUNT"> </a><div class="element clickable constant  constant_PRICE_TO_CONSIDER_NEW_USER_DISCOUNT" data-toggle="collapse" data-target=".constant_PRICE_TO_CONSIDER_NEW_USER_DISCOUNT .collapse" title="">
+<h2>PRICE_TO_CONSIDER_NEW_USER_DISCOUNT</h2>
+<pre>PRICE_TO_CONSIDER_NEW_USER_DISCOUNT = 50 </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
 <a id="constant_SUBTOTAL_VALUE_FOR_DISCOUNT"> </a><div class="element clickable constant  constant_SUBTOTAL_VALUE_FOR_DISCOUNT" data-toggle="collapse" data-target=".constant_SUBTOTAL_VALUE_FOR_DISCOUNT .collapse" title="">
 <h2>Subtotal to determine value for discount (applicable on rule above_3000)</h2>
-<pre>SUBTOTAL_VALUE_FOR_DISCOUNT = "3000" </pre>
+<pre>SUBTOTAL_VALUE_FOR_DISCOUNT = '3000' </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_USER_API_URL"> </a><div class="element clickable constant  constant_USER_API_URL" data-toggle="collapse" data-target=".constant_USER_API_URL .collapse" title="">
+<h2>User api url</h2>
+<pre>USER_API_URL = 'http://localhost/api/v1/user/' </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
@@ -146,7 +175,7 @@ These values can all be modified in it's own constant for maintaining purposes.<
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor v2.9.0</a> and<br>
-            generated on 2020-09-20T14:19:53-03:00.<br></footer></div>
+            generated on 2020-09-20T21:30:40-03:00.<br></footer></div>
 </div>
 </body>
 </html>

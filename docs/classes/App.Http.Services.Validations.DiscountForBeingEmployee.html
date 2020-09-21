@@ -23,6 +23,7 @@
 <li><a href="../namespaces/App.html"><i class="icon-th"></i> App</a></li>
 <li><a>Packages</a></li>
 <li><a href="../packages/App.html"><i class="icon-folder-open"></i> App</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
 </ul>
 </li>
 <li class="dropdown" id="charts-menu">
@@ -33,7 +34,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">26</span></a></li>
+                <span class="label label-info">33</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
@@ -64,7 +65,7 @@
 <i title="Methods" class="icon-custom icon-method"></i> Methods
                     <ul>
 <li class="method public "><a href="#method___construct" title="__construct() :: DiscountForBeingStaff constructor."><span class="description">DiscountForBeingStaff constructor.</span><pre>__construct()</pre></a></li>
-<li class="method public "><a href="#method_apply" title="apply() :: Apply the discount"><span class="description">Apply the discount</span><pre>apply()</pre></a></li>
+<li class="method public "><a href="#method_apply" title="apply() :: Applies the discount"><span class="description">Applies the discount</span><pre>apply()</pre></a></li>
 <li class="method public "><a href="#method_validate" title="validate() :: Validate the discount"><span class="description">Validate the discount</span><pre>validate()</pre></a></li>
 </ul>
 </li>
@@ -97,13 +98,23 @@
 </li>
 </ul>
 <div xmlns:php="http://php.net/xsl" class="element class">
-<p class="short_description">Class DiscountForBeingEmployee</p>
+<p class="short_description">employee discount validation</p>
 <div class="details">
 <div class="long_description"></div>
-<table class="table table-bordered"><tr>
+<table class="table table-bordered">
+<tr>
+<th>author</th>
+<td><a href="mailto:hborgesdasilva9294@gmail.com">Henrique Borges da Silva</a></td>
+</tr>
+<tr>
+<th>summary</th>
+<td>This validation class checks if the employee discount can be applied</td>
+</tr>
+<tr>
 <th>package</th>
 <td><a href="../packages/App.Http.Services.Validations.html">App\Http\Services\Validations</a></td>
-</tr></table>
+</tr>
+</table>
 <h3>
 <i title="Methods" class="icon-custom icon-method"></i> Methods</h3>
 <a id="method___construct"></a><div class="element clickable method public method___construct " data-toggle="collapse" data-target=".method___construct .collapse" title="public">
@@ -120,15 +131,21 @@
 </div></div>
 </div>
 <a id="method_apply"></a><div class="element clickable method public method_apply " data-toggle="collapse" data-target=".method_apply .collapse" title="public">
-<h2>Apply the discount</h2>
+<h2>Applies the discount</h2>
 <pre>apply() </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
-<table class="table table-bordered"><tr>
+<table class="table table-bordered">
+<tr>
+<th>summary</th>
+<td>Applies the discount for employees rule</td>
+</tr>
+<tr>
 <th>inherited_from</th>
 <td>\App\Http\Services\Validations\DiscountValidationInterface::apply()</td>
-</tr></table>
+</tr>
+</table>
 </div></div>
 </div>
 <a id="method_validate"></a><div class="element clickable method public method_validate " data-toggle="collapse" data-target=".method_validate .collapse" title="public">
@@ -162,7 +179,7 @@
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor v2.9.0</a> and<br>
-            generated on 2020-09-20T14:19:53-03:00.<br></footer></div>
+            generated on 2020-09-20T21:30:40-03:00.<br></footer></div>
 </div>
 </body>
 </html>

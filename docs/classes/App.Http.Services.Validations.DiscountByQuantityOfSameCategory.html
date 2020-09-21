@@ -3,7 +3,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
 <meta charset="utf-8">
-<title>Maitha api documentation » \App\Http\DTO\Builder\SaleDataBuilder</title>
+<title>Maitha api documentation » \App\Http\Services\Validations\DiscountByQuantityOfSameCategory</title>
 <meta name="author" content="Mike van Riel">
 <meta name="description" content="">
 <link href="../css/template.css" rel="stylesheet" media="all">
@@ -64,8 +64,9 @@
 <li class="nav-header">
 <i title="Methods" class="icon-custom icon-method"></i> Methods
                     <ul>
-<li class="method public "><a href="#method___construct" title="__construct() :: SaleDataBuilder constructor."><span class="description">SaleDataBuilder constructor.</span><pre>__construct()</pre></a></li>
-<li class="method public "><a href="#method_build" title="build() :: Build the sale data passing the request in the parameter"><span class="description">Build the sale data passing the request in the parameter</span><pre>build()</pre></a></li>
+<li class="method public "><a href="#method___construct" title="__construct() :: DiscountByValueOfCategory constructor."><span class="description">DiscountByValueOfCategory constructor.</span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#method_apply" title="apply() :: Apply the discount"><span class="description">Apply the discount</span><pre>apply()</pre></a></li>
+<li class="method public "><a href="#method_validate" title="validate() :: Validate the discount"><span class="description">Validate the discount</span><pre>validate()</pre></a></li>
 </ul>
 </li>
 <li class="nav-header">
@@ -73,16 +74,12 @@
                     <ul></ul>
 </li>
 <li class="nav-header private">» Private
-                    <ul>
-<li class="property private "><a href="#property_moneyFormatter" title="$moneyFormatter() :: Money formatter object"><span class="description"></span><pre>$moneyFormatter</pre></a></li>
-<li class="property private "><a href="#property_moneyParser" title="$moneyParser() :: Money parser object"><span class="description"></span><pre>$moneyParser</pre></a></li>
-<li class="property private "><a href="#property_requestDispatcher" title="$requestDispatcher() :: "><span class="description"></span><pre>$requestDispatcher</pre></a></li>
-</ul>
+                    <ul><li class="property private "><a href="#property_saleData" title="$saleData() :: Sale data"><span class="description"></span><pre>$saleData</pre></a></li></ul>
 </li>
 </ul>
 </div>
 <div class="span8">
-<a xmlns:php="http://php.net/xsl" id="\App\Http\DTO\Builder\SaleDataBuilder"></a><ul xmlns:php="http://php.net/xsl" class="breadcrumb">
+<a xmlns:php="http://php.net/xsl" id="\App\Http\Services\Validations\DiscountByQuantityOfSameCategory"></a><ul xmlns:php="http://php.net/xsl" class="breadcrumb">
 <li>
 <a href="../index.html"><i title="Classes" class="icon-custom icon-class"></i></a><span class="divider">\</span>
 </li>
@@ -91,17 +88,17 @@
 <span class="divider">\</span><a href="../namespaces/App.Http.html">Http</a>
 </li>
 <li>
-<span class="divider">\</span><a href="../namespaces/App.Http.DTO.html">DTO</a>
+<span class="divider">\</span><a href="../namespaces/App.Http.Services.html">Services</a>
 </li>
 <li>
-<span class="divider">\</span><a href="../namespaces/App.Http.DTO.Builder.html">Builder</a>
+<span class="divider">\</span><a href="../namespaces/App.Http.Services.Validations.html">Validations</a>
 </li>
 <li class="active">
-<span class="divider">\</span><a href="../classes/App.Http.DTO.Builder.SaleDataBuilder.html">SaleDataBuilder</a>
+<span class="divider">\</span><a href="../classes/App.Http.Services.Validations.DiscountByQuantityOfSameCategory.html">DiscountByQuantityOfSameCategory</a>
 </li>
 </ul>
 <div xmlns:php="http://php.net/xsl" class="element class">
-<p class="short_description">Class SaleDataBuilder</p>
+<p class="short_description">same-category discount validation</p>
 <div class="details">
 <div class="long_description"></div>
 <table class="table table-bordered">
@@ -111,69 +108,61 @@
 </tr>
 <tr>
 <th>package</th>
-<td><a href="../packages/App.Http.DTO.Builder.html">App\Http\DTO\Builder</a></td>
+<td><a href="../packages/App.Http.Services.Validations.html">App\Http\Services\Validations</a></td>
 </tr>
 </table>
 <h3>
 <i title="Methods" class="icon-custom icon-method"></i> Methods</h3>
 <a id="method___construct"></a><div class="element clickable method public method___construct " data-toggle="collapse" data-target=".method___construct .collapse" title="public">
-<h2>SaleDataBuilder constructor.</h2>
-<pre>__construct(\Money\MoneyParser $moneyParser, \Money\MoneyFormatter $moneyFormatter, \App\Http\Services\helpers\RequestDispatcher $requestDispatcher) </pre>
+<h2>DiscountByValueOfCategory constructor.</h2>
+<pre>__construct(\App\Http\DTO\SaleData $saleData) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
-<h4>$moneyParser</h4>
-<code>\Money\MoneyParser</code>
-</div>
-<div class="subelement argument">
-<h4>$moneyFormatter</h4>
-<code>\Money\MoneyFormatter</code>
-</div>
-<div class="subelement argument">
-<h4>$requestDispatcher</h4>
-<code>\App\Http\Services\helpers\RequestDispatcher</code>
+<h4>$saleData</h4>
+<code>\App\Http\DTO\SaleData</code>
 </div>
 </div></div>
 </div>
-<a id="method_build"></a><div class="element clickable method public method_build " data-toggle="collapse" data-target=".method_build .collapse" title="public">
-<h2>Build the sale data passing the request in the parameter</h2>
-<pre>build($request) : \App\Http\DTO\SaleData</pre>
+<a id="method_apply"></a><div class="element clickable method public method_apply " data-toggle="collapse" data-target=".method_apply .collapse" title="public">
+<h2>Apply the discount</h2>
+<pre>apply() </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
-<h3>Parameters</h3>
-<div class="subelement argument"><h4>$request</h4></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\App\Http\Services\Validations\DiscountValidationInterface::apply()</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_validate"></a><div class="element clickable method public method_validate " data-toggle="collapse" data-target=".method_validate .collapse" title="public">
+<h2>Validate the discount</h2>
+<pre>validate() : boolean</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>summary</th>
+<td>Validate if the sale matches the same-category rule</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\App\Http\Services\Validations\DiscountValidationInterface::validate()</td>
+</tr>
+</table>
 <h3>Returns</h3>
-<div class="subelement response"><code>\App\Http\DTO\SaleData</code></div>
+<div class="subelement response"><code>boolean</code></div>
 </div></div>
 </div>
 <h3>
 <i title="Properties" class="icon-custom icon-property"></i> Properties</h3>
-<a id="property_moneyFormatter"> </a><div class="element clickable property private property_moneyFormatter" data-toggle="collapse" data-target=".property_moneyFormatter .collapse" title="private">
-<h2>Money formatter object</h2>
-<pre>$moneyFormatter : \Money\MoneyFormatter</pre>
-<div class="row collapse"><div class="detail-description">
-<h3>Default</h3>
-<div class="subelement argument"></div>
-</div></div>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
-</div>
-<a id="property_moneyParser"> </a><div class="element clickable property private property_moneyParser" data-toggle="collapse" data-target=".property_moneyParser .collapse" title="private">
-<h2>Money parser object</h2>
-<pre>$moneyParser : \Money\MoneyParser</pre>
-<div class="row collapse"><div class="detail-description">
-<h3>Default</h3>
-<div class="subelement argument"></div>
-</div></div>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
-</div>
-<a id="property_requestDispatcher"> </a><div class="element clickable property private property_requestDispatcher" data-toggle="collapse" data-target=".property_requestDispatcher .collapse" title="private">
-<h2>$requestDispatcher</h2>
-<pre>$requestDispatcher : \App\Http\Services\helpers\RequestDispatcher</pre>
+<a id="property_saleData"> </a><div class="element clickable property private property_saleData" data-toggle="collapse" data-target=".property_saleData .collapse" title="private">
+<h2>Sale data</h2>
+<pre>$saleData : \App\Http\DTO\SaleData</pre>
 <div class="row collapse"><div class="detail-description">
 <h3>Default</h3>
 <div class="subelement argument"></div>
