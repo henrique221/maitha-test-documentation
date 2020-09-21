@@ -1332,7 +1332,7 @@ apply the discount in case it is valid.</long-description>
     </parse_markers>
     <source>eJyVVVFv2jAQfs+v8EMlElQK297oykYL1Sq1UJW0e4mETHIp0ULi2Q4TmvjvOztxEgxtNT+AOPvO333fd+brN7ZmTkY3IBgNgYwZC35IyYIF8G0SggheaJpEVCZ5Ji4dpxCtM5M8LDaQyWCSiDAvMnlp7fvzYEFTmFBJra1T5YOZgvFAmQoWUGY85BnsAv2J1/e7XYd0CV3lW+h9GQwGJKquJtu6EJ5Qh/x1IlpREqZUCBKuIfwlSBITuYaThUKakRVuMZYmEGGlvlOmmi6vd34uaapBkmTDUlAkNPtNS3eZBB4jr85fh+DS8NXqEsULwVO0Cpj49y3lxJBWBfv6m/FkSyWQM1FTWsaLVZqEJC6yUPe5XIZIpuRFKF1TqEnydE4JR60ziTT1RmabXLXrqwN7x4Ze9QcNZbxIweqjPlQxrYqSDZXIv9ABlUPyZrODYUWrkqyAw86tDitRwfWGZJXnqd2SKFZlqavSPsPh9dO9a3XaG72CXBQrraXr6Z/jjWrH9bzLppiGc5tzo2555rC0tsJwuHi+9uf++H75Mr5/ni5v50/Lyd3iZv48871KLLWQEbfGiPdywF64v6bZnE9/F4jmFFR93SPlArjr1bXU6o2YCrtvQD3o7Jx0EHDH87wWYWpxkAXPCNoGmub3jrUd01TAW74Y64kp1TXWsFxx6giJc14OItGD2DLTafnVZO7cIyMz4CFoZSo5HqdPN9OZr3WopTGCtBTG+9GYEqJFpUk52Vf2bDQy3FYZXPmmTP/AXkf6G7QjMrClODPM3NA0LFI0R4RgOEaiJq9PPiFXXeLGaU6l91YX5+Rzy8wlT8oskfHIe20atxmD4aOyVe48xlf7yrrLjOFHs6emgVN8sCx0bdoOqMG/FiybwZ/61XXfO4s3gGxe7Z+JXNd5/6myKuIdDmA5hMJMmakM0UmqTqf6Owbz2MWnO05e3Q5lyQXSjQmvOC8Xzf9Uxzvi2IJPo0g/vgaGcNtMePZ075298w+3ZHbk</source>
   </file>
-  <file path="Services/Validations/DiscountByQuantityOfSameCategory.php" generated-path="Services.Validations.DiscountByQuantityOfSameCategory.html" hash="516a087c03888df5161a1e8afbd69ca6" package="Default">
+  <file path="Services/Validations/DiscountByQuantityOfSameCategory.php" generated-path="Services.Validations.DiscountByQuantityOfSameCategory.html" hash="96e70e3b425d8cd220355a5a56e5d5a8" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
@@ -1341,32 +1341,33 @@ apply the discount in case it is valid.</long-description>
     <namespace-alias name="Discount">\App\Http\Document\Discount</namespace-alias>
     <namespace-alias name="SaleData">\App\Http\DTO\SaleData</namespace-alias>
     <namespace-alias name="Value">\App\Http\Services\Validations\NamesMap\Value</namespace-alias>
-    <class final="false" abstract="false" namespace="App\Http\Services\Validations" line="11" package="Default">
+    <namespace-alias name="Money">\Money\Money</namespace-alias>
+    <class final="false" abstract="false" namespace="App\Http\Services\Validations" line="12" package="Default">
       <extends/>
       <implements>\App\Http\Services\Validations\DiscountValidationInterface</implements>
       <name>DiscountByQuantityOfSameCategory</name>
       <full_name>\App\Http\Services\Validations\DiscountByQuantityOfSameCategory</full_name>
-      <docblock line="11">
+      <docblock line="12">
         <description>same-category discount validation</description>
         <long-description></long-description>
-        <tag name="package" line="11" description="Default"/>
+        <tag name="package" line="12" description="Default"/>
       </docblock>
-      <property static="false" visibility="private" namespace="App\Http\Services\Validations" line="18" package="Default">
+      <property static="false" visibility="private" namespace="App\Http\Services\Validations" line="19" package="Default">
         <name>$saleData</name>
         <full_name>\App\Http\Services\Validations\DiscountByQuantityOfSameCategory::saleData</full_name>
         <default></default>
-        <docblock line="18">
+        <docblock line="19">
           <description>Sale data</description>
           <long-description></long-description>
-          <tag name="var" line="18" description="" type="\App\Http\DTO\SaleData" variable="">
+          <tag name="var" line="19" description="" type="\App\Http\DTO\SaleData" variable="">
             <type>\App\Http\DTO\SaleData</type>
           </tag>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\Services\Validations" line="20" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\Services\Validations" line="21" package="Default">
         <name>__construct</name>
         <full_name>\App\Http\Services\Validations\DiscountByQuantityOfSameCategory::__construct()</full_name>
-        <docblock line="20">
+        <docblock line="21">
           <description></description>
           <long-description></long-description>
           <tag name="inherited_from" description="\App\Http\Services\Validations\DiscountValidationInterface::__construct()" refers="\App\Http\Services\Validations\DiscountValidationInterface::__construct()" link="/classes/App.Http.Services.Validations.DiscountValidationInterface.html#method___construct"/>
@@ -1377,19 +1378,19 @@ apply the discount in case it is valid.</long-description>
           <type>\App\Http\DTO\SaleData</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\Services\Validations" line="30" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\Services\Validations" line="31" package="Default">
         <name>validate</name>
         <full_name>\App\Http\Services\Validations\DiscountByQuantityOfSameCategory::validate()</full_name>
-        <docblock line="30">
+        <docblock line="31">
           <description>Validate the discount</description>
           <long-description>Validate if the sale matches the same-category rule</long-description>
           <tag name="inherited_from" description="\App\Http\Services\Validations\DiscountValidationInterface::validate()" refers="\App\Http\Services\Validations\DiscountValidationInterface::validate()" link="/classes/App.Http.Services.Validations.DiscountValidationInterface.html#method_validate"/>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\Services\Validations" line="57" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\Services\Validations" line="58" package="Default">
         <name>apply</name>
         <full_name>\App\Http\Services\Validations\DiscountByQuantityOfSameCategory::apply()</full_name>
-        <docblock line="57">
+        <docblock line="58">
           <description>Applies the discount</description>
           <long-description>Applies the discount for same-category rule</long-description>
           <tag name="inherited_from" description="\App\Http\Services\Validations\DiscountValidationInterface::apply()" refers="\App\Http\Services\Validations\DiscountValidationInterface::apply()" link="/classes/App.Http.Services.Validations.DiscountValidationInterface.html#method_apply"/>
@@ -1398,12 +1399,12 @@ apply the discount in case it is valid.</long-description>
     </class>
     <parse_markers>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="20" code="PPC:ERR-50015">Argument $saleData is missing from the Docblock of __construct</error>
-      <error line="20" code="PPC:ERR-50008">No summary for method __construct()</error>
+      <error line="21" code="PPC:ERR-50015">Argument $saleData is missing from the Docblock of __construct</error>
+      <error line="21" code="PPC:ERR-50008">No summary for method __construct()</error>
     </parse_markers>
-    <source>eJyVVm1v2zYQ/q5fwQFGTQV5cfcxnt2mTroFWOLMdjcMdSEwEhUTkyWWpNwJq//7jpQoS7Tktvpi+Hj33HOv5C9v+IZ7KdlSyUlI0Q3n69+U4uslFTsWUrn+kyQsIoplqRx7Xi4bOrdZmG9pqta3TIZZnqqxc76ar5ckobdEEeeoC379qGk8EK6FOQVvV2dnHjpDEuQXIVH0JRMFiipnaFebgtKVFyZESmSpvCv+yEmqmCrm8RLsZ9acbXlCNeuD7oHDfaqoiCER3n8egs8Q0N8Z0oEg0CKVwMrf7ohANspKeGV+uWA78IoGss5BKc+fExaiOE9D7RMFQQjRK5GHClugg5FvbEo6+huoDZMXU3uMJk18rbD3XOpVfBSpDa3T54RR67DYqGlMtCUq3FBZCZpFEHlC28E6QVXFodi/Rs9ZlrhRVEgM0CeICEGKYEs4ru3xgIssgpT4DSv9CapykSJ7fDF9ocoW9z7C/rjW3p+7yTLKT6WhxL5fFcQQEpRTog5sTJKCne5EiRt0W0YVCfkXU5tWl1mUmCXQUfg0j3PUFbaeF2xpuVmAKuHSwz+0COi/TAJQb07O6/D8For+Xr2qDz/2AnxCU/S6y5SlgaFxyjd0d8xe8JBwdgla20xHSpLLQ06Hvu8G2FHqcUth39UVHz81yt+qlFsASdXCRE0jW4hZzQf3FraJWfn8iW65KjpLfMKD7/dNK+zIhFVD1zOsXSoozsSPDikBnAIfbRhORQgLEprYLOLr66e7xezucRW8ny+C5c3DXTC7Wd39Ol/8HdzeL2fzD4+r40mikc2ZjV6vqh9M0qGagyT7QiUMDdwaADTqPqkwQGE4bFCC1FASbupx6uBGJOrbOCAvnbZ6/EPKSp9NlvrTo9liO51YiK9f0QhNJpMW567Od6Itzccn1Q6hf2te9l5fVjvw+mMdfK4v2NmGwnAby5pED5S9lbGzR0HtGEdPn72kHUyYghMEGtimHLajp2h0VF07QDOShHmimwNcCZBEB7sr9Ho0Apc4TjICDfI9hM/Rz05nDDgRkkbNiDrm4SFLafGkNQX2L6bGBsPzAK4i3EEWFuzw3eL3oetLZYokPS6W+fNKH2t8mT8rQeDp4bBr1qeVJ3jVAWxKv9TvJ3xK16xa480sk2aGOnemCf99JuDtocoMxOYPLiPyj28w4+Fma/xVyDTqTFW36argUErcvKYg3XpBQGUvWyt16B+l2YmARJF5SlkmEjeT0XydVOt/7/0PeceKnA==</source>
+    <source>eJyVVltv2zYUftev4ACjpoJc3D3as7fUSbcAS5zZ7oahLgRGomJissSSlDth9X/fISXKkkx5Kx9siDznO9+5kj/8yLfcS8mOSk5Cim453/yiFN+sqNizkMrN7yRhEVEsS+XE83LZkLnLwnxHU7W5YzLM8lRNOufrxWZFEnpHFOkcueA3T5rGI+F6M6elxmOW0mJjfsH8zcWFhy6QBMGrkCj6mokCRZV1tK+xQOjGCxMiJbLc3hW/5SRVTBWLeAX6c6vOdjyh2o2j7JHUQ6qoiCEy3j8egmUI6HWBtGcIpEi1Yfd/2hOBrNvV5o3554LtwSoayDoo5X7+krAQxXkaapsoCEIIhxJ5qLAFOir5Rqeko9dAbZm8mtljNG3ia4GD16Ve+UeR2tI6fB03ahkWGzGNiXZEhVsqq41mEkSe0LazHaeq5FDsj9FLliVdLyokBuhTRIQgRbAjHNf6eMBFFkFI/IaWXoKqXKTIHl/NXqmyyX2IsD+ppQ+X3WAZ4edSUWLfrxJiCAnKKVFHNiZIwV6XpsQNui2lioT8g6ltq8osSswSqCh8nsclcrmt2wFbWt0oQJZwaeEvWgT0byYBqDcml7V7fgtFrzdv6sOPvQCf0Ay9damyNDA0ztmG6o7ZKx4Szq5BapdpT0lyfYzp0Pe7DjpSPWkJHFxV8fFTI/2tTHUTIKlaGq9pZBMxr/ng3sQ2MSub39EdV4UzxWcs+H5ft8LQTFjVdD3N6hJBcSa+tUkJ4BT4ZMJwKkIYkFDEZjKPx8/3y/n90zp4v1gGq9vH+2B+u77/ebH8M7h7WM0XH57Wp51EIxsz670eVd8YpGM2B0n2hUpoGrhGAGjkPqkwQGA4bFCC0FASbut2cnAjEvVNHNgvjbZq/EPKSptNlnrp1myxnU0txNevaISm02mLs6vyO96W6pOzYkfX/6tfDl5fVB14/b4OPtcX7HxLCTeKNYceJHsp484YBbETGN179oruQEIP9JtvIJtc2HKeodFJam33zEkS5omuDLAkYCc66t2gt6MRWMRxkhGojv9B9xJ936mKASdC0qjpj6MXzMPnWUsK7F/NjA6GpwFcQ9jBFYbr8N3y16GjAquh1LbqnLKnzAyL8RiQ8cg/N3UHKlMk6fFllb+s9bF2ROYvShB433QJNXLVyge8JQE2pV/qRxo+J2vmubFmJlYzFc7BbDx8nwl44Kgy1LH5wKVH/uk1aSzc7oy9CplGzpy4VdcFh5LBzbsQ8qqnEAy669bcHvrd2ul6QKLIvNcsE4mbwWg+gao75uD9C6ZsqXk=</source>
   </file>
-  <file path="DTO/Layers/CalculateSubTotal.php" generated-path="DTO.Layers.CalculateSubTotal.html" hash="3efdfffc89b4af9e2de07702cee16fa2" package="Default">
+  <file path="DTO/Layers/CalculateSubTotal.php" generated-path="DTO.Layers.CalculateSubTotal.html" hash="b299b665c32081361b91fc2cfd0d1917" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
@@ -1411,20 +1412,21 @@ apply the discount in case it is valid.</long-description>
     </docblock>
     <namespace-alias name="SaleData">\App\Http\DTO\SaleData</namespace-alias>
     <namespace-alias name="Money">\Money\Money</namespace-alias>
-    <class final="false" abstract="false" namespace="App\Http\DTO\Layers" line="12" package="Default">
+    <namespace-alias name="Throwable">\Throwable</namespace-alias>
+    <class final="false" abstract="false" namespace="App\Http\DTO\Layers" line="13" package="Default">
       <extends/>
       <implements>\App\Http\DTO\Layers\LayerInterface</implements>
       <name>CalculateSubTotal</name>
       <full_name>\App\Http\DTO\Layers\CalculateSubTotal</full_name>
-      <docblock line="12">
+      <docblock line="13">
         <description>Calculate SubTotal</description>
         <long-description>The responsibility of this class is to calculate the subtotal of the sale</long-description>
-        <tag name="package" line="12" description="Default"/>
+        <tag name="package" line="13" description="Default"/>
       </docblock>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO\Layers" line="17" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO\Layers" line="18" package="Default">
         <name>exec</name>
         <full_name>\App\Http\DTO\Layers\CalculateSubTotal::exec()</full_name>
-        <docblock line="17">
+        <docblock line="18">
           <description>This method is executed to calculate the subtotal of the sale (Not considering the discounts)</description>
           <long-description>Executes the flow of the layer</long-description>
           <tag name="inherited_from" description="\App\Http\DTO\Layers\LayerInterface::exec()" refers="\App\Http\DTO\Layers\LayerInterface::exec()" link="/classes/App.Http.DTO.Layers.LayerInterface.html#method_exec"/>
@@ -1438,11 +1440,11 @@ apply the discount in case it is valid.</long-description>
     </class>
     <parse_markers>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="17" code="PPC:ERR-50015">Argument $saleData is missing from the Docblock of exec</error>
+      <error line="18" code="PPC:ERR-50015">Argument $saleData is missing from the Docblock of exec</error>
     </parse_markers>
-    <source>eJyNUs2O2jAQvvsp5oCEgxbR826h2l0OrURb2mVvXIwzEEuObcVjqaji3Tt2SAR76hyccWa+nxn585fQBOFUizEojfAcwv4rUdivdz/3G3XGLj4JkeKHypuyuFaknkrpu3d43peTmxezmYAZvCqrk1WE8JYOO0/K8t9c2DUIHct5F83BWENn8EegxkTQVsUInJAHPeKJATEdKHP0rXxnA0y2ED1kFBu0wLTBYouOIpQxvjnC7sgjir8COIrLHNkQK7ZIja+zNv5BnQjr/zMB8ocn0HmYGjvjTqVSm6h9YvHqKrIo35AO1mg4JqfJeFek5LBLmMRr1oN6nzkmo/Cy3/Xj48vvjfxU8baHnqPvUOkG5MgyX52Qtp2vk6YoK1ARJqG/VjfkRSA5w62GH8AS7gmK3lZ1ETtZzVchZ3LgKR3vA1ZWDzBlY1P2dceu2ryLTD3qzFdtsmSCPd+T/UrKET8JWX0kudnBmM9Xqq7llf8GcLlZ3ThMRBpehxwZrqCLuIh/95r1gg==</source>
+    <source>eJyNUsFu2zAMvfsreAhQOViQnds1w7YeNqDbujW95SLLTC1AlgSJwhoM+fdRcmy43g7jQaZEvvdImu/e+85XVvYYvVQIH7w/fCbyh7v998O9PGGIN1WV4iLyKA3eSZI3JfTVWTwdyjk87LvgfsnGIGO363UFa/gkjUpGEsJjavaOpOHXHNh3CIHVnY260UbTCdwRqNMRlJExAjvkQE14YkBMDWWOIZXvXA+TbasBMomNWqB7b7BHSxFKV18sYThyx9XvCthKldlyQazYI3Wuzdr4gioRtv9XBIhvjkDlZloM2j6XSKujconF64vItnx9aoxWcExWkXa2SIlxtLCKF28ADXVmo3Ca3bKtplJuh59xff3x5714W/P853lHF1CqDsTEvdk9Iz0E1yZFUdQgI6z8cK0XIkUoWc3pmjflFl6TFN0HGSIGUW92Pnti5CoZTyNW1G/gigu84vr+UpB9nlSmn7Q2uz4Z0t6cXhP+SNISL4yo/0U0m8nkb3aybcVFYwE6L0Y6NReRxj0SE9MMfOa9oDzVae1hhS8Kff6pyylSzpnFZzTVcJ6rP0JdF3M=</source>
   </file>
-  <file path="DTO/Builder/SaleDataBuilder.php" generated-path="DTO.Builder.SaleDataBuilder.html" hash="c39e38cc65c5f047bf9fbd051d36e43b" package="Default">
+  <file path="DTO/Builder/SaleDataBuilder.php" generated-path="DTO.Builder.SaleDataBuilder.html" hash="efca6e88fa6f9d51327973cefe2b6cf2" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
@@ -1454,55 +1456,56 @@ apply the discount in case it is valid.</long-description>
     <namespace-alias name="Request">\Illuminate\Http\Request</namespace-alias>
     <namespace-alias name="MoneyFormatter">\Money\MoneyFormatter</namespace-alias>
     <namespace-alias name="MoneyParser">\Money\MoneyParser</namespace-alias>
-    <class final="false" abstract="false" namespace="App\Http\DTO\Builder" line="14" package="Default">
+    <namespace-alias name="Throwable">\Throwable</namespace-alias>
+    <class final="false" abstract="false" namespace="App\Http\DTO\Builder" line="15" package="Default">
       <extends/>
       <name>SaleDataBuilder</name>
       <full_name>\App\Http\DTO\Builder\SaleDataBuilder</full_name>
-      <docblock line="14">
+      <docblock line="15">
         <description>Sale data builder</description>
         <long-description></long-description>
-        <tag name="package" line="14" description="Default"/>
+        <tag name="package" line="15" description="Default"/>
       </docblock>
-      <property static="false" visibility="private" namespace="App\Http\DTO\Builder" line="21" package="Default">
+      <property static="false" visibility="private" namespace="App\Http\DTO\Builder" line="22" package="Default">
         <name>$moneyParser</name>
         <full_name>\App\Http\DTO\Builder\SaleDataBuilder::moneyParser</full_name>
         <default></default>
-        <docblock line="21">
+        <docblock line="22">
           <description>Money parser object</description>
           <long-description></long-description>
-          <tag name="var" line="21" description="" type="\Money\MoneyParser" variable="">
+          <tag name="var" line="22" description="" type="\Money\MoneyParser" variable="">
             <type>\Money\MoneyParser</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="private" namespace="App\Http\DTO\Builder" line="28" package="Default">
+      <property static="false" visibility="private" namespace="App\Http\DTO\Builder" line="29" package="Default">
         <name>$moneyFormatter</name>
         <full_name>\App\Http\DTO\Builder\SaleDataBuilder::moneyFormatter</full_name>
         <default></default>
-        <docblock line="28">
+        <docblock line="29">
           <description>Money formatter object</description>
           <long-description></long-description>
-          <tag name="var" line="28" description="" type="\Money\MoneyFormatter" variable="">
+          <tag name="var" line="29" description="" type="\Money\MoneyFormatter" variable="">
             <type>\Money\MoneyFormatter</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="private" namespace="App\Http\DTO\Builder" line="35" package="Default">
+      <property static="false" visibility="private" namespace="App\Http\DTO\Builder" line="36" package="Default">
         <name>$requestDispatcher</name>
         <full_name>\App\Http\DTO\Builder\SaleDataBuilder::requestDispatcher</full_name>
         <default></default>
-        <docblock line="35">
+        <docblock line="36">
           <description>Request dispatcher</description>
           <long-description></long-description>
-          <tag name="var" line="35" description="" type="\App\Http\Services\helpers\RequestDispatcher" variable="">
+          <tag name="var" line="36" description="" type="\App\Http\Services\helpers\RequestDispatcher" variable="">
             <type>\App\Http\Services\helpers\RequestDispatcher</type>
           </tag>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO\Builder" line="37" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO\Builder" line="38" package="Default">
         <name>__construct</name>
         <full_name>\App\Http\DTO\Builder\SaleDataBuilder::__construct()</full_name>
-        <docblock line="37">
+        <docblock line="38">
           <description></description>
           <long-description></long-description>
         </docblock>
@@ -1522,13 +1525,13 @@ apply the discount in case it is valid.</long-description>
           <type>\App\Http\Services\helpers\RequestDispatcher</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO\Builder" line="52" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO\Builder" line="53" package="Default">
         <name>build</name>
         <full_name>\App\Http\DTO\Builder\SaleDataBuilder::build()</full_name>
-        <docblock line="52">
+        <docblock line="53">
           <description>Build the sale data passing the request in the parameter</description>
           <long-description></long-description>
-          <tag name="return" line="52" description="" type="\App\Http\DTO\SaleData">
+          <tag name="return" line="53" description="" type="\App\Http\DTO\SaleData">
             <type>\App\Http\DTO\SaleData</type>
           </tag>
         </docblock>
@@ -1541,15 +1544,15 @@ apply the discount in case it is valid.</long-description>
     </class>
     <parse_markers>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="37" code="PPC:ERR-50015">Argument $moneyParser is missing from the Docblock of __construct</error>
-      <error line="37" code="PPC:ERR-50015">Argument $moneyFormatter is missing from the Docblock of __construct</error>
-      <error line="37" code="PPC:ERR-50015">Argument $requestDispatcher is missing from the Docblock of __construct</error>
-      <error line="37" code="PPC:ERR-50008">No summary for method __construct()</error>
-      <error line="52" code="PPC:ERR-50015">Argument $request is missing from the Docblock of build</error>
+      <error line="38" code="PPC:ERR-50015">Argument $moneyParser is missing from the Docblock of __construct</error>
+      <error line="38" code="PPC:ERR-50015">Argument $moneyFormatter is missing from the Docblock of __construct</error>
+      <error line="38" code="PPC:ERR-50015">Argument $requestDispatcher is missing from the Docblock of __construct</error>
+      <error line="38" code="PPC:ERR-50008">No summary for method __construct()</error>
+      <error line="53" code="PPC:ERR-50015">Argument $request is missing from the Docblock of build</error>
     </parse_markers>
-    <source>eJyNVctu2zAQvOsr9hDAkmHD96Zx2sQtmkPRtElPlhHQFGOxkCiGDxdG4H8vRZEKLapJeLBh7e7M7O5Q/njJS54wVBPJESbwmfP8m1I8X93/yK80rQoizpNEyzDUYF0TpvJb0RQaq/NB2FTeoYqskEKD0B0Re4qJzEtScSJk/os8aSLVihp2hcuWqy24qSpdU4YU6epcWhf83jByyO3n10bUSClfFkRukZBW+WI6TWAKrSAojCLYdk2Zh4sEV0hK8GJdu8lzAubYwvZMO1zgFhKa7R+ClQv5jE97JCAgds8X9psLujetwFl9omyU5NF39BZP3/orVMF4hmxuolD0kx9jitYzTibiLXYJeltRDI+aYUUbBg8PuGFSCeOZtEMyJ5jayYRmpxl9L8PeXvIitSPKbHIGz33RmSqpnC8DYrgYbGos9UXORTzsQUEkoq0ZmVlbcow2ZV0JqiQgew9zY1vKdvapAwLK7E/jUnOZVbxPQZQWrDf76SYHi7J3JPUe8VozmxuMTjos0w8jf3voNJ7pbHx4s/+OKAumyLvXjDQ0642zVnvMXSEIl5B6gfPljqh04vMnGSDZq3cvq3D3IbrrwWWlAX+YNV9Kom6KdAC6ntBisoHLD8B0Vb1We20uzK4RhzEM3Mfeh/VTI6aoOsRITy7yPpzfjJpS816OgbQPvYkk15vW1tz/Jfj4MYn90rEaW3ypEa2G69M+MMkym+nUyLTnCjQ4W/fY/hodk38bJiI0</source>
+    <source>eJyNVVtv2jAUfs+vOA9IJAjE+1jpLmxaH6Z1a/dEUGUcl3hKHNcXOlTx3+skdjBOtuIHUHy+c77v3JL31zznEUMlkRxhAh85T78pxdPV/Y/0k6ZFRsQiirT0TRXWJWEqvRVVprFaBGbjeYcKskIKBaY7IvYUE5nmpOBEyPQXedJEqhU17ArnNVftcFMUuqQMKdL6WVhr/F4xckib36+VKJFSzs2z3CIh3fV9LqpntC2ISWQ+mUQwgVofZEYgbNsczeU8wgWSEpx2m330EoE5jWN9Ji0N8IYBqu0fgpU1OcSHPRLg6bD38+afC7o3mcGo9IUOkzy6BN/i6SrxHyqvWiGbLTBkXSOGmHrdGiYT/aa2AL0tKIZHzbCiFYOHB1wxqYQZobiNZI5XtbMKTc8RXS5hbidcT+2AsgacwEvnNFI5lbOlRwxXQaeGoCc5V/1iBw49EbXPQM1ql2OvU81UgsoJyG6GuRlbynbNrQ0ElDWPZkrNbqt+PwVRWrBu2M87GTSq2ZHYzYjTmjTYU+mUOHhPTcLSRjcZMvLckcX9Kk+Hyzn9Z9GSxTkVb99F0lCtN3bg3DFbRBDOIXbSZ8sdUfHY+YwTQLLLy77VkiAZn8XmY5FxoMVHzpaSqJssDoKvxzQbb+D6HTBdFG/5fzZrtavEYSgO7myXx/upEVNUHfrRnqzl8li/GTXu5qXeD6ad6aJocr2pF4G7b4qPOUbDc9UqMOPzpUS0CNurnWGcJA3SKpNxxxnosUvRxT9Zj4DruYO4+5jAiPzFhNcLEo6KqjGe3Qtjt/oYvQIQrEaW</source>
   </file>
-  <file path="DTO/SaleData.php" generated-path="DTO.SaleData.html" hash="41d6ae95832004a2cfb7f1987cb6b8f3" package="Default">
+  <file path="DTO/SaleData.php" generated-path="DTO.SaleData.html" hash="90ab4a21372b6b4d26dd6f14f1e1a9a3" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
@@ -2104,7 +2107,7 @@ requests during the execution of the flow</description>
       <error line="107" code="PPC:ERR-50015">Argument $subTotal is missing from the Docblock of setSubTotal</error>
       <error line="126" code="PPC:ERR-50015">Argument $total is missing from the Docblock of setTotal</error>
     </parse_markers>
-    <source>eJydVttu2zAMffdXcECAOsGyvLdLugLdFStWLO1T0wfFlhsXjixIcrZs67+PlnyRfImT+qFVZJI6PD6k+P6Sb7jHyJZKTgIKV5yvvijFV9d3Py48L5Pu1uo72VMhzb+vTFERoddF2+6GcB6zp9WSJPSaKHJLBJ6B9tIYf5MpW1IRkyT+Q9ZJEeImZXS/0n/x8Nlk4sEEbkjMQGIcCDEQBAmREvfdV1GS/jKvQG2IgiBlCl9KIEkCjAZUSiL2wCsYEKUCTal2P5Mgg5TTdxh05pkwJXKgvxVlYb1RpwLxlid0S5mSrYS8vx7go3PInwl82BEBUgmkBUaYrfi4JXEC97gCvSwMZ/o/F/GOKGpZIiNdEYkQZA8jLtIwCxDIbbHojlaa9QTT1P9jGZI2ktn6LlUkgWW2VvmiO2JpdijirExbx4G7/miqO5SRXfHL3UQC8CMqyiWkEX4sGmQqThmsiaQh4CJdP9OcGMJCQC53MYrBiCT3NA5oiUoiIDkN4igOjBwa5+l8XOU/PMIosbE10jHvYA4Pj+2kllRB/nWBtr9+tk4QRZSxQCcjqbovdeC3NDQ+r8SpvY308mekNrGcLmq1zR1BlWaCqkwwY212X1poPx+P9slGi+AM4AY0+0wLYd/xOVnclXb1XXRVNwthiM+yTvyG3yCZVaXN7XI6lcq+XAp/DWqI5CoFxFw79FHsYm2jugpDrACt2IMHkzDUReC7pVCIfZA+UxJYOPPC43Tukq5uUDLXLNAhEk0XOY5Cc/AhiWI3nNrNsonO4eaAOpdFV/V1/6y77Lib1KpXz+2GfCqvQ+Dr22GI1Ap+E6/Lpwu1m9GOq6dNl8OV9hjUoSr5Uq8ja5goq+0doOoYntQhkn5mTA8ynVWxVESo8lbES4PuKI5B2jQvZHND6jGomH8OgBUZa+HEKYqSYAO+UyFAZNkOLFtNvsBBM2U465XlP13k6Iz/+MIxjiOMWzo0I9kslTau+4vnrrr0ZQa25k1f7Rd8mRECdiTJWkPB0Q372ZoQad8Hf3AyOJPF6HUG8wW8KTh26gsuQY9r51C/1fL7lIotUdgG/fF0EekffleA8Vv3yDBGKWRMNY+8LvYL5PZzCUeZnQixjtSE2EmJXUcuuLphvR5MD1lY4jjnPe01GIvdYtu37B/L+n3x/gP0RM0/</source>
+    <source>eJydVttu2zAMffdXcECAOsGy7Dld0nXormixommfmj4otty4cGRBkrNlW/59tOSbfImT+qFVZJI6PD6k+OGCr7nDyIZKTjwKl5wvvynFl1f3P88dJ5H21vKa7KiQ5t93pqgI0Ou8aXdDOA/Z83JBInpFFLklAs9Ae2mMf8iYLagISRT+IasoC3ETM7pb6r94+GQ0cmAENyRkIDEO+BgIvIhIifv2qyCKf5lXoNZEgRczhS8lkCgCRj0qJRE74AUMCGKBplS7n0mQXszpOww6cUyYHDnQ34oyv9woU4FwwyO6oUzJRkLOXwfw0Tmkzwg+bokAqQTSAgPMVnzekDCCB1yBXmaGE/2fi3BLFK1YIiNtEYkQZAcDLmI/8RDIbbZoj5abdQTT1P9jCZI2kMnqPlYkgkWyUumiPWJudijiJE9bx4H77miqPZSRXfbL3kQC8CMqyiXEAX4s6iUqjBmsiKQ+4CJevdCUGMJ8QC63IYrBiCT1NA5oiUoiIDn1wiD0jBxq5+l8bOU/PsEgqmKrpWPewQwen5pJLaiC9OsCbX79ZBUhiiBhnk5GUvWQ68BtaGg4LcSpvY300meg1qEcz0u1zSxB5WaCqkQwY2129w20X49H+1xFi+AM4Bq06pkVhF3Hp2RxW9rFd9FVXS+EPj7zOnFrfr1kFpU2q5bTqVR25ZL5a1B9JBcpIObSoYtiG2sT1aXvYwVoxR48mPi+LgLXLoVM7L30mZLAwpllHqdzF7V1g5y5eoH2kWi6yHEUmoMPSRS74bjaLOvoLG4OqHORdVVX98+yyw7bSS169azakE/ltQ98eTv0kVrAr+O1+bShtjPacvU06bK40h69OlQ5X+p1ZPUTVWl7B6g6hid1iKS7hOlBprUqFooIld+KeGnQLcUxSJumhWxuSD0GZfPPAbAiYQ2cOEVR4q3BtSoEiMzbQcVWky9w0IwZznp5+Y/nKTrjPzy3jMMA4+YO9UhVlnIb233v2Ks2fZmBrX7TF/sZX2aEgC2JksZQcHTDfqlMiLTrgz9aGZzJbPQ6g9kc3mQcN+ur+lwY9U2nn+6u3ffN91Mow2jLL7HYEIX90h2O54H+4badNHxrY/ND1EzCVB3bVbbfiu0osxMhlpHqEFu56yau7GyvB9NBFvYCHAifdxpMhd1s263YP+WFvnf+Azum0zU=</source>
   </file>
   <file path="Controllers/CartsController.php" generated-path="Controllers.CartsController.html" hash="1bebc198a7774cb894913fdcca3222e4" package="Default">
     <docblock line="0">
@@ -2308,7 +2311,7 @@ requests during the execution of the flow</description>
     </parse_markers>
     <source>eJydVVtv2yAUfvevOKoq1YmUpVvf2l0aKdOmPWwPjbaXShXBJKHCgACnzbb+93KxIwebOKpfEsF34Lsc4OMXuZEZRyXREmECMynvvxsj7+cCVyXh5ibLKk3ghxb8jiiKGP2LlozY4el4nMEYbguisaLSUMFhsaEaMENag/1jCwswAijXBnFDkSFgNgQKqrGouLFQxHDF7HhhQX5uxcSTXXaahVXmNRRoKRlxhHSHS/YvA/t5Pu4bw0IYxGCLWEXgiZrNfkdAUjJKihrY4G+3SIE2ivI1nBtX/NvV/rGlDYEaOvW/UtGtE5PAwie4uLywFkW0ZqWfbcgcp4E8eB5jIwIxqrvpYicJiNV+16PSLfbXKiHVzzlpXHDSo+6OGJ+gaZnfyvcgh8MtqiWjGFYVx76JNDGLXl/z4xGNruEgrdAW7js3ti8nn5NpJRa82S+giKkUD+uE0ZeO/m9Of6rxYtfbh+brM3LNfQ1n7y/fXX04O2rOOmmOlR/8icS3uac8SGnaZ9rfROn8fLPkh301nE/TYnXBG/xPcx2w3vo6uZpItJucEEBQd6LhLSlpg0PLWNbt+xHyn6J9puxZxDV0NJTALLoY8tS9MphKXODy6V47b0mqV/SQ+R1hp8XQz7gvkPCwhJdKLB8JNjBPtBJdc6FIPFpvjJRCu/8lfY7v7kjTY+s5I/moX4UV/hDIPNgLW+de1agR8ZK9AqkTVlg=</source>
   </file>
-  <file path="DTO/Layers/DiscountApplier.php" generated-path="DTO.Layers.DiscountApplier.html" hash="b48180b55a65a16797d88fe4918f441c" package="Default">
+  <file path="DTO/Layers/DiscountApplier.php" generated-path="DTO.Layers.DiscountApplier.html" hash="0833e1aa9392dfcde305ef7f99f8620a" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
@@ -2345,7 +2348,7 @@ requests during the execution of the flow</description>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
       <error line="19" code="PPC:ERR-50015">Argument $saleData is missing from the Docblock of exec</error>
     </parse_markers>
-    <source>eJyNU0uL2zAQvvtXTGFh7bAhe0+bsiWFFrZsacL2kosij2OBLRlr3Kwp+e8dKX4naauLZc18r5H9/mORFoEWOdpCSISnoth9ISp26+3L7lnUWNplEFR2WDGyylHTbq2sNJWm5aTOyI3IcC1IMHYxmwUwc+WsBkoR4gYGRvt3y73c4Zq2/FqyE6Ot2qtMUQ0m4SZlQWbCWuANGRD/4loE5/bWoRNXWILKiwyddws+21dNWCacO/gdAC/v1a0ZfH5DWRF61iQzx+u6TXcL2jqnOVJqYmcVzxwxiIR1PLB19IqlSpQUpNh55rzAL5GpWLDkMVUy7aNJoWGPXlxh3Egt/LOo9pmSkFRaeiInGLazhzvb7CLffI7o1p2Xaq1Y+NC3zlcHpNdROYz4Fjtoqg4pWmqrjH1c9tW4P9Z47NI6iq4nF28DdAeZryzSU+62bRnj8HEonpgSBY8mnAYQdpIpGqR1SyVTkA96IRfB6iLilOvGGP6LfnnJNBnHiGXcfgr6XT9OMiSyiyv8ZjTW30VpsQyjEct8Vbjj0FLJWuFQ3yO3jo+/gAp/Kkr7G4we4P7Tj+f7QQY31XdKk+fxPgaxGTGd3A2vm2rvRYfjGSbsm/kL6Qz9JW8bcSR+K+/lJUUPI6BP3Z1E02naZmTNBK6UN1Tyb32or8y6LvAlYcVz8FNwCv4AxHC0tg==</source>
+    <source>eJyNU0uL2zAQvvtXTGEhdtiQvadN2SWFFrZsacL2kotij2OBLRlr3Kwp+e8dKX47aVcXy5r5XiP74+c8yT0lMjS5CBEe83z/lSjfb3Yv+2dRYWFWnleafkWHZYaK9htpQl0qWo3qjNyKFDeCBGOX87kHc1tOK6AEIaphoJV7N9zLHbZpx68FO9HKyINMJVWgY26SBsJUGAO8IQ3if1xL79LeOLTiEguQWZ6i9W7AZfumCIuYc3t/PODlvNo1hy9vGJaEjjVO9em6bt3dgHbWaYaU6MhaxQtHBCJmHQdsHL1iIWMZCpLsPLVe4LdIZSRY8pTIMOmihULBAZ24xKiWWrpnXh5SGUJcqtARWUG/mT3cmXoXuOZLRLvunFRjxcCnrnWxPiK9Dsp+wLfYQhN5TNBQU2Xsw6qrRt2xwlOb1lK0PZl466FbyGJtkB4zu23KGPmzh1lfPtYFCh6OP44gzChV0Mtrl4zHIBd1IhjAehJyzHVjEO+iX02ZRgMZsAzbz1636wZKmkQ6ucTvWmH1QxQGCz8YsCzWuT32DRWs5ff1HXJn+fgbKPGXpKS7w+AeZk8/n2e9DHaqH6Qix+N89GIzYjy5G1635cGJ9sfTT9g18zfSGvpH3ibiQPxW3uklBfcDoEvdngTjaZp6ZPUErpS3VPCPfayuzLrK8SVmxUvws3f2/gJiwbUE</source>
   </file>
   <package name="Default" full_name="Default"/>
   <package name="global" full_name="global"/>

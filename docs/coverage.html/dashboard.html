@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Dashboard for /var/www/html/app</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href=".css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href=".css/nv.d3.min.css" rel="stylesheet" type="text/css">
+  <link href=".css/style.css" rel="stylesheet" type="text/css">
+  <link href=".css/custom.css" rel="stylesheet" type="text/css">
+ </head>
+ <body>
+  <header>
+   <div class="container-fluid">
+    <div class="row">
+     <div class="col-md-12">
+      <nav aria-label="breadcrumb">
+       <ol class="breadcrumb">
+         <li class="breadcrumb-item"><a href="index.html">/var/www/html/app</a></li>
+         <li class="breadcrumb-item active">(Dashboard)</li>
+
+       </ol>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </header>
+  <div class="container-fluid">
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Classes</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="classCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="classComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Http/Controllers/CartsController.php.html#18">App\Http\Controllers\CartsController</a></td><td class="text-right">57%</td></tr>
+       <tr><td><a href="Http/DTO/Layers/CalculateSubTotal.php.html#13">App\Http\DTO\Layers\CalculateSubTotal</a></td><td class="text-right">77%</td></tr>
+       <tr><td><a href="Http/DTO/SaleData.php.html#14">App\Http\DTO\SaleData</a></td><td class="text-right">86%</td></tr>
+       <tr><td><a href="Http/Services/Validations/DiscountByQuantityOfSameItem.php.html#13">App\Http\Services\Validations\DiscountByQuantityOfSameItem</a></td><td class="text-right">89%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Http/DTO/SaleData.php.html#14">App\Http\DTO\SaleData</a></td><td class="text-right">17</td></tr>
+       <tr><td><a href="Http/Services/Validations/DiscountByQuantityOfSameItem.php.html#13">App\Http\Services\Validations\DiscountByQuantityOfSameItem</a></td><td class="text-right">11</td></tr>
+       <tr><td><a href="Http/Controllers/CartsController.php.html#18">App\Http\Controllers\CartsController</a></td><td class="text-right">3</td></tr>
+       <tr><td><a href="Http/DTO/Layers/CalculateSubTotal.php.html#13">App\Http\DTO\Layers\CalculateSubTotal</a></td><td class="text-right">3</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Methods</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="methodCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="methodComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Http/DTO/SaleData.php.html#97"><abbr title="App\Http\DTO\SaleData::getLayers">getLayers</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Document/Discount.php.html#94"><abbr title="App\Http\Document\Discount::jsonSerialize">jsonSerialize</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Document/Product.php.html#116"><abbr title="App\Http\Document\Product::jsonSerialize">jsonSerialize</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Services/Validations/DiscountByQuantityOfSameItem.php.html#110"><abbr title="App\Http\Services\Validations\DiscountByQuantityOfSameItem::getPreviousMultiplier">getPreviousMultiplier</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Controllers/CartsController.php.html#53"><abbr title="App\Http\Controllers\CartsController::calculateDiscount">calculateDiscount</abbr></a></td><td class="text-right">52%</td></tr>
+       <tr><td><a href="Http/DTO/Layers/CalculateSubTotal.php.html#18"><abbr title="App\Http\DTO\Layers\CalculateSubTotal::exec">exec</abbr></a></td><td class="text-right">77%</td></tr>
+       <tr><td><a href="Http/DTO/SaleData.php.html#164"><abbr title="App\Http\DTO\SaleData::jsonSerialize">jsonSerialize</abbr></a></td><td class="text-right">77%</td></tr>
+       <tr><td><a href="Http/DTO/SaleData.php.html#147"><abbr title="App\Http\DTO\SaleData::run">run</abbr></a></td><td class="text-right">80%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Http/Services/Validations/DiscountByQuantityOfSameItem.php.html#110"><abbr title="App\Http\Services\Validations\DiscountByQuantityOfSameItem::getPreviousMultiplier">getPreviousMultiplier</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Http/DTO/SaleData.php.html#164"><abbr title="App\Http\DTO\SaleData::jsonSerialize">jsonSerialize</abbr></a></td><td class="text-right">4</td></tr>
+       <tr><td><a href="Http/DTO/Layers/CalculateSubTotal.php.html#18"><abbr title="App\Http\DTO\Layers\CalculateSubTotal::exec">exec</abbr></a></td><td class="text-right">3</td></tr>
+       <tr><td><a href="Http/DTO/SaleData.php.html#147"><abbr title="App\Http\DTO\SaleData::run">run</abbr></a></td><td class="text-right">3</td></tr>
+       <tr><td><a href="Http/Controllers/CartsController.php.html#53"><abbr title="App\Http\Controllers\CartsController::calculateDiscount">calculateDiscount</abbr></a></td><td class="text-right">2</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <footer>
+    <hr/>
+    <p>
+     <small>Generated by <a href="https://github.com/sebastianbergmann/php-code-coverage" target="_top">php-code-coverage 6.1.4</a> using <a href="https://secure.php.net/" target="_top">PHP 7.3.8</a> with <a href="https://xdebug.org/">Xdebug 2.7.2</a> and <a href="https://phpunit.de/">PHPUnit 7.5.14</a> at Mon Sep 21 5:12:26 UTC 2020.</small>
+    </p>
+   </footer>
+  </div>
+  <script src=".js/jquery.min.js" type="text/javascript"></script>
+  <script src=".js/d3.min.js" type="text/javascript"></script>
+  <script src=".js/nv.d3.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+$(document).ready(function() {
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#classCoverageDistribution svg')
+      .datum(getCoverageDistributionData([0,0,0,0,0,0,1,0,1,2,3,24], "Class Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#methodCoverageDistribution svg')
+      .datum(getCoverageDistributionData([4,0,0,0,0,0,1,0,2,1,2,75], "Method Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getCoverageDistributionData(data, label) {
+    var labels = [
+      '0%',
+      '0-10%',
+      '10-20%',
+      '20-30%',
+      '30-40%',
+      '40-50%',
+      '50-60%',
+      '60-70%',
+      '70-80%',
+      '80-90%',
+      '90-100%',
+      '100%'
+    ];
+    var values = [];
+    $.each(labels, function(key) {
+      values.push({x: labels[key], y: data[key]});
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Cyclomatic Complexity');
+
+    d3.select('#classComplexity svg')
+      .datum(getComplexityData([[100,2,"<a href=\"Console\/Kernel.php.html#7\">App\\Console\\Kernel<\/a>"],[100,2,"<a href=\"Exceptions\/Handler.php.html#7\">App\\Exceptions\\Handler<\/a>"],[57.89473684210527,3,"<a href=\"Http\/Controllers\/CartsController.php.html#18\">App\\Http\\Controllers\\CartsController<\/a>"],[100,0,"<a href=\"Http\/Controllers\/Controller.php.html#7\">App\\Http\\Controllers\\Controller<\/a>"],[100,2,"<a href=\"Http\/Controllers\/UsersController.php.html#8\">App\\Http\\Controllers\\UsersController<\/a>"],[100,8,"<a href=\"Http\/DTO\/Builder\/SaleDataBuilder.php.html#15\">App\\Http\\DTO\\Builder\\SaleDataBuilder<\/a>"],[77.77777777777779,3,"<a href=\"Http\/DTO\/Layers\/CalculateSubTotal.php.html#13\">App\\Http\\DTO\\Layers\\CalculateSubTotal<\/a>"],[100,4,"<a href=\"Http\/DTO\/Layers\/DiscountApplier.php.html#12\">App\\Http\\DTO\\Layers\\DiscountApplier<\/a>"],[100,4,"<a href=\"Http\/DTO\/Layers\/DiscountVerification.php.html#9\">App\\Http\\DTO\\Layers\\DiscountVerification<\/a>"],[100,10,"<a href=\"Http\/DTO\/Mapping\/DiscountParameters.php.html#9\">App\\Http\\DTO\\Mapping\\DiscountParameters<\/a>"],[100,4,"<a href=\"Http\/DTO\/Mapping\/SaleDataParameters.php.html#11\">App\\Http\\DTO\\Mapping\\SaleDataParameters<\/a>"],[86.20689655172413,17,"<a href=\"Http\/DTO\/SaleData.php.html#14\">App\\Http\\DTO\\SaleData<\/a>"],[90,7,"<a href=\"Http\/Document\/Discount.php.html#9\">App\\Http\\Document\\Discount<\/a>"],[92.3076923076923,9,"<a href=\"Http\/Document\/Product.php.html#9\">App\\Http\\Document\\Product<\/a>"],[100,0,"<a href=\"Http\/Kernel.php.html#13\">App\\Http\\Kernel<\/a>"],[100,0,"<a href=\"Http\/Middleware\/CheckForMaintenanceMode.php.html#6\">App\\Http\\Middleware\\CheckForMaintenanceMode<\/a>"],[100,0,"<a href=\"Http\/Middleware\/TrimStrings.php.html#6\">App\\Http\\Middleware\\TrimStrings<\/a>"],[100,0,"<a href=\"Http\/Middleware\/TrustProxies.php.html#7\">App\\Http\\Middleware\\TrustProxies<\/a>"],[100,3,"<a href=\"Http\/Requests\/CartDiscountRequest.php.html#6\">App\\Http\\Requests\\CartDiscountRequest<\/a>"],[97.2972972972973,11,"<a href=\"Http\/Services\/Validations\/DiscountByQuantityOfSameCategory.php.html#12\">App\\Http\\Services\\Validations\\DiscountByQuantityOfSameCategory<\/a>"],[89.47368421052632,11,"<a href=\"Http\/Services\/Validations\/DiscountByQuantityOfSameItem.php.html#13\">App\\Http\\Services\\Validations\\DiscountByQuantityOfSameItem<\/a>"],[100,5,"<a href=\"Http\/Services\/Validations\/DiscountByTotalValue.php.html#14\">App\\Http\\Services\\Validations\\DiscountByTotalValue<\/a>"],[100,7,"<a href=\"Http\/Services\/Validations\/DiscountForBeingEmployee.php.html#13\">App\\Http\\Services\\Validations\\DiscountForBeingEmployee<\/a>"],[100,5,"<a href=\"Http\/Services\/Validations\/DiscountForNewUsers.php.html#11\">App\\Http\\Services\\Validations\\DiscountForNewUsers<\/a>"],[100,0,"<a href=\"Http\/Services\/Validations\/NamesMap\/Value.php.html#10\">App\\Http\\Services\\Validations\\NamesMap\\Value<\/a>"],[100,1,"<a href=\"Http\/Services\/helpers\/RequestDispatcher.php.html#7\">App\\Http\\Services\\helpers\\RequestDispatcher<\/a>"],[100,2,"<a href=\"Providers\/AppServiceProvider.php.html#7\">App\\Providers\\AppServiceProvider<\/a>"],[100,1,"<a href=\"Providers\/AuthServiceProvider.php.html#6\">App\\Providers\\AuthServiceProvider<\/a>"],[100,1,"<a href=\"Providers\/EventServiceProvider.php.html#6\">App\\Providers\\EventServiceProvider<\/a>"],[100,3,"<a href=\"Providers\/MoneyServiceProvider.php.html#11\">App\\Providers\\MoneyServiceProvider<\/a>"],[100,4,"<a href=\"Providers\/RouteServiceProvider.php.html#7\">App\\Providers\\RouteServiceProvider<\/a>"]], 'Class Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Method Complexity');
+
+    d3.select('#methodComplexity svg')
+      .datum(getComplexityData([[100,1,"<a href=\"Console\/Kernel.php.html#23\">App\\Console\\Kernel::schedule<\/a>"],[100,1,"<a href=\"Console\/Kernel.php.html#34\">App\\Console\\Kernel::commands<\/a>"],[100,1,"<a href=\"Exceptions\/Handler.php.html#33\">App\\Exceptions\\Handler::report<\/a>"],[100,1,"<a href=\"Exceptions\/Handler.php.html#45\">App\\Exceptions\\Handler::render<\/a>"],[100,1,"<a href=\"Http\/Controllers\/CartsController.php.html#27\">App\\Http\\Controllers\\CartsController::__construct<\/a>"],[52.94117647058824,2,"<a href=\"Http\/Controllers\/CartsController.php.html#53\">App\\Http\\Controllers\\CartsController::calculateDiscount<\/a>"],[100,2,"<a href=\"Http\/Controllers\/UsersController.php.html#10\">App\\Http\\Controllers\\UsersController::information<\/a>"],[100,1,"<a href=\"Http\/DTO\/Builder\/SaleDataBuilder.php.html#38\">App\\Http\\DTO\\Builder\\SaleDataBuilder::__construct<\/a>"],[100,7,"<a href=\"Http\/DTO\/Builder\/SaleDataBuilder.php.html#53\">App\\Http\\DTO\\Builder\\SaleDataBuilder::build<\/a>"],[77.77777777777779,3,"<a href=\"Http\/DTO\/Layers\/CalculateSubTotal.php.html#18\">App\\Http\\DTO\\Layers\\CalculateSubTotal::exec<\/a>"],[100,4,"<a href=\"Http\/DTO\/Layers\/DiscountApplier.php.html#19\">App\\Http\\DTO\\Layers\\DiscountApplier::exec<\/a>"],[100,4,"<a href=\"Http\/DTO\/Layers\/DiscountVerification.php.html#17\">App\\Http\\DTO\\Layers\\DiscountVerification::exec<\/a>"],[100,1,"<a href=\"Http\/DTO\/Mapping\/DiscountParameters.php.html#47\">App\\Http\\DTO\\Mapping\\DiscountParameters::setDiscount<\/a>"],[100,1,"<a href=\"Http\/DTO\/Mapping\/DiscountParameters.php.html#58\">App\\Http\\DTO\\Mapping\\DiscountParameters::getDiscount<\/a>"],[100,1,"<a href=\"Http\/DTO\/Mapping\/DiscountParameters.php.html#68\">App\\Http\\DTO\\Mapping\\DiscountParameters::setStrategy<\/a>"],[100,1,"<a href=\"Http\/DTO\/Mapping\/DiscountParameters.php.html#79\">App\\Http\\DTO\\Mapping\\DiscountParameters::getStrategy<\/a>"],[100,1,"<a href=\"Http\/DTO\/Mapping\/DiscountParameters.php.html#89\">App\\Http\\DTO\\Mapping\\DiscountParameters::addValidDiscounts<\/a>"],[100,1,"<a href=\"Http\/DTO\/Mapping\/DiscountParameters.php.html#102\">App\\Http\\DTO\\Mapping\\DiscountParameters::getValidDiscounts<\/a>"],[100,1,"<a href=\"Http\/DTO\/Mapping\/DiscountParameters.php.html#114\">App\\Http\\DTO\\Mapping\\DiscountParameters::setPromotionalProducts<\/a>"],[100,1,"<a href=\"Http\/DTO\/Mapping\/DiscountParameters.php.html#125\">App\\Http\\DTO\\Mapping\\DiscountParameters::getPromotionalProducts<\/a>"],[100,1,"<a href=\"Http\/DTO\/Mapping\/DiscountParameters.php.html#137\">App\\Http\\DTO\\Mapping\\DiscountParameters::setRepeatedProductsCategories<\/a>"],[100,1,"<a href=\"Http\/DTO\/Mapping\/DiscountParameters.php.html#148\">App\\Http\\DTO\\Mapping\\DiscountParameters::getRepeatedProductsCategories<\/a>"],[100,1,"<a href=\"Http\/DTO\/Mapping\/SaleDataParameters.php.html#35\">App\\Http\\DTO\\Mapping\\SaleDataParameters::__construct<\/a>"],[100,1,"<a href=\"Http\/DTO\/Mapping\/SaleDataParameters.php.html#50\">App\\Http\\DTO\\Mapping\\SaleDataParameters::getMoneyParser<\/a>"],[100,1,"<a href=\"Http\/DTO\/Mapping\/SaleDataParameters.php.html#60\">App\\Http\\DTO\\Mapping\\SaleDataParameters::getMoneyFormatter<\/a>"],[100,1,"<a href=\"Http\/DTO\/Mapping\/SaleDataParameters.php.html#68\">App\\Http\\DTO\\Mapping\\SaleDataParameters::getRequestDispatcher<\/a>"],[100,1,"<a href=\"Http\/DTO\/SaleData.php.html#48\">App\\Http\\DTO\\SaleData::setUserEmail<\/a>"],[100,1,"<a href=\"Http\/DTO\/SaleData.php.html#57\">App\\Http\\DTO\\SaleData::getUserEmail<\/a>"],[100,1,"<a href=\"Http\/DTO\/SaleData.php.html#67\">App\\Http\\DTO\\SaleData::setProducts<\/a>"],[100,1,"<a href=\"Http\/DTO\/SaleData.php.html#78\">App\\Http\\DTO\\SaleData::getProducts<\/a>"],[100,1,"<a href=\"Http\/DTO\/SaleData.php.html#86\">App\\Http\\DTO\\SaleData::addLayer<\/a>"],[0,1,"<a href=\"Http\/DTO\/SaleData.php.html#97\">App\\Http\\DTO\\SaleData::getLayers<\/a>"],[100,1,"<a href=\"Http\/DTO\/SaleData.php.html#107\">App\\Http\\DTO\\SaleData::setSubTotal<\/a>"],[100,1,"<a href=\"Http\/DTO\/SaleData.php.html#118\">App\\Http\\DTO\\SaleData::getSubTotal<\/a>"],[100,1,"<a href=\"Http\/DTO\/SaleData.php.html#126\">App\\Http\\DTO\\SaleData::setTotal<\/a>"],[100,1,"<a href=\"Http\/DTO\/SaleData.php.html#137\">App\\Http\\DTO\\SaleData::getTotal<\/a>"],[80,3,"<a href=\"Http\/DTO\/SaleData.php.html#147\">App\\Http\\DTO\\SaleData::run<\/a>"],[77.77777777777779,4,"<a href=\"Http\/DTO\/SaleData.php.html#164\">App\\Http\\DTO\\SaleData::jsonSerialize<\/a>"],[100,1,"<a href=\"Http\/Document\/Discount.php.html#35\">App\\Http\\Document\\Discount::setTotalValueWithDiscount<\/a>"],[100,1,"<a href=\"Http\/Document\/Discount.php.html#46\">App\\Http\\Document\\Discount::getTotalValueWithDiscount<\/a>"],[100,1,"<a href=\"Http\/Document\/Discount.php.html#54\">App\\Http\\Document\\Discount::setTypeOf<\/a>"],[100,1,"<a href=\"Http\/Document\/Discount.php.html#65\">App\\Http\\Document\\Discount::getTypeOf<\/a>"],[100,1,"<a href=\"Http\/Document\/Discount.php.html#73\">App\\Http\\Document\\Discount::setAmountDiscounted<\/a>"],[100,1,"<a href=\"Http\/Document\/Discount.php.html#82\">App\\Http\\Document\\Discount::getAmountDiscounted<\/a>"],[0,1,"<a href=\"Http\/Document\/Discount.php.html#94\">App\\Http\\Document\\Discount::jsonSerialize<\/a>"],[100,1,"<a href=\"Http\/Document\/Product.php.html#42\">App\\Http\\Document\\Product::setId<\/a>"],[100,1,"<a href=\"Http\/Document\/Product.php.html#51\">App\\Http\\Document\\Product::getId<\/a>"],[100,1,"<a href=\"Http\/Document\/Product.php.html#59\">App\\Http\\Document\\Product::setCategoryId<\/a>"],[100,1,"<a href=\"Http\/Document\/Product.php.html#68\">App\\Http\\Document\\Product::getCategoryId<\/a>"],[100,1,"<a href=\"Http\/Document\/Product.php.html#76\">App\\Http\\Document\\Product::setQuantity<\/a>"],[100,1,"<a href=\"Http\/Document\/Product.php.html#87\">App\\Http\\Document\\Product::getQuantity<\/a>"],[100,1,"<a href=\"Http\/Document\/Product.php.html#95\">App\\Http\\Document\\Product::setUnitPrice<\/a>"],[100,1,"<a href=\"Http\/Document\/Product.php.html#106\">App\\Http\\Document\\Product::getUnitPrice<\/a>"],[0,1,"<a href=\"Http\/Document\/Product.php.html#116\">App\\Http\\Document\\Product::jsonSerialize<\/a>"],[100,1,"<a href=\"Http\/Requests\/CartDiscountRequest.php.html#8\">App\\Http\\Requests\\CartDiscountRequest::authorize<\/a>"],[100,1,"<a href=\"Http\/Requests\/CartDiscountRequest.php.html#13\">App\\Http\\Requests\\CartDiscountRequest::rules<\/a>"],[100,1,"<a href=\"Http\/Requests\/CartDiscountRequest.php.html#25\">App\\Http\\Requests\\CartDiscountRequest::messages<\/a>"],[100,1,"<a href=\"Http\/Services\/Validations\/DiscountByQuantityOfSameCategory.php.html#21\">App\\Http\\Services\\Validations\\DiscountByQuantityOfSameCategory::__construct<\/a>"],[100,4,"<a href=\"Http\/Services\/Validations\/DiscountByQuantityOfSameCategory.php.html#31\">App\\Http\\Services\\Validations\\DiscountByQuantityOfSameCategory::validate<\/a>"],[95.83333333333334,6,"<a href=\"Http\/Services\/Validations\/DiscountByQuantityOfSameCategory.php.html#58\">App\\Http\\Services\\Validations\\DiscountByQuantityOfSameCategory::apply<\/a>"],[100,1,"<a href=\"Http\/Services\/Validations\/DiscountByQuantityOfSameItem.php.html#24\">App\\Http\\Services\\Validations\\DiscountByQuantityOfSameItem::__construct<\/a>"],[100,2,"<a href=\"Http\/Services\/Validations\/DiscountByQuantityOfSameItem.php.html#34\">App\\Http\\Services\\Validations\\DiscountByQuantityOfSameItem::validate<\/a>"],[96.42857142857143,6,"<a href=\"Http\/Services\/Validations\/DiscountByQuantityOfSameItem.php.html#50\">App\\Http\\Services\\Validations\\DiscountByQuantityOfSameItem::apply<\/a>"],[0,2,"<a href=\"Http\/Services\/Validations\/DiscountByQuantityOfSameItem.php.html#110\">App\\Http\\Services\\Validations\\DiscountByQuantityOfSameItem::getPreviousMultiplier<\/a>"],[100,1,"<a href=\"Http\/Services\/Validations\/DiscountByTotalValue.php.html#23\">App\\Http\\Services\\Validations\\DiscountByTotalValue::__construct<\/a>"],[100,2,"<a href=\"Http\/Services\/Validations\/DiscountByTotalValue.php.html#33\">App\\Http\\Services\\Validations\\DiscountByTotalValue::validate<\/a>"],[100,2,"<a href=\"Http\/Services\/Validations\/DiscountByTotalValue.php.html#50\">App\\Http\\Services\\Validations\\DiscountByTotalValue::apply<\/a>"],[100,1,"<a href=\"Http\/Services\/Validations\/DiscountForBeingEmployee.php.html#22\">App\\Http\\Services\\Validations\\DiscountForBeingEmployee::__construct<\/a>"],[100,4,"<a href=\"Http\/Services\/Validations\/DiscountForBeingEmployee.php.html#32\">App\\Http\\Services\\Validations\\DiscountForBeingEmployee::validate<\/a>"],[100,2,"<a href=\"Http\/Services\/Validations\/DiscountForBeingEmployee.php.html#49\">App\\Http\\Services\\Validations\\DiscountForBeingEmployee::apply<\/a>"],[100,1,"<a href=\"Http\/Services\/Validations\/DiscountForNewUsers.php.html#23\">App\\Http\\Services\\Validations\\DiscountForNewUsers::__construct<\/a>"],[100,2,"<a href=\"Http\/Services\/Validations\/DiscountForNewUsers.php.html#33\">App\\Http\\Services\\Validations\\DiscountForNewUsers::validate<\/a>"],[100,2,"<a href=\"Http\/Services\/Validations\/DiscountForNewUsers.php.html#45\">App\\Http\\Services\\Validations\\DiscountForNewUsers::apply<\/a>"],[100,1,"<a href=\"Http\/Services\/helpers\/RequestDispatcher.php.html#14\">App\\Http\\Services\\helpers\\RequestDispatcher::getResponse<\/a>"],[100,1,"<a href=\"Providers\/AppServiceProvider.php.html#9\">App\\Providers\\AppServiceProvider::register<\/a>"],[100,1,"<a href=\"Providers\/AppServiceProvider.php.html#16\">App\\Providers\\AppServiceProvider::boot<\/a>"],[100,1,"<a href=\"Providers\/AuthServiceProvider.php.html#20\">App\\Providers\\AuthServiceProvider::boot<\/a>"],[100,1,"<a href=\"Providers\/EventServiceProvider.php.html#20\">App\\Providers\\EventServiceProvider::boot<\/a>"],[100,1,"<a href=\"Providers\/MoneyServiceProvider.php.html#23\">App\\Providers\\MoneyServiceProvider::register<\/a>"],[100,1,"<a href=\"Providers\/MoneyServiceProvider.php.html#49\">App\\Providers\\MoneyServiceProvider::boot<\/a>"],[100,1,"<a href=\"Providers\/MoneyServiceProvider.php.html#53\">App\\Providers\\MoneyServiceProvider::provides<\/a>"],[100,1,"<a href=\"Providers\/RouteServiceProvider.php.html#23\">App\\Providers\\RouteServiceProvider::boot<\/a>"],[100,1,"<a href=\"Providers\/RouteServiceProvider.php.html#35\">App\\Providers\\RouteServiceProvider::map<\/a>"],[100,1,"<a href=\"Providers\/RouteServiceProvider.php.html#51\">App\\Providers\\RouteServiceProvider::mapWebRoutes<\/a>"],[100,1,"<a href=\"Providers\/RouteServiceProvider.php.html#65\">App\\Providers\\RouteServiceProvider::mapApiRoutes<\/a>"]], 'Method Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getComplexityData(data, label) {
+    var values = [];
+    $.each(data, function(key) {
+      var value = Math.round(data[key][0]*100) / 100;
+      values.push({
+        x: value,
+        y: data[key][1],
+        class: data[key][2],
+        size: 0.05,
+        shape: 'diamond'
+      });
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+});
+  </script>
+ </body>
+</html>
