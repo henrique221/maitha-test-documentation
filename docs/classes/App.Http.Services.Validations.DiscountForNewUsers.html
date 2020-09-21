@@ -3,7 +3,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
 <meta charset="utf-8">
-<title>Maitha api documentation » \App\Http\Services\Validations\DiscountForNewUsers</title>
+<title>Maitha api documentation - Henrique » \App\Http\Services\Validations\DiscountForNewUsers</title>
 <meta name="author" content="Mike van Riel">
 <meta name="description" content="">
 <link href="../css/template.css" rel="stylesheet" media="all">
@@ -15,7 +15,7 @@
 <body>
 <div class="navbar navbar-fixed-top">
 <div class="navbar-inner"><div class="container">
-<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">Maitha api documentation</a><div class="nav-collapse"><ul class="nav">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">Maitha api documentation - Henrique</a><div class="nav-collapse"><ul class="nav">
 <li class="dropdown">
 <a href="#api" class="dropdown-toggle" data-toggle="dropdown">
                                     API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
@@ -23,7 +23,6 @@
 <li><a href="../namespaces/App.html"><i class="icon-th"></i> App</a></li>
 <li><a>Packages</a></li>
 <li><a href="../packages/App.html"><i class="icon-folder-open"></i> App</a></li>
-<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
 </ul>
 </li>
 <li class="dropdown" id="charts-menu">
@@ -34,7 +33,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">33</span></a></li>
+                <span class="label label-info">19</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
@@ -65,7 +64,7 @@
 <i title="Methods" class="icon-custom icon-method"></i> Methods
                     <ul>
 <li class="method public "><a href="#method___construct" title="__construct() :: DiscountForNewUsers constructors."><span class="description">DiscountForNewUsers constructors.</span><pre>__construct()</pre></a></li>
-<li class="method public "><a href="#method_apply" title="apply() :: Apply the discount"><span class="description">Apply the discount</span><pre>apply()</pre></a></li>
+<li class="method public "><a href="#method_apply" title="apply() :: Applies the discount"><span class="description">Applies the discount</span><pre>apply()</pre></a></li>
 <li class="method public "><a href="#method_validate" title="validate() :: Validate the discount"><span class="description">Validate the discount</span><pre>validate()</pre></a></li>
 </ul>
 </li>
@@ -74,7 +73,7 @@
                     <ul></ul>
 </li>
 <li class="nav-header private">» Private
-                    <ul><li class="property private "><a href="#property_saleData" title="$saleData() :: "><span class="description"></span><pre>$saleData</pre></a></li></ul>
+                    <ul><li class="property private "><a href="#property_saleData" title="$saleData() :: Sale data"><span class="description"></span><pre>$saleData</pre></a></li></ul>
 </li>
 </ul>
 </div>
@@ -127,33 +126,47 @@
 </div></div>
 </div>
 <a id="method_apply"></a><div class="element clickable method public method_apply " data-toggle="collapse" data-target=".method_apply .collapse" title="public">
-<h2>Apply the discount</h2>
+<h2>Applies the discount</h2>
 <pre>apply() </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
-<table class="table table-bordered"><tr>
+<table class="table table-bordered">
+<tr>
+<th>summary</th>
+<td>Applies the discount for new user rule</td>
+</tr>
+<tr>
 <th>inherited_from</th>
 <td>\App\Http\Services\Validations\DiscountValidationInterface::apply()</td>
-</tr></table>
+</tr>
+</table>
 </div></div>
 </div>
 <a id="method_validate"></a><div class="element clickable method public method_validate " data-toggle="collapse" data-target=".method_validate .collapse" title="public">
 <h2>Validate the discount</h2>
-<pre>validate() </pre>
+<pre>validate() : boolean</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
-<table class="table table-bordered"><tr>
+<table class="table table-bordered">
+<tr>
+<th>summary</th>
+<td>Validate if the sale matches the new-user rule</td>
+</tr>
+<tr>
 <th>inherited_from</th>
 <td>\App\Http\Services\Validations\DiscountValidationInterface::validate()</td>
-</tr></table>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response"><code>boolean</code></div>
 </div></div>
 </div>
 <h3>
 <i title="Properties" class="icon-custom icon-property"></i> Properties</h3>
 <a id="property_saleData"> </a><div class="element clickable property private property_saleData" data-toggle="collapse" data-target=".property_saleData .collapse" title="private">
-<h2>$saleData</h2>
+<h2>Sale data</h2>
 <pre>$saleData : \App\Http\DTO\SaleData</pre>
 <div class="row collapse"><div class="detail-description">
 <h3>Default</h3>
@@ -169,7 +182,7 @@
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor v2.9.0</a> and<br>
-            generated on 2020-09-20T21:30:40-03:00.<br></footer></div>
+            generated on 2020-09-20T21:59:22-03:00.<br></footer></div>
 </div>
 </body>
 </html>
