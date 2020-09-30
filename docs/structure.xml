@@ -1,352 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<project title="Maitha api documentation - Henrique" version="v2.9.0">
+<project title="Api documentation" version="v2.9.0">
   <partials/>
-  <file path="DTO/Mapping/SaleDataParameters.php" generated-path="DTO.Mapping.SaleDataParameters.html" hash="15bbb4c0945d16167393d3a68771d6c8" package="Default">
-    <docblock line="0">
-      <description></description>
-      <long-description></long-description>
-      <tag name="package" line="0" description="Default"/>
-    </docblock>
-    <namespace-alias name="RequestDispatcher">\App\Http\Services\helpers\RequestDispatcher</namespace-alias>
-    <namespace-alias name="MoneyFormatter">\Money\MoneyFormatter</namespace-alias>
-    <namespace-alias name="MoneyParser">\Money\MoneyParser</namespace-alias>
-    <class final="false" abstract="true" namespace="App\Http\DTO\Mapping" line="11" package="Default">
-      <extends>\App\Http\DTO\Mapping\DiscountParameters</extends>
-      <name>SaleDataParameters</name>
-      <full_name>\App\Http\DTO\Mapping\SaleDataParameters</full_name>
-      <docblock line="11">
-        <description>Abstract class that contains Sale Data class main parameters</description>
-        <long-description></long-description>
-        <tag name="package" line="11" description="Default"/>
-        <tag name="inherited_from" description="\App\Http\DTO\Mapping\DiscountParameters" refers="\App\Http\DTO\Mapping\DiscountParameters" link="/classes/App.Http.DTO.Mapping.DiscountParameters.html"/>
-      </docblock>
-      <property static="false" visibility="private" namespace="App\Http\DTO\Mapping" line="18" package="Default">
-        <name>$moneyParser</name>
-        <full_name>\App\Http\DTO\Mapping\SaleDataParameters::moneyParser</full_name>
-        <default></default>
-        <docblock line="18">
-          <description></description>
-          <long-description></long-description>
-          <tag name="var" line="18" description="&lt;p&gt;MoneyParser&lt;/p&gt;" type="\Money\MoneyParser" variable="$moneyParser">
-            <type>\Money\MoneyParser</type>
-          </tag>
-          <tag name="object" line="18" description="MoneyParser"/>
-        </docblock>
-      </property>
-      <property static="false" visibility="private" namespace="App\Http\DTO\Mapping" line="25" package="Default">
-        <name>$moneyFormatter</name>
-        <full_name>\App\Http\DTO\Mapping\SaleDataParameters::moneyFormatter</full_name>
-        <default></default>
-        <docblock line="25">
-          <description></description>
-          <long-description></long-description>
-          <tag name="var" line="25" description="&lt;p&gt;MoneyFormatter&lt;/p&gt;" type="\Money\MoneyFormatter" variable="">
-            <type>\Money\MoneyFormatter</type>
-          </tag>
-          <tag name="object" line="25" description="MoneyFormatter"/>
-        </docblock>
-      </property>
-      <property static="false" visibility="private" namespace="App\Http\DTO\Mapping" line="33" package="Default">
-        <name>$requestDispatcher</name>
-        <full_name>\App\Http\DTO\Mapping\SaleDataParameters::requestDispatcher</full_name>
-        <default></default>
-        <docblock line="33">
-          <description>Request dispatcher is implemented in parameters to make
-requests during the execution of the flow</description>
-          <long-description></long-description>
-          <tag name="var" line="33" description="" type="\App\Http\Services\helpers\RequestDispatcher" variable="$requestDispatcher">
-            <type>\App\Http\Services\helpers\RequestDispatcher</type>
-          </tag>
-        </docblock>
-      </property>
-      <property static="false" visibility="private" namespace="App\Http\DTO\Mapping" line="16" package="Default">
-        <name>$discount</name>
-        <full_name>\App\Http\DTO\Mapping\DiscountParameters::discount</full_name>
-        <default></default>
-        <docblock line="16">
-          <description></description>
-          <long-description></long-description>
-          <tag name="var" line="16" description="&lt;p&gt;Discount&lt;/p&gt;" type="\Money\Money|string" variable="$discount">
-            <type>\Money\Money</type>
-            <type>string</type>
-          </tag>
-          <tag name="object" line="16" description="Money"/>
-        </docblock>
-      </property>
-      <property static="false" visibility="private" namespace="App\Http\DTO\Mapping" line="21" package="Default">
-        <name>$strategy</name>
-        <full_name>\App\Http\DTO\Mapping\DiscountParameters::strategy</full_name>
-        <default></default>
-        <docblock line="21">
-          <description></description>
-          <long-description></long-description>
-          <tag name="var" line="21" description="&lt;p&gt;Strategy&lt;/p&gt;" type="string" variable="$strategy">
-            <type>string</type>
-          </tag>
-        </docblock>
-      </property>
-      <property static="false" visibility="private" namespace="App\Http\DTO\Mapping" line="26" package="Default">
-        <name>$promotionalProducts</name>
-        <full_name>\App\Http\DTO\Mapping\DiscountParameters::promotionalProducts</full_name>
-        <default></default>
-        <docblock line="26">
-          <description></description>
-          <long-description></long-description>
-          <tag name="var" line="26" description="&lt;p&gt;Promotional Products&lt;/p&gt;" type="array|null" variable="$promotionalProducts">
-            <type>array</type>
-            <type>null</type>
-          </tag>
-        </docblock>
-      </property>
-      <property static="false" visibility="private" namespace="App\Http\DTO\Mapping" line="33" package="Default">
-        <name>$validDiscounts</name>
-        <full_name>\App\Http\DTO\Mapping\DiscountParameters::validDiscounts</full_name>
-        <default>array()</default>
-        <docblock line="33">
-          <description></description>
-          <long-description></long-description>
-          <tag name="var" line="33" description="&lt;p&gt;Array of possible valid discounts&lt;/p&gt;" type="array&lt;mixed,\App\Http\Document\Discount&gt;" variable="$validDiscounts">
-            <type>array&lt;mixed,\App\Http\Document\Discount&gt;</type>
-          </tag>
-          <tag name="array" line="33" description="Discount"/>
-        </docblock>
-      </property>
-      <property static="false" visibility="private" namespace="App\Http\DTO\Mapping" line="38" package="Default">
-        <name>$repeatedProductsCategories</name>
-        <full_name>\App\Http\DTO\Mapping\DiscountParameters::repeatedProductsCategories</full_name>
-        <default>array()</default>
-        <docblock line="38">
-          <description></description>
-          <long-description></long-description>
-          <tag name="var" line="38" description="&lt;p&gt;Repeated product's categories&lt;/p&gt;" type="array&lt;mixed,\App\Http\Document\Product&gt;" variable="$repeatedProductsCategories">
-            <type>array&lt;mixed,\App\Http\Document\Product&gt;</type>
-          </tag>
-        </docblock>
-      </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO\Mapping" line="35" package="Default">
-        <name>__construct</name>
-        <full_name>\App\Http\DTO\Mapping\SaleDataParameters::__construct()</full_name>
-        <docblock line="35">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$moneyParser</name>
-          <default></default>
-          <type>\Money\MoneyParser</type>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$moneyFormatter</name>
-          <default></default>
-          <type>\Money\MoneyFormatter</type>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$requestDispatcher</name>
-          <default></default>
-          <type>\App\Http\Services\helpers\RequestDispatcher</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO\Mapping" line="50" package="Default">
-        <name>getMoneyParser</name>
-        <full_name>\App\Http\DTO\Mapping\SaleDataParameters::getMoneyParser()</full_name>
-        <docblock line="50">
-          <description>Retrieve MoneyParser object</description>
-          <long-description></long-description>
-          <tag name="description" line="50" description="MoneyParser is used in sales data scope to parse money values"/>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO\Mapping" line="60" package="Default">
-        <name>getMoneyFormatter</name>
-        <full_name>\App\Http\DTO\Mapping\SaleDataParameters::getMoneyFormatter()</full_name>
-        <docblock line="60">
-          <description>Retrieve MoneyFormatter object</description>
-          <long-description></long-description>
-          <tag name="description" line="60" description="MoneyFormatter is used in sales data scope to format money values"/>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO\Mapping" line="68" package="Default">
-        <name>getRequestDispatcher</name>
-        <full_name>\App\Http\DTO\Mapping\SaleDataParameters::getRequestDispatcher()</full_name>
-        <docblock line="68">
-          <description>RequestDispatcher</description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO\Mapping" line="47" package="Default">
-        <name>setDiscount</name>
-        <full_name>\App\Http\DTO\Mapping\DiscountParameters::setDiscount()</full_name>
-        <docblock line="47">
-          <description>Set discount</description>
-          <long-description></long-description>
-          <tag name="param" line="47" description="" type="\Money\Money|string" variable="$discount">
-            <type>\Money\Money</type>
-            <type>string</type>
-          </tag>
-          <tag name="return" line="47" description="" type="\App\Http\DTO\Mapping\DiscountParameters|\App\Http\DTO\SaleData">
-            <type>\App\Http\DTO\Mapping\DiscountParameters</type>
-            <type>\App\Http\DTO\SaleData</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$discount</name>
-          <default></default>
-          <type>\Money\Money|string</type>
-        </argument>
-        <inherited_from>\App\Http\DTO\Mapping\DiscountParameters</inherited_from>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO\Mapping" line="58" package="Default">
-        <name>getDiscount</name>
-        <full_name>\App\Http\DTO\Mapping\DiscountParameters::getDiscount()</full_name>
-        <docblock line="58">
-          <description>Get discount</description>
-          <long-description></long-description>
-          <tag name="return" line="58" description="" type="\Money\Money|string">
-            <type>\Money\Money</type>
-            <type>string</type>
-          </tag>
-        </docblock>
-        <inherited_from>\App\Http\DTO\Mapping\DiscountParameters</inherited_from>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO\Mapping" line="68" package="Default">
-        <name>setStrategy</name>
-        <full_name>\App\Http\DTO\Mapping\DiscountParameters::setStrategy()</full_name>
-        <docblock line="68">
-          <description>Set strategy</description>
-          <long-description></long-description>
-          <tag name="return" line="68" description="" type="\App\Http\DTO\Mapping\DiscountParameters|\App\Http\DTO\SaleData">
-            <type>\App\Http\DTO\Mapping\DiscountParameters</type>
-            <type>\App\Http\DTO\SaleData</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$strategy</name>
-          <default></default>
-          <type>\App\Http\DTO\Mapping\string</type>
-        </argument>
-        <inherited_from>\App\Http\DTO\Mapping\DiscountParameters</inherited_from>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO\Mapping" line="79" package="Default">
-        <name>getStrategy</name>
-        <full_name>\App\Http\DTO\Mapping\DiscountParameters::getStrategy()</full_name>
-        <docblock line="79">
-          <description>Get strategy</description>
-          <long-description></long-description>
-          <tag name="return" line="79" description="" type="string">
-            <type>string</type>
-          </tag>
-        </docblock>
-        <inherited_from>\App\Http\DTO\Mapping\DiscountParameters</inherited_from>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO\Mapping" line="89" package="Default">
-        <name>addValidDiscounts</name>
-        <full_name>\App\Http\DTO\Mapping\DiscountParameters::addValidDiscounts()</full_name>
-        <docblock line="89">
-          <description>Add valid discounts</description>
-          <long-description></long-description>
-          <tag name="return" line="89" description="" type="\App\Http\DTO\Mapping\DiscountParameters|\App\Http\DTO\SaleData">
-            <type>\App\Http\DTO\Mapping\DiscountParameters</type>
-            <type>\App\Http\DTO\SaleData</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$validDiscounts</name>
-          <default></default>
-          <type>\App\Http\Document\Discount</type>
-        </argument>
-        <inherited_from>\App\Http\DTO\Mapping\DiscountParameters</inherited_from>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO\Mapping" line="102" package="Default">
-        <name>getValidDiscounts</name>
-        <full_name>\App\Http\DTO\Mapping\DiscountParameters::getValidDiscounts()</full_name>
-        <docblock line="102">
-          <description>Get valid discounts</description>
-          <long-description></long-description>
-          <tag name="description" line="102" description="The discount is validated on the DiscountVerification layer"/>
-          <tag name="return" line="102" description="" type="array|null">
-            <type>array</type>
-            <type>null</type>
-          </tag>
-        </docblock>
-        <inherited_from>\App\Http\DTO\Mapping\DiscountParameters</inherited_from>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO\Mapping" line="114" package="Default">
-        <name>setPromotionalProducts</name>
-        <full_name>\App\Http\DTO\Mapping\DiscountParameters::setPromotionalProducts()</full_name>
-        <docblock line="114">
-          <description>Set promotional products</description>
-          <long-description></long-description>
-          <tag name="param" line="114" description="" type="array|null" variable="$promotionalProducts">
-            <type>array</type>
-            <type>null</type>
-          </tag>
-          <tag name="return" line="114" description="" type="\App\Http\DTO\Mapping\DiscountParameters|\App\Http\DTO\SaleData">
-            <type>\App\Http\DTO\Mapping\DiscountParameters</type>
-            <type>\App\Http\DTO\SaleData</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$promotionalProducts</name>
-          <default></default>
-          <type>array|null</type>
-        </argument>
-        <inherited_from>\App\Http\DTO\Mapping\DiscountParameters</inherited_from>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO\Mapping" line="125" package="Default">
-        <name>getPromotionalProducts</name>
-        <full_name>\App\Http\DTO\Mapping\DiscountParameters::getPromotionalProducts()</full_name>
-        <docblock line="125">
-          <description>Get promotional products</description>
-          <long-description></long-description>
-          <tag name="return" line="125" description="" type="array|null">
-            <type>array</type>
-            <type>null</type>
-          </tag>
-        </docblock>
-        <inherited_from>\App\Http\DTO\Mapping\DiscountParameters</inherited_from>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO\Mapping" line="137" package="Default">
-        <name>setRepeatedProductsCategories</name>
-        <full_name>\App\Http\DTO\Mapping\DiscountParameters::setRepeatedProductsCategories()</full_name>
-        <docblock line="137">
-          <description>This method receives the repeated category as an array with the productId and categoryId</description>
-          <long-description></long-description>
-          <tag name="param" line="137" description="" type="array&lt;mixed,\App\Http\Document\Product&gt;" variable="$repeatedProductsCategory">
-            <type>array&lt;mixed,\App\Http\Document\Product&gt;</type>
-          </tag>
-          <tag name="return" line="137" description="" type="\App\Http\DTO\Mapping\DiscountParameters|\App\Http\DTO\SaleData">
-            <type>\App\Http\DTO\Mapping\DiscountParameters</type>
-            <type>\App\Http\DTO\SaleData</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$repeatedProductsCategory</name>
-          <default></default>
-          <type>array&lt;mixed,\App\Http\Document\Product&gt;</type>
-        </argument>
-        <inherited_from>\App\Http\DTO\Mapping\DiscountParameters</inherited_from>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO\Mapping" line="148" package="Default">
-        <name>getRepeatedProductsCategories</name>
-        <full_name>\App\Http\DTO\Mapping\DiscountParameters::getRepeatedProductsCategories()</full_name>
-        <docblock line="148">
-          <description>Get repeated products categories</description>
-          <long-description></long-description>
-          <tag name="return" line="148" description="" type="array">
-            <type>array</type>
-          </tag>
-        </docblock>
-        <inherited_from>\App\Http\DTO\Mapping\DiscountParameters</inherited_from>
-      </method>
-    </class>
-    <parse_markers>
-      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="35" code="PPC:ERR-50015">Argument $moneyParser is missing from the Docblock of __construct</error>
-      <error line="35" code="PPC:ERR-50015">Argument $moneyFormatter is missing from the Docblock of __construct</error>
-      <error line="35" code="PPC:ERR-50015">Argument $requestDispatcher is missing from the Docblock of __construct</error>
-      <error line="35" code="PPC:ERR-50008">No summary for method __construct()</error>
-    </parse_markers>
-    <source>eJyVVMFu2zAMvfsreMihDVbkvq5bCwTDLkWLdUcDhSIztTZbViXa2xD030cpgS3LTprpYMcSH/Ue+ZhPX0xpMi1qdEZIhDtj8m9EJl//eMjvhTFKv1xnWeuioye0nZLo8hIrg9bl3/G1RUdrxTlIlmivA+C+0fg3D8+vja0F0czJo7DOb2er5TKDJdxtHFkhCWQlnAMqBf9sNAmlHTyJCmEtSBxOa94FIyzT59yO8atMjBN4iEc89lGAfwh14YD5yqbVNBxluwx4BSp+LeG2ExYiorCoo4/o4ADocc3mJzKJacQqvI1VnSAcpeMiHL29L2DyeeraNGju5qgx6eWHrkLRtxWUA1WbCmvUhAWMig/UcD9+4R7Oy+7xDorWsou4lcilR9mSajQ027CxrZrfqQYvemIpWNh0a17WJOygzLSbSknYtloGAs/PbCu2Sivpoud8rNMfxhFDN5IqDnFnC7iEXQ9aUKnc1efYYjeJReZCBzo307YmgAkJj5mpmYe8zXiCrMIOR4Xaey7tYoFOWmVCreNo9hD/BQTzOJ5NtoefZ55Eg95CxkdBEAGdqJjWuM1JF1+QouQXlx8nE7eLDEmt1TNFPk/tUOUzBQ+AdzRvQ+D/i+4v6HWPR/6k9MQic+pPztuU0wTgac1nOcbsqBHfsn/F9h8b</source>
-  </file>
   <file path="DTO/Layers/LayerInterface.php" generated-path="DTO.Layers.LayerInterface.html" hash="80c998164987d36f4a137009ee17be20" package="Default">
     <docblock line="0">
       <description></description>
@@ -382,76 +36,74 @@ requests during the execution of the flow</description>
     </parse_markers>
     <source>eJx9jzELwjAQhff7FTc4aJb+gAoiVFAoOOjYJYYLLcT0aC6oiP/dNFSHgr7l7vjee3DrDbcMXl8psDaEW+ZmL8JNdT42tX7QEEqAGGbkpB1VWnRihVKACg9eaLBjRU59z8QK6H7BJ2BSrhilcHcnE4VQWkLr+hv2Nu9uzE2mmTf8NRd5cry4zqCN3kjXe6QUXX6ewEWYtlUJL3gDLrtVhA==</source>
   </file>
-  <file path="Document/Product.php" generated-path="Document.Product.html" hash="29cd0339e74494f95b4254f7395fc232" package="Default">
+  <file path="Document/Product.php" generated-path="Document.Product.html" hash="ed48d4e6fe95d6b9e554d0e4b205317b" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
       <tag name="package" line="0" description="Default"/>
     </docblock>
-    <namespace-alias name="JsonSerializable">\JsonSerializable</namespace-alias>
-    <class final="false" abstract="false" namespace="App\Http\Document" line="9" package="Default">
+    <class final="false" abstract="false" namespace="App\Http\Document" line="7" package="Default">
       <extends/>
-      <implements>\JsonSerializable</implements>
       <name>Product</name>
       <full_name>\App\Http\Document\Product</full_name>
-      <docblock line="9">
+      <docblock line="7">
         <description></description>
         <long-description></long-description>
-        <tag name="description" line="9" description="This class is used to instantiate the products from the sale scope"/>
-        <tag name="package" line="9" description="Default"/>
+        <tag name="description" line="7" description="This class is used to instantiate the products from the sale scope"/>
+        <tag name="package" line="7" description="Default"/>
       </docblock>
-      <property static="false" visibility="private" namespace="App\Http\Document" line="16" package="Default">
+      <property static="false" visibility="private" namespace="App\Http\Document" line="14" package="Default">
         <name>$id</name>
         <full_name>\App\Http\Document\Product::id</full_name>
         <default></default>
-        <docblock line="16">
+        <docblock line="14">
           <description>Id of the product</description>
           <long-description></long-description>
-          <tag name="var" line="16" description="" type="string" variable="$id">
+          <tag name="var" line="14" description="" type="string" variable="$id">
             <type>string</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="private" namespace="App\Http\Document" line="23" package="Default">
+      <property static="false" visibility="private" namespace="App\Http\Document" line="21" package="Default">
         <name>$categoryId</name>
         <full_name>\App\Http\Document\Product::categoryId</full_name>
         <default></default>
-        <docblock line="23">
+        <docblock line="21">
           <description>Category id</description>
           <long-description></long-description>
-          <tag name="var" line="23" description="" type="string" variable="$categoryId">
+          <tag name="var" line="21" description="" type="string" variable="$categoryId">
             <type>string</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="private" namespace="App\Http\Document" line="30" package="Default">
+      <property static="false" visibility="private" namespace="App\Http\Document" line="28" package="Default">
         <name>$quantity</name>
         <full_name>\App\Http\Document\Product::quantity</full_name>
         <default></default>
-        <docblock line="30">
+        <docblock line="28">
           <description>Quantity of products</description>
           <long-description></long-description>
-          <tag name="var" line="30" description="" type="integer" variable="$quantity">
+          <tag name="var" line="28" description="" type="integer" variable="$quantity">
             <type>integer</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="private" namespace="App\Http\Document" line="37" package="Default">
+      <property static="false" visibility="private" namespace="App\Http\Document" line="35" package="Default">
         <name>$unitPrice</name>
         <full_name>\App\Http\Document\Product::unitPrice</full_name>
         <default></default>
-        <docblock line="37">
+        <docblock line="35">
           <description>Price of each product</description>
           <long-description></long-description>
-          <tag name="var" line="37" description="" type="string" variable="$unitPrice">
+          <tag name="var" line="35" description="" type="string" variable="$unitPrice">
             <type>string</type>
           </tag>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\Document" line="42" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\Document" line="40" package="Default">
         <name>setId</name>
         <full_name>\App\Http\Document\Product::setId()</full_name>
-        <docblock line="42">
+        <docblock line="40">
           <description>Set the product Id</description>
           <long-description></long-description>
         </docblock>
@@ -461,18 +113,18 @@ requests during the execution of the flow</description>
           <type>\App\Http\Document\string</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\Document" line="51" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\Document" line="49" package="Default">
         <name>getId</name>
         <full_name>\App\Http\Document\Product::getId()</full_name>
-        <docblock line="51">
+        <docblock line="49">
           <description>Get the product id</description>
           <long-description></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\Document" line="59" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\Document" line="57" package="Default">
         <name>setCategoryId</name>
         <full_name>\App\Http\Document\Product::setCategoryId()</full_name>
-        <docblock line="59">
+        <docblock line="57">
           <description>Set the product's category id</description>
           <long-description></long-description>
         </docblock>
@@ -482,18 +134,18 @@ requests during the execution of the flow</description>
           <type>\App\Http\Document\string</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\Document" line="68" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\Document" line="66" package="Default">
         <name>getCategoryId</name>
         <full_name>\App\Http\Document\Product::getCategoryId()</full_name>
-        <docblock line="68">
+        <docblock line="66">
           <description>Get the id of the product's category</description>
           <long-description></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\Document" line="76" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\Document" line="74" package="Default">
         <name>setQuantity</name>
         <full_name>\App\Http\Document\Product::setQuantity()</full_name>
-        <docblock line="76">
+        <docblock line="74">
           <description>Set quantity of products</description>
           <long-description></long-description>
         </docblock>
@@ -503,19 +155,19 @@ requests during the execution of the flow</description>
           <type>\App\Http\Document\int</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\Document" line="87" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\Document" line="85" package="Default">
         <name>getQuantity</name>
         <full_name>\App\Http\Document\Product::getQuantity()</full_name>
-        <docblock line="87">
+        <docblock line="85">
           <description>Get the quantity of products bought</description>
           <long-description></long-description>
-          <tag name="Description" line="87" description="Example: &quot;2&quot;"/>
+          <tag name="Description" line="85" description="Example: &quot;2&quot;"/>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\Document" line="95" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\Document" line="93" package="Default">
         <name>setUnitPrice</name>
         <full_name>\App\Http\Document\Product::setUnitPrice()</full_name>
-        <docblock line="95">
+        <docblock line="93">
           <description>Set the price of the single product</description>
           <long-description></long-description>
         </docblock>
@@ -525,25 +177,25 @@ requests during the execution of the flow</description>
           <type>\App\Http\Document\string</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\Document" line="106" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\Document" line="104" package="Default">
         <name>getUnitPrice</name>
         <full_name>\App\Http\Document\Product::getUnitPrice()</full_name>
-        <docblock line="106">
+        <docblock line="104">
           <description>Get the price of the single product</description>
           <long-description></long-description>
-          <tag name="description" line="106" description="Example: &quot;12.3&quot;"/>
+          <tag name="description" line="104" description="Example: &quot;12.3&quot;"/>
         </docblock>
       </method>
     </class>
     <parse_markers>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="9" code="PPC:ERR-50005">No summary for class \App\Http\Document\Product</error>
-      <error line="42" code="PPC:ERR-50015">Argument $id is missing from the Docblock of setId</error>
-      <error line="59" code="PPC:ERR-50015">Argument $categoryId is missing from the Docblock of setCategoryId</error>
-      <error line="76" code="PPC:ERR-50015">Argument $quantity is missing from the Docblock of setQuantity</error>
-      <error line="95" code="PPC:ERR-50015">Argument $unitPrice is missing from the Docblock of setUnitPrice</error>
+      <error line="7" code="PPC:ERR-50005">No summary for class \App\Http\Document\Product</error>
+      <error line="40" code="PPC:ERR-50015">Argument $id is missing from the Docblock of setId</error>
+      <error line="57" code="PPC:ERR-50015">Argument $categoryId is missing from the Docblock of setCategoryId</error>
+      <error line="74" code="PPC:ERR-50015">Argument $quantity is missing from the Docblock of setQuantity</error>
+      <error line="93" code="PPC:ERR-50015">Argument $unitPrice is missing from the Docblock of setUnitPrice</error>
     </parse_markers>
-    <source>eJydld9v0zAQx9/zV5ymSmSVoGK8DQZFG4LyNDR4mzS5jpt4SmzPdqYV2P++y896dtJUzUMb+ey77318d/n0RWUqEqRgRhHK4KtStz+sVbdXkpYFE/ZjFJWGwU8jxQ3TnOT8L1nnDJcX83kEc1gmzFDNleVSwO+MG6A5MQbwBQ8mYCVwYSwRlhPLwGYMlJZJSa2BjZZFvWJIjj9UKoYuF1Hj4brZBrxQOau0mEBG9C8CfGop1TOHVQJy40ZpDZ19+Ug0GKu5SGHGk3Z5Uf8rzR8rjbiO+XmOL9GSSr2F/tCgS9puW4243tnDEL/KipLdVhl0jIZicWFh9tBuHg7TWcMg15rjPWMERmh2CKRScFsfGo7Um8NQN8y6NwE+k3KdcwqbUtC6eAyzqyTe3c3peVcC9fbmqqtnZrHM3n7mCVw0d9UZNLOlFo29WX0ORH33RPk14IlKa1EopdHlKXEDVoLGgnok3mCTBOU0CuWyL5k4rLIpSLudFSy3+o6Bxv3ucjKZwuikcRhOX+ww1ofxphkl2jVa/KqTplD2kS7c/joG45BmWMsyzYJOvHKm67cnUo3Cczg5O5mi3aeIWWGWe0G/TmZf9bajox7ZeH25P2VHif/ppkQcjJUp7P3GirszbY4BP51BDz4ZBP/+7N2HSfa7ZA8rdC+pUP6Sp0Jq5ktsvRCtyfZ/wZ/Y/lFy73w8UdqwJJR/J9f3jNo7/AiYuJZ42gl7jl4AbGtU0A==</source>
+    <source>eJydlEtP4zAQgO/+FSNUabuV2Aq48V7BCnoDLdy4GMdtLKW2sccItOp/XzuvGichVX1IIs9kHt88zq90romka241ZRx+a/1yj6hfbhVzay7xjJD5bEZgBtcZt8wIjUJJeMqFBVZQa8F/OMszQAVCWqQSBUUOmHPQRmWOoYWlUevyxtLCP5jS3Juck8rCQ6VG/hHwp3QXzgwWGahlbKkWNPLrd2rAohFyBROR1dfz8q2NeA9x+HufQ2L4xktWynxC+1OvSVarLQZMb+VdF48ukMDPkEHDoc+XkAiTt1q5300j7Tp5MMIXzXvglOW7QHJSYPlTv6dW3HX1l2NcCUiZuNdCMFg6ycoGsRwX2XRbm5+nbZmDelXqcCboW+nwUmRwUdWqERiOzshKXt1uOkHdJUGlPZAEtSqD8qFUcSWRxA5DQENOExI//CB02mkQyk3bMtNul41B2moGWHH37QNNpNMVZTKGMUpjN5xpsP1Y34aHZpBoM2jTL5M0hrL1dBHP1z4Y+2KGV+VWeWcSb6MN+ueDrnXBT+Hg+GCMdpuiz8pn+S3or8l817316ijXsi9fkW7ZQeLPzZaYdtbKGPZWMXCPts0+4MczaMFnveCPjn+djLLfJrtboydJbciG/AePJxeX</source>
   </file>
   <file path="Services/Validations/DiscountValidationInterface.php" generated-path="Services.Validations.DiscountValidationInterface.html" hash="c046fc5fb8682ee0472bfc5eaf654832" package="Default">
     <docblock line="0">
@@ -700,30 +352,28 @@ These values can all be modified in it's own constant for maintaining purposes.<
     </parse_markers>
     <source>eJyllNtu2kAQhu/9FHNRiRaJmoTmpgdVjlkSJMDIh1SRkKzFHsKqtne1uyZCUd+9u+YQklKCWt9YyDPzf/8c+PpdLIVT0RKVoBmCJ8TsVmsxi1CuWIZqdkcLllPNeKVmExs3puKL47jttgNtMF9rVLDgEnKmMl5XGlYo2YJlTQ7QKgcqRLH9bXJsWrxEyHilKatY9QCrTRVWgV4yBVlBlQIqEXLUKEtWUVPWamiTd5bORwfMY2QU7qpn1EQVBcwRSp6bTMytItMtBfyxsjxK74RKQ7ajE7UUXKEyNduus4FrfDtPjUrTCvu0IarnmmtagOZ79i3Ayx6937LOCwRDL2vzpnO+wrTX7XY/bOu5zbsBgyi5joPYG6V33igh6SAI0/4w8oNkEsM3aNm0lpnLK6ApygyNnuGxiuv/pZiS0CeTuJHfEx1wXFydyYClKPga8TTMLuotFDKejoJ7Qg5RLrtnoiiz1R2zNvjA5XrP85Z5b0xS34vJTRDeH8p+OiLrlY1Dvnh2a4UrfIRaobRrGL472gAT0rEhxxrgja1kGgz28g3ZhPxIk4iEtgV2GocGwqFP0jhI/WASDfvkOfjQwZVx8FcDQvK8zvTm5BfSDPAYtqY/sdPrCLruXJ5Gn4ZBP/HjqEEfhITYJTrVwT3AixM7uUX/QHMdJDe38esr6/0Jltj5UcGglsWR0k1vvekwTcKRPdOl+W/97LoFz2ix5Eq7JtVdXbh2xq6531/Ob0TXru0=</source>
   </file>
-  <file path="Services/helpers/RequestDispatcher.php" generated-path="Services.helpers.RequestDispatcher.html" hash="78c00b129e3bf427f4df6b0345f7f6f5" package="Default">
+  <file path="Services/helpers/RequestDispatcher.php" generated-path="Services.helpers.RequestDispatcher.html" hash="80dd29121958837445211f6fdc38956a" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
       <tag name="package" line="0" description="Default"/>
     </docblock>
-    <class final="false" abstract="false" namespace="App\Http\Services\helpers" line="7" package="Default">
+    <namespace-alias name="JsonValidator">\App\Utils\JsonValidator</namespace-alias>
+    <class final="false" abstract="false" namespace="App\Http\Services\helpers" line="9" package="Default">
       <extends/>
       <name>RequestDispatcher</name>
       <full_name>\App\Http\Services\helpers\RequestDispatcher</full_name>
-      <docblock line="7">
+      <docblock line="9">
         <description>A simple request dispatcher service</description>
         <long-description></long-description>
-        <tag name="package" line="7" description="Default"/>
+        <tag name="package" line="9" description="Default"/>
       </docblock>
       <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\Services\helpers" line="14" package="Default">
-        <name>getResponse</name>
-        <full_name>\App\Http\Services\helpers\RequestDispatcher::getResponse()</full_name>
+        <name>get</name>
+        <full_name>\App\Http\Services\helpers\RequestDispatcher::get()</full_name>
         <docblock line="14">
           <description>Make an http response with GET method</description>
           <long-description></long-description>
-          <tag name="return" line="14" description="" type="mixed">
-            <type>mixed</type>
-          </tag>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$url</name>
@@ -739,12 +389,12 @@ These values can all be modified in it's own constant for maintaining purposes.<
     </class>
     <parse_markers>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="14" code="PPC:ERR-50015">Argument $url is missing from the Docblock of getResponse</error>
-      <error line="14" code="PPC:ERR-50015">Argument $parameter is missing from the Docblock of getResponse</error>
+      <error line="14" code="PPC:ERR-50015">Argument $url is missing from the Docblock of get</error>
+      <error line="14" code="PPC:ERR-50015">Argument $parameter is missing from the Docblock of get</error>
     </parse_markers>
-    <source>eJxdkEFPAjEQhe/9FXPgABsiPwCJEkU9KJqy3khI7Y602m1rO1USw3+37LKsOpemed97r53zC688s6LG6IVEmHu/viPy6xWGTy0xrhUajyFOGZsUBYMC5hB17Q1CwI+EkaDS2UtSYYDYujI2YdKIGIG30PWJYd8M8jRhhyngQbwjCAsq9+bQ6J2NCF+aFNwuSqiRlKuOcOe5DEgpWKj1Djtt0pw+vRgt4TVZSdpZ2CLxY+YwUtB2C4MUzBi6ixchf58wjBp/+7zDDNBW3mlLMGssZz067SElbJWXMQOZkY22moYn46jnGjUiOZ/11jOGq2d+//hUbviifObLks+Xq5sFHwOFhL+8g7yUZKjrwB3KLuN/gzQu/7MXT+pxX2/R2U2F0lWZamP/1O3Znv0AnQei7Q==</source>
+    <source>eJyFU01v00AQvftXzKGS7cgi5ZoQrAAGgmiKHIdLUlnuelIvdXaX3XUBofx31p+xqaPOxVrPezNvvt74IhMWS46oREIQlkLsP2st9huUT5Sg2meYC5RqblmFqv1bTXO1/6I4+57kNE00l8Y7nUwsmMASFD2KHEHizwKVhpSayJpkKEHVMQ1sapE8UQrCGvShw1h/LTBWBSttAjfJI0LCIDOqTFAlODM6flGdwacggiPqjKcNeFp9RXGfUwKHghFNOYMH1I7SkrIHuCpk7kH7EIk0hWuUbsWrU5d2hSwVnDINi4ry6gydn0FZwlJT6AKIgcSUUe10RLeHa0W/4+mfTZ16AbY9glixAze+3d2IL5CSy4bYeekBnEaH29NfWiVKoeZCtxAP3m/Dr7ffojgMom24jsLlevMxCD3QssCe5Bf50eomuN1GHry+dntynpXbNgd/I+mEzsfxTfEV3oyMmudLlLYndY7y0WNcVtUNgaq43gVn4HfB/6+M2bDtXX9IzhWOqDxZ4+NfqWV1M+XxmPyDG5rNzAGQx1pcH+iMiO/XJ1EXksFuIM9uOfG9IdmweHtZyYBYmg8/zO84RcJTHEvfbMwzounTmlfk7lRt74IupRNdqKGycgd2dnnqcZnavgPfh+tLEaqJDwNUG3HGN4d0sk7WP3VXdog=</source>
   </file>
-  <file path="Services/Validations/DiscountForNewUsers.php" generated-path="Services.Validations.DiscountForNewUsers.html" hash="7527f96f238c3a8d2718e35579103afb" package="Default">
+  <file path="Services/Validations/DiscountForNewUsers.php" generated-path="Services.Validations.DiscountForNewUsers.html" hash="3b1478f82575e691c78942a84e8cfb51" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
@@ -753,32 +403,33 @@ These values can all be modified in it's own constant for maintaining purposes.<
     <namespace-alias name="Discount">\App\Http\Document\Discount</namespace-alias>
     <namespace-alias name="SaleData">\App\Http\DTO\SaleData</namespace-alias>
     <namespace-alias name="Value">\App\Http\Services\Validations\NamesMap\Value</namespace-alias>
-    <class final="false" abstract="false" namespace="App\Http\Services\Validations" line="11" package="Default">
+    <namespace-alias name="Money">\Money\Money</namespace-alias>
+    <class final="false" abstract="false" namespace="App\Http\Services\Validations" line="12" package="Default">
       <extends/>
       <implements>\App\Http\Services\Validations\DiscountValidationInterface</implements>
       <name>DiscountForNewUsers</name>
       <full_name>\App\Http\Services\Validations\DiscountForNewUsers</full_name>
-      <docblock line="11">
+      <docblock line="12">
         <description>new-user discount validation</description>
         <long-description></long-description>
-        <tag name="package" line="11" description="Default"/>
+        <tag name="package" line="12" description="Default"/>
       </docblock>
-      <property static="false" visibility="private" namespace="App\Http\Services\Validations" line="18" package="Default">
+      <property static="false" visibility="private" namespace="App\Http\Services\Validations" line="19" package="Default">
         <name>$saleData</name>
         <full_name>\App\Http\Services\Validations\DiscountForNewUsers::saleData</full_name>
         <default></default>
-        <docblock line="18">
+        <docblock line="19">
           <description>Sale data</description>
           <long-description></long-description>
-          <tag name="var" line="18" description="" type="\App\Http\DTO\SaleData" variable="">
+          <tag name="var" line="19" description="" type="\App\Http\DTO\SaleData" variable="">
             <type>\App\Http\DTO\SaleData</type>
           </tag>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\Services\Validations" line="23" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\Services\Validations" line="24" package="Default">
         <name>__construct</name>
         <full_name>\App\Http\Services\Validations\DiscountForNewUsers::__construct()</full_name>
-        <docblock line="23">
+        <docblock line="24">
           <description>DiscountForNewUsers constructors.</description>
           <long-description></long-description>
           <tag name="inherited_from" description="\App\Http\Services\Validations\DiscountValidationInterface::__construct()" refers="\App\Http\Services\Validations\DiscountValidationInterface::__construct()" link="/classes/App.Http.Services.Validations.DiscountValidationInterface.html#method___construct"/>
@@ -789,19 +440,19 @@ These values can all be modified in it's own constant for maintaining purposes.<
           <type>\App\Http\DTO\SaleData</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\Services\Validations" line="33" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\Services\Validations" line="34" package="Default">
         <name>validate</name>
         <full_name>\App\Http\Services\Validations\DiscountForNewUsers::validate()</full_name>
-        <docblock line="33">
+        <docblock line="34">
           <description>Validate the discount</description>
           <long-description>Validate if the sale matches the new-user rule</long-description>
           <tag name="inherited_from" description="\App\Http\Services\Validations\DiscountValidationInterface::validate()" refers="\App\Http\Services\Validations\DiscountValidationInterface::validate()" link="/classes/App.Http.Services.Validations.DiscountValidationInterface.html#method_validate"/>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\Services\Validations" line="45" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\Services\Validations" line="49" package="Default">
         <name>apply</name>
         <full_name>\App\Http\Services\Validations\DiscountForNewUsers::apply()</full_name>
-        <docblock line="45">
+        <docblock line="49">
           <description>Applies the discount</description>
           <long-description>Applies the discount for new user rule</long-description>
           <tag name="inherited_from" description="\App\Http\Services\Validations\DiscountValidationInterface::apply()" refers="\App\Http\Services\Validations\DiscountValidationInterface::apply()" link="/classes/App.Http.Services.Validations.DiscountValidationInterface.html#method_apply"/>
@@ -810,258 +461,11 @@ These values can all be modified in it's own constant for maintaining purposes.<
     </class>
     <parse_markers>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="23" code="PPC:ERR-50015">Argument $saleData is missing from the Docblock of __construct</error>
+      <error line="24" code="PPC:ERR-50015">Argument $saleData is missing from the Docblock of __construct</error>
     </parse_markers>
-    <source>eJyNVNuO2jAQfc9X+AFpHVTgHcpuERcVqZAVl+4LUuRNJmA1F9d2WKGKf99xSEIIoVq/RLJnzpxzZibfX8RBWDGLQAnmARkJsfuptditQR65B2r3m4XcZ5onsRpYVqoqMZPESyOI9W7ClZeksR7U3jfObs1CmDDNak9N8LulobFgwlymgNV67bZF2iSGjw5mS+LndcixzML3nuWFTClSsJglcgkfW0xQhEciBMPx+nytOI81yABlW/8sgicrZ06bGNoEo1h+Udz/ODJJCk35ZS/7CsmPTANpqVJxHbSJoIfCtUw9nUjVvQVM30PukSCNPUOWuG4ZSwsG12p2lnPRYU5LH7jqPBfPZFglZgLOd/RyY4DoA5RW1/SXMTzIwgwmiZj2DqCyi7JXMg3hv3ryHgK1++Q9ScK6AAl/U1B6fADvT26XUXGrq/O8B726RKK9ImMiqV3CmJMHKYH+Ac2Gq9/frqcrd/Q6d7erX98aYU3FacR4SG17UAJK0KmMCURCn2gTSZu89EnAQgWPjMYtCHnu1wOfm0JIkEjjL/mavwwhTvRuLvyGIRyS3JTX1Xw8dTeOO3aW6/kEHVpO39zMqsl8PXa2y83ViRbywdZr8Nfpu040CzOUB01aJDGcZnnGfYcuWLQpE9E3Bj1rQ5mGA0gfMXgeNuq0Kz5cdsSkvHF9KDbTcH+A2Sk8Gi2MDa4zKy1xZ87VqArFG7/xZ4jopn1FMVqZqnooWgB6U1avcqT3tG/NvBiK+aMoQ8uDwKdfU/AAbXMS4AQUf0IB39MnJngX/0a4wHsc1G6x9092XVW9o8z3s79IwUvRqvBK9jlfn7P1CZmDC60=</source>
+    <source>eJydVV1v2jAUfc+v8EMlHFTaPfSJjm4MqIbUkoqP9WGZIje5KdZCktoOVVXx33dtkhBCKNv8wId9fe6551zbn7+ky9SK2Qpkynwg/TR1vyuVujMQa+6DdH+wiAdM8SSW15aVyUrMMPGzFcTKHXLpJ1msrmvrc8edsQiGTLHaUhO8O9E07lmqJzPY7rhPYnhzzSemv2y3LdImMbx2cFGQIE9M1iUMrl9afsSkJAWt20RM4HWBGyThqzQCTXq3vKMwjhWIEHWw3i2Cw6TTo010HQSjWD5RzH9dM0GKIvPJS/OdCr5mCsiZLCWogzYR9FEJJTJfJUJe7ANmTxH3SZjFviZLPK+MpQWDXTbb7NnWoceZWnLZuSmWSa9KTAdsDujlwgBRSyilrtVfxvDQhGlMsmLKX4I0E6VXIovgw3pyD4HaXfKUJFG9AAEvGUg1WIL/O5dLV7FfV+fmGdR0G4nypoaJoHYJo4cJoqbLut3FbDT1+g9jbzG9O2+E05lGK8YjatvXJRAWTK8+XZFer9fI7WdL4KFCh8CTiqlMtn7ZlXL0EKAyERO0EHa4G6u2HLJIwjGP8ERFPJf6iEVNISRMhLaG/J01DCHe6EFLBQ3929se2W732/SukPhhOh6MvLnjDZzJbDxEvSejR88IPxzPBs5iMq8I2wT7wISE4IjdJqGJODQ61dO0CdJs7a/0LLXPSQv5tqosZPY0TxSL9itqyj/LI6m9h2nnB75olhIRowRgo4v5ksWOGL1kuPd41Xa9bc6YyeCETfdHk/79ey2x59yWcnu3zs6EStWn4P/Thz0vPoA/4Ylhp7SEj1wti/3mKiulxV9KMLwST5dRNWiv8fDhQlB9PIq9tM6iEoo5QZnsRu4qtcZ2MTIhGbwllVaqcxOaP/SwNLtJRllIVERB8I95TitzJO/8LQUnpPjuhPyZtljKL/ABwlZ+xgvmorjqW/aBZzV2LAjMw1EQkLQqqF2/DDfWxvoDhEmw/A==</source>
   </file>
-  <file path="DTO/Mapping/DiscountParameters.php" generated-path="DTO.Mapping.DiscountParameters.html" hash="70f1f3f391ece44935a1d194d1fe3a1e" package="Default">
-    <docblock line="0">
-      <description></description>
-      <long-description></long-description>
-      <tag name="package" line="0" description="Default"/>
-    </docblock>
-    <namespace-alias name="Discount">\App\Http\Document\Discount</namespace-alias>
-    <namespace-alias name="Product">\App\Http\Document\Product</namespace-alias>
-    <namespace-alias name="SaleData">\App\Http\DTO\SaleData</namespace-alias>
-    <namespace-alias name="Money">\Money\Money</namespace-alias>
-    <class final="false" abstract="true" namespace="App\Http\DTO\Mapping" line="9" package="Default">
-      <extends/>
-      <name>DiscountParameters</name>
-      <full_name>\App\Http\DTO\Mapping\DiscountParameters</full_name>
-      <docblock line="9">
-        <description></description>
-        <long-description></long-description>
-        <tag name="package" line="9" description="Default"/>
-      </docblock>
-      <property static="false" visibility="private" namespace="App\Http\DTO\Mapping" line="16" package="Default">
-        <name>$discount</name>
-        <full_name>\App\Http\DTO\Mapping\DiscountParameters::discount</full_name>
-        <default></default>
-        <docblock line="16">
-          <description></description>
-          <long-description></long-description>
-          <tag name="var" line="16" description="&lt;p&gt;Discount&lt;/p&gt;" type="\Money\Money|string" variable="$discount">
-            <type>\Money\Money</type>
-            <type>string</type>
-          </tag>
-          <tag name="object" line="16" description="Money"/>
-        </docblock>
-      </property>
-      <property static="false" visibility="private" namespace="App\Http\DTO\Mapping" line="21" package="Default">
-        <name>$strategy</name>
-        <full_name>\App\Http\DTO\Mapping\DiscountParameters::strategy</full_name>
-        <default></default>
-        <docblock line="21">
-          <description></description>
-          <long-description></long-description>
-          <tag name="var" line="21" description="&lt;p&gt;Strategy&lt;/p&gt;" type="string" variable="$strategy">
-            <type>string</type>
-          </tag>
-        </docblock>
-      </property>
-      <property static="false" visibility="private" namespace="App\Http\DTO\Mapping" line="26" package="Default">
-        <name>$promotionalProducts</name>
-        <full_name>\App\Http\DTO\Mapping\DiscountParameters::promotionalProducts</full_name>
-        <default></default>
-        <docblock line="26">
-          <description></description>
-          <long-description></long-description>
-          <tag name="var" line="26" description="&lt;p&gt;Promotional Products&lt;/p&gt;" type="array|null" variable="$promotionalProducts">
-            <type>array</type>
-            <type>null</type>
-          </tag>
-        </docblock>
-      </property>
-      <property static="false" visibility="private" namespace="App\Http\DTO\Mapping" line="33" package="Default">
-        <name>$validDiscounts</name>
-        <full_name>\App\Http\DTO\Mapping\DiscountParameters::validDiscounts</full_name>
-        <default>array()</default>
-        <docblock line="33">
-          <description></description>
-          <long-description></long-description>
-          <tag name="var" line="33" description="&lt;p&gt;Array of possible valid discounts&lt;/p&gt;" type="array&lt;mixed,\App\Http\Document\Discount&gt;" variable="$validDiscounts">
-            <type>array&lt;mixed,\App\Http\Document\Discount&gt;</type>
-          </tag>
-          <tag name="array" line="33" description="Discount"/>
-        </docblock>
-      </property>
-      <property static="false" visibility="private" namespace="App\Http\DTO\Mapping" line="38" package="Default">
-        <name>$repeatedProductsCategories</name>
-        <full_name>\App\Http\DTO\Mapping\DiscountParameters::repeatedProductsCategories</full_name>
-        <default>array()</default>
-        <docblock line="38">
-          <description></description>
-          <long-description></long-description>
-          <tag name="var" line="38" description="&lt;p&gt;Repeated product's categories&lt;/p&gt;" type="array&lt;mixed,\App\Http\Document\Product&gt;" variable="$repeatedProductsCategories">
-            <type>array&lt;mixed,\App\Http\Document\Product&gt;</type>
-          </tag>
-        </docblock>
-      </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO\Mapping" line="47" package="Default">
-        <name>setDiscount</name>
-        <full_name>\App\Http\DTO\Mapping\DiscountParameters::setDiscount()</full_name>
-        <docblock line="47">
-          <description>Set discount</description>
-          <long-description></long-description>
-          <tag name="param" line="47" description="" type="\Money\Money|string" variable="$discount">
-            <type>\Money\Money</type>
-            <type>string</type>
-          </tag>
-          <tag name="return" line="47" description="" type="\App\Http\DTO\Mapping\DiscountParameters|\App\Http\DTO\SaleData">
-            <type>\App\Http\DTO\Mapping\DiscountParameters</type>
-            <type>\App\Http\DTO\SaleData</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$discount</name>
-          <default></default>
-          <type>\Money\Money|string</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO\Mapping" line="58" package="Default">
-        <name>getDiscount</name>
-        <full_name>\App\Http\DTO\Mapping\DiscountParameters::getDiscount()</full_name>
-        <docblock line="58">
-          <description>Get discount</description>
-          <long-description></long-description>
-          <tag name="return" line="58" description="" type="\Money\Money|string">
-            <type>\Money\Money</type>
-            <type>string</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO\Mapping" line="68" package="Default">
-        <name>setStrategy</name>
-        <full_name>\App\Http\DTO\Mapping\DiscountParameters::setStrategy()</full_name>
-        <docblock line="68">
-          <description>Set strategy</description>
-          <long-description></long-description>
-          <tag name="return" line="68" description="" type="\App\Http\DTO\Mapping\DiscountParameters|\App\Http\DTO\SaleData">
-            <type>\App\Http\DTO\Mapping\DiscountParameters</type>
-            <type>\App\Http\DTO\SaleData</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$strategy</name>
-          <default></default>
-          <type>\App\Http\DTO\Mapping\string</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO\Mapping" line="79" package="Default">
-        <name>getStrategy</name>
-        <full_name>\App\Http\DTO\Mapping\DiscountParameters::getStrategy()</full_name>
-        <docblock line="79">
-          <description>Get strategy</description>
-          <long-description></long-description>
-          <tag name="return" line="79" description="" type="string">
-            <type>string</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO\Mapping" line="89" package="Default">
-        <name>addValidDiscounts</name>
-        <full_name>\App\Http\DTO\Mapping\DiscountParameters::addValidDiscounts()</full_name>
-        <docblock line="89">
-          <description>Add valid discounts</description>
-          <long-description></long-description>
-          <tag name="return" line="89" description="" type="\App\Http\DTO\Mapping\DiscountParameters|\App\Http\DTO\SaleData">
-            <type>\App\Http\DTO\Mapping\DiscountParameters</type>
-            <type>\App\Http\DTO\SaleData</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$validDiscounts</name>
-          <default></default>
-          <type>\App\Http\Document\Discount</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO\Mapping" line="102" package="Default">
-        <name>getValidDiscounts</name>
-        <full_name>\App\Http\DTO\Mapping\DiscountParameters::getValidDiscounts()</full_name>
-        <docblock line="102">
-          <description>Get valid discounts</description>
-          <long-description></long-description>
-          <tag name="description" line="102" description="The discount is validated on the DiscountVerification layer"/>
-          <tag name="return" line="102" description="" type="array|null">
-            <type>array</type>
-            <type>null</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO\Mapping" line="114" package="Default">
-        <name>setPromotionalProducts</name>
-        <full_name>\App\Http\DTO\Mapping\DiscountParameters::setPromotionalProducts()</full_name>
-        <docblock line="114">
-          <description>Set promotional products</description>
-          <long-description></long-description>
-          <tag name="param" line="114" description="" type="array|null" variable="$promotionalProducts">
-            <type>array</type>
-            <type>null</type>
-          </tag>
-          <tag name="return" line="114" description="" type="\App\Http\DTO\Mapping\DiscountParameters|\App\Http\DTO\SaleData">
-            <type>\App\Http\DTO\Mapping\DiscountParameters</type>
-            <type>\App\Http\DTO\SaleData</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$promotionalProducts</name>
-          <default></default>
-          <type>array|null</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO\Mapping" line="125" package="Default">
-        <name>getPromotionalProducts</name>
-        <full_name>\App\Http\DTO\Mapping\DiscountParameters::getPromotionalProducts()</full_name>
-        <docblock line="125">
-          <description>Get promotional products</description>
-          <long-description></long-description>
-          <tag name="return" line="125" description="" type="array|null">
-            <type>array</type>
-            <type>null</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO\Mapping" line="137" package="Default">
-        <name>setRepeatedProductsCategories</name>
-        <full_name>\App\Http\DTO\Mapping\DiscountParameters::setRepeatedProductsCategories()</full_name>
-        <docblock line="137">
-          <description>This method receives the repeated category as an array with the productId and categoryId</description>
-          <long-description></long-description>
-          <tag name="param" line="137" description="" type="array&lt;mixed,\App\Http\Document\Product&gt;" variable="$repeatedProductsCategory">
-            <type>array&lt;mixed,\App\Http\Document\Product&gt;</type>
-          </tag>
-          <tag name="return" line="137" description="" type="\App\Http\DTO\Mapping\DiscountParameters|\App\Http\DTO\SaleData">
-            <type>\App\Http\DTO\Mapping\DiscountParameters</type>
-            <type>\App\Http\DTO\SaleData</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$repeatedProductsCategory</name>
-          <default></default>
-          <type>array&lt;mixed,\App\Http\Document\Product&gt;</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO\Mapping" line="148" package="Default">
-        <name>getRepeatedProductsCategories</name>
-        <full_name>\App\Http\DTO\Mapping\DiscountParameters::getRepeatedProductsCategories()</full_name>
-        <docblock line="148">
-          <description>Get repeated products categories</description>
-          <long-description></long-description>
-          <tag name="return" line="148" description="" type="array">
-            <type>array</type>
-          </tag>
-        </docblock>
-      </method>
-    </class>
-    <parse_markers>
-      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="9" code="PPC:ERR-50005">No summary for class \App\Http\DTO\Mapping\DiscountParameters</error>
-      <error line="68" code="PPC:ERR-50015">Argument $strategy is missing from the Docblock of setStrategy</error>
-      <error line="89" code="PPC:ERR-50015">Argument $validDiscounts is missing from the Docblock of addValidDiscounts</error>
-    </parse_markers>
-    <source>eJy1Vk1v2jAYvudXvAekUaSp93VsRUPaeqiGCuql9GBiA55CbNkOExr973McOwTHTora5gCR36/nffx+5Ot3vuVJjnZEcpQSmHC+/KUUX04Xv5f3iHOab26SpJBNEUuLHcnVckplyopc3UTkM8FwkbbE2vMcZWSKFKpE9ywnh6X51bHQSiqBUgVphqQEF2SGhEapiJDJvwT0cz0amX8Ywe0eicrLUdtqyDDA1qy2t7q1CVv9ITqIsbKH1+afC7pHipxcaEyheC5SiVaRzQHm9iXszalFvCEh0OGYF1kGAy7YjinKcpRZCiXMTmfgDsOBAtaRmI6ap2cY7FFGsTuQMCnhAFsDZ1LSVUbAKIDjRPp0Gvw+2R4yL8YYnp4jyCzwEpggnGhr7HL5UbLIBCUSHqxIRzCyTxLSWhqG0OEtDGdOVJ20nzMvSzJSd76uIKoQeaCaj64XzgEXq4ymsC7ytLxKkEQ502Ed48qoVt1QPgO1pfLzt7r0x80adkoWiNGtTl9aSf/sSNraN7PuRL5pIPcBN7GccMdQlVchz3vsHel13Tv0+zrCct3242ZvX8pyTz6v47eG3s3vOco2ngnGfV3+RpoRxo9nM2Do3vzhECH9XEmPh7FvePkV9KSMiUwF5Qb/YktqRaCyMjUTSAuVFjoYj0TQNdXDqLTK0IGICJOnsd93yR5x3Vcd4iTcUI1t4cZoi4JqzvVsqPfvyFk7yLBaM6H4kYoJ7dJxZEleWjmv4e7iew5l3X3Z0VzaqBfaAPQ1bBnWTlJC93rxlYXr9qJboAdAEpDFDX+p2ho1m+Ud1rKT7h0OV0z/Fv+AOf4Q3fCueGJYIhXU+ckQdXZ5NQnvaybwMROsqr6C6iDk6kvDRay84vm7bF6S/3bpv+s=</source>
-  </file>
-  <file path="Services/Validations/DiscountByQuantityOfSameItem.php" generated-path="Services.Validations.DiscountByQuantityOfSameItem.html" hash="4e3911f9d3c279df9158f0146d18ea55" package="Default">
+  <file path="Services/Validations/DiscountByQuantityOfSameItem.php" generated-path="Services.Validations.DiscountByQuantityOfSameItem.html" hash="401f394c6c71efee98e63d63f252feaa" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
@@ -1148,7 +552,7 @@ These values can all be modified in it's own constant for maintaining purposes.<
       <error line="24" code="PPC:ERR-50008">No summary for method __construct()</error>
       <error line="110" code="PPC:ERR-50015">Argument $number is missing from the Docblock of getPreviousMultiplier</error>
     </parse_markers>
-    <source>eJylV9tyGjkQfecrlCpvmGGNySZvZmFjG5NQtQ4O4M1DSFFiEKDKXBRJg4va4t+3pRkNc9FMLquXBE3rdPfpo1b7z7/YnrVCHBDBsEfQDWPL91Ky5ZzwA/WIWP6DfbrBkkah6LdascjZjCIvDkgolyMqvCgOZb/0fTFdzrFPRlji0icb/PKDCuMBM7UZE/DW63RaqIME7HepJAHapI7QITsGBspmsacit4s8HwuBvD3xvgpEt0juSYLDeLSJPXmG8nCI1gRhxnxKNoDVayWHTVa3x48xDiWVx+l2DhATFQkNmE9U8me7cyqTUBK+BT5b/7YQLJ2HWh2k+EBghdMNs/92Q4THKdPB1xodMEeG0XSzp/9lnB6wJOhCZHwn+/Hapx7axqGnkVcrD5iWHBhwDND5kKvPJDGrdSGB1e7QfEaDPL4yOLXK+aUkEE244biURmaT1QXSDbCEagm9wWPYiJKP31Lu1W9VQKSEUMy9lGOqAuK412gdRX45qVQB4hOV+0ceBZE+NUCYc3xcbakPxXNKqXeHOyIf04OOe3n25hg8N+dDLU5kzENEw5UGzuw01GSjQKAWW7pz2pjRK2Yiwf6VibDtugVItV6+RAUko03HRcMB0jfn+vrmYfr0YbGajlePs+no6W4xX91On969X6zG09lqNJnfqe/9DPzkpnqxVB3+p1M30WUs2Il0z6gpAy9IwOSx2bwqJGgV/rFJRVUDJKOk+NmOaBSKuvLAW0kfWQyJmzvse7FvFA33zNPSJNjbI9NLBGGYgwnE8wzJlSLORZ1A6musRaFKCYDT7T3ApcQqekZVgF5ewE1nMiUHmDnflyncQadBUK/L9ubMKzQYDGql+NvPKdHmRKeKA92Bo3i3V4nVuOtXDp8Q8eG9+UHURPD6hpMDjWLxEPuSqveA13Fj81nZSR2NIz7mhIAnp+DaGpxanQb2FG3j2f19tTOo1fvVDmBWemc/W9HbWnl5sbXRYFisylNIgUYwc+wRdmrlVktHt0Ske2mPTkZStSfw/fNhNYdm8filyN25+KfLagfd2TuoW2y7WfiTcKZewAF61S/d+jz3eavMbBtx3Zqc73UJLDKCtE9hawxUQO93inaf8zx/cW1Xt5rK7wPUhFLHZXMcVTXWhFNHnSUqC2ZtoUulMyfI5txTChJ4iEJyfMRcQFspqrA7ZGrbgckMHjCnyl+3NgkYI9q3s7/bVSmVHgVbRPN4vVCmjgsf4rXkGObCcjYFZPO0wWwPmCF5zsZfp86ulClU8kbf5rMH67Sl2YIbD4OhGsggwq3+UY2vzCV40FnpVphn4Vf85M9bPR0Z3DInP8pBFWEY2FEiriT+Srpvugwfu6/bbuOUhTcbPRgbZzBg5UisnZPeEQlzSPJsoSB7t0rDkrJK5peKpRm0kxarfplBDa2xADGrSQmFcbAGWzXnBERW8N9m064Z04p/l2RziP2RhWPoInFRHsee9xT077xI5400jv85XxgYaAB/9C0XOs0mNTPUn1r/AdoRf6I=</source>
+    <source>eJylV1tz2jgUfudXqDPZYrMhdNu3sLBNQmiZ2ZQUyPahdBhhBGjqiyrJZJgd/vseyZbxRXYvq5cW+ehcPn3n6Muff7E9a4U4IIJhj6AbxpbvpWTLOeEH6hGx/Af7dIMljULRb7VikbMZRV4ckFAuR1R4URzKfun7YrqcY5+MsMSlTzb3yw8qjQfM1GZMIFqv02mhDhKw36WSBGiTBkKH7BgYKJvFnorcLvJ8LATy9sT7KhDdIrkniR/Go03sybMrD4doTRBmzKdkA756reSwqer2+DHGoaTyON3OwcVEZUID5hNV/NnuXMoklIRvAc/Wvy0ES9ehVgcpPBBY4XTD7L/dEOFxynTytUYHzJFBNN3s6X8ZpwcsCboQGd7Jfrz2qYe2cehpz6uVB0hLDgg4xtH5kKvPJDmrdSEB1e7QfEaDvH9lcGqV60tBIBpwg3GpjMwmuxcoN8ASbkvoDR7DRpR8/JZir36rC0SKCMXaSzWmLCCOe43WUeSXi0oZID5RuX/kURDpUwOEOcfH1Zb6cHlOqfTucEfkY3rQcS/P0Rzjz83FUIsTGfMQ0XClHWd22tVko5zAXWzpzmljRq+YyQT7VybDtusWXKr18iUqeDLcdFw0HCDdOdfXNw/Tpw+L1XS8epxNR093i/nqdvr07v1iNZ7OVqPJ/E5972fOT27KF8utw/906Sa7DAU7kO7Za4rACxIweWw2rxIJRoV/bGJR1QDJKLn8bEc0EkW1POBW4keWQxLmDvte7BtGQ595mpoEe3tkZokgDHMwgXyeobhSxrmsE5e6jTUp1FWCw+n2HtylwCp4RlUHvTyBm85kTA4wc75PU+hBp4FQr8v25swrNBgMaqn4288x0RZEl4oDPYGjeLdXhdWE61cOnxDx4b35Qa8J4XWHkwONYvEQ+5Kq94DXYWOLWdlJA40jPuaEQCSnENqanFqdBvQUbOPZ/X11MqjV+9UJYFbas5+t3tuaeXmytdFgWLyVp5ACjGDm2DPs1NKtFo5uCUj30p6djKQaTxD759NqTs0S8UsRu/Plny6rE3Rnn6Bucexm6U/CmXoBB+hVv9T1eezzVpnZNuJ6NDnfmxJYZADpmMI2GKiA2e8U7T7ncf7i2lq3WsrvA9TkpQ7L5jyqbKxJpw46S1YWn7UXXbo6c4JszjOlQIGHKCTHR8wFjJUiC7tDprYdUGbwgDlV/Lq1RYCMaN/O/m5XqVR6FGwZzeP1Qpk6LnyI15Jj0IXlagqezdMG2h58huQ5k79OnV2pUrjJG93N5whWtaXRgo4HYagEGWS41T+q+ZWxhAi6Kj0K8yj8Spz8eWukI4Muc/JSDm4RxMCOEnEl8VfSfdNl+Nh93XYbVRbebLQwNsFAYOVArNVJ74gEHZI8WyjI3q2SWFJWiX6pWBqhnYxY9csINbTGAsislBIK42ANtkrnBERW/L/N1K6RacW/SzIdYn9k4Ri6SEKU5djzngL/QW68UHIjTeN/ygvjBvr/j76ln9NiUjOD/Kn1H11Rf2U=</source>
   </file>
   <file path="DTO/Layers/DiscountVerification.php" generated-path="DTO.Layers.DiscountVerification.html" hash="20350cc21f4fbad744c75743b0bd4c55" package="Default">
     <docblock line="0">
@@ -1189,7 +593,7 @@ apply the discount in case it is valid.</long-description>
     </parse_markers>
     <source>eJxtUt1q2zAUvtdTnIuC7bAmD9C1W1kGG4ztoqFXhqDKx7WYIglJdhpK3n1HsuPZTgXGsnW+n3P0ff5iG8s0P6C3XCA8Wlv+CMGW292f8hc/ofN3jLV+cfLEFW554HS2Wa0YrOAZnaxPEBqESnphWh08/d8wobj3sB3+pTIpeJBGgzxYhQekSkhSP3VAV5MN9s6AVqKOawXf31C0ARN/rcwRgoGul+S6Am6tmosPwAt+10gPBwyNqYB22NNVkUZwpRLU0QyM9vJFIXh0nRTooTYOkIsG/krSMfUoAK6lOhLvJWhdmwCpiZ6GJ0NU7biS1XqwtElv274oKaButUgjicbyy3Thxg+7IhW/j1LjZPruHp3jJxBGBy611K8QW7LG971M7mOETNFfO+6AJ4qbS+3uZHFavxn38xK4j7K1fM0zbuV6lMqKuxFBI0wTzBdQ7udkxaTBmdK3GKHflFFS88HtHVpFKcmzffYJMnpacTSu8nMBOir3WTExck1KhFkMdp/s8mm49bJ8jleVUkof2fraCiV/SitryFPS9/gmfZhYSYhi2VuykhJ0DxqPC1v5/4tf6Fy0Evb2oettYv6hwChy+5CymS9mEdeZffzV787szP4Boj06BA==</source>
   </file>
-  <file path="Services/Validations/DiscountForBeingEmployee.php" generated-path="Services.Validations.DiscountForBeingEmployee.html" hash="a605544e0e9d8294c849d78b6c0011ea" package="Default">
+  <file path="Services/Validations/DiscountForBeingEmployee.php" generated-path="Services.Validations.DiscountForBeingEmployee.html" hash="730f994cc2991e5cb28e760ef5cfb65b" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
@@ -1198,32 +602,33 @@ apply the discount in case it is valid.</long-description>
     <namespace-alias name="Discount">\App\Http\Document\Discount</namespace-alias>
     <namespace-alias name="SaleData">\App\Http\DTO\SaleData</namespace-alias>
     <namespace-alias name="Value">\App\Http\Services\Validations\NamesMap\Value</namespace-alias>
-    <class final="false" abstract="false" namespace="App\Http\Services\Validations" line="13" package="Default">
+    <namespace-alias name="Money">\Money\Money</namespace-alias>
+    <class final="false" abstract="false" namespace="App\Http\Services\Validations" line="14" package="Default">
       <extends/>
       <implements>\App\Http\Services\Validations\DiscountValidationInterface</implements>
       <name>DiscountForBeingEmployee</name>
       <full_name>\App\Http\Services\Validations\DiscountForBeingEmployee</full_name>
-      <docblock line="13">
+      <docblock line="14">
         <description>employee discount validation</description>
         <long-description>This validation class checks if the employee discount can be applied</long-description>
-        <tag name="package" line="13" description="Default"/>
+        <tag name="package" line="14" description="Default"/>
       </docblock>
-      <property static="false" visibility="private" namespace="App\Http\Services\Validations" line="20" package="Default">
+      <property static="false" visibility="private" namespace="App\Http\Services\Validations" line="21" package="Default">
         <name>$saleData</name>
         <full_name>\App\Http\Services\Validations\DiscountForBeingEmployee::saleData</full_name>
         <default></default>
-        <docblock line="20">
+        <docblock line="21">
           <description>Sale data</description>
           <long-description></long-description>
-          <tag name="var" line="20" description="" type="\App\Http\DTO\SaleData" variable="">
+          <tag name="var" line="21" description="" type="\App\Http\DTO\SaleData" variable="">
             <type>\App\Http\DTO\SaleData</type>
           </tag>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\Services\Validations" line="22" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\Services\Validations" line="23" package="Default">
         <name>__construct</name>
         <full_name>\App\Http\Services\Validations\DiscountForBeingEmployee::__construct()</full_name>
-        <docblock line="22">
+        <docblock line="23">
           <description></description>
           <long-description></long-description>
           <tag name="inherited_from" description="\App\Http\Services\Validations\DiscountValidationInterface::__construct()" refers="\App\Http\Services\Validations\DiscountValidationInterface::__construct()" link="/classes/App.Http.Services.Validations.DiscountValidationInterface.html#method___construct"/>
@@ -1234,19 +639,19 @@ apply the discount in case it is valid.</long-description>
           <type>\App\Http\DTO\SaleData</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\Services\Validations" line="32" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\Services\Validations" line="33" package="Default">
         <name>validate</name>
         <full_name>\App\Http\Services\Validations\DiscountForBeingEmployee::validate()</full_name>
-        <docblock line="32">
+        <docblock line="33">
           <description>Validate the discount</description>
           <long-description>Validate if the sale matches the employee rule</long-description>
           <tag name="inherited_from" description="\App\Http\Services\Validations\DiscountValidationInterface::validate()" refers="\App\Http\Services\Validations\DiscountValidationInterface::validate()" link="/classes/App.Http.Services.Validations.DiscountValidationInterface.html#method_validate"/>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\Services\Validations" line="49" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\Services\Validations" line="48" package="Default">
         <name>apply</name>
         <full_name>\App\Http\Services\Validations\DiscountForBeingEmployee::apply()</full_name>
-        <docblock line="49">
+        <docblock line="48">
           <description>Applies the discount</description>
           <long-description>Applies the discount for employees rule</long-description>
           <tag name="inherited_from" description="\App\Http\Services\Validations\DiscountValidationInterface::apply()" refers="\App\Http\Services\Validations\DiscountValidationInterface::apply()" link="/classes/App.Http.Services.Validations.DiscountValidationInterface.html#method_apply"/>
@@ -1255,10 +660,10 @@ apply the discount in case it is valid.</long-description>
     </class>
     <parse_markers>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="22" code="PPC:ERR-50015">Argument $saleData is missing from the Docblock of __construct</error>
-      <error line="22" code="PPC:ERR-50008">No summary for method __construct()</error>
+      <error line="23" code="PPC:ERR-50015">Argument $saleData is missing from the Docblock of __construct</error>
+      <error line="23" code="PPC:ERR-50008">No summary for method __construct()</error>
     </parse_markers>
-    <source>eJyNVd9v2jAQfs9f4YeqOKiMbo90o2sL1Sq1pSp00zSmyDgXsGqSyHbo0MT/vnPIL0Kg8wvofPfdfd+dL58v40XshGwJOmYcyFUcT78ZE0/HoFaCg55+Z1L4zIgo1BeOk+iKzyDiyRJCMx0IzaMkNBe1+8loOmYSBsyw2lUT/PTRlvHAYmtMALN1222HtAksYxmtAYif5SGrIgrvrctkIXTFSrhkWhO+AP6qiQiIWUADDGchmQFhcSwF+IjTdbaBOaHbSF2DCOfDPFTgH7CcS5+SwV1oQAUoo/PXIXjS8u1pEysDQS+WGXL71xVTJNcoM3bT31iJFTNATnSh4NaezKTgJEhCnjL1PI7aGZVwQ3OgMshNY7bl2HNiUKhOP78mX6r41mHj1EvP+EGqYS5djUbhk0ltMcmSGWyA3tVeJRJ2edb4ZE0E6vbILIpknUCOpIdLJuS90AZJoASBmNMWi8WHwqHlXpRhOH0qjbCUd0Xo9OdgXvJ76mZC24N0KFOKrb1XWHvwB7NpWmKdNZXjFtH2nJ42+fwqMX67FXb2KDCJCt+LIpc9EjCpoeS4cWoQlfv9tl6lQ6+PdbXJhQSRKrqp32+nfVtrujeGMSiOrwibkb71Xu9p+HwzfJx4t6Nnb/jwdD/6ORx6g7vxzejlcVLpI6bHuTLgj5OZiQyTafyBpj5EIaxvswhF3U5/G06bnBFwYgGpW5+Aoto+Oa936yQX5oZJnkgcXB+LUWjxy7gu+Xh+joLSQEbMuIdYnJFP1dRboZjS4Oe75hjPJ+up6O742dPppyAUlwQ+LtpQsXtGWtfP96297GltB5KWeuEF0lAMN1Ct3j3APDd+GhA2hLdijdJjvpgBzKQQ6ocwiyKuVlsD/aOTUCu4Sb7/zv3e0FmQQxmulinXDBn8xj4dKG4dwyig1SWIvcaAOb7eYh+23Mo+3Ha3Vjzz/XSR50VoWu2BW980G2fj/AOuxYkX</source>
+    <source>eJyNVVtv2jAUfs+v8MOkOFVbuj3StR0FqlVqAXHZNEEVmeQEooXEsx0qNPW/79i5kIZAlwdonXP5LueYr3d8za2YbUBy5gHpcL74rhRfTEBsQw/k4geLQp+pMInltWWlshLTS7x0A7Fa9ELpJWmsrmvvp8PFhEXQY4rVXjWVXww0jGfG9WEKWcZzEsNuYT6xfevszCJnBDY8SnYAxM8bk21ZBt/rkOk6lJVT4kVMSuKtwfstSRgQtYaGMh6LyRII4zwKwcc6LStLLBg+JOIewnjVL1JD/AO0CPuYPaXHWIEIUFfrr0XwMfD1c0a0LgSjWH5QnH/bMkEK0fLDlvnmItwyBeSTLCXNztNlFHokSGPPMHVdD8VUIvUULQrtkxyTk8HRzyeFQl3cFq/JTbW+Dniz6tBzfmA0LKSr0Shjcql1TbJhCg2Q77UXaQTvedb45CYCddpkmSRRnYCAPylI1dXWDuC1dOamzu3idgVqnEWjV9ygEdQpS+nHBFEzgO32bNIfu53RozsbP503lptJEP0NCyPqOLkfOSjJ0QW4T/ydRnIE5NwuAt0lRtov5O6OzF+uD9gV3lTrzm09P4c5AlQq4nepczuURc8sIWCRhGMOd8z8y1MGN4WQIBGlsfJjZ/Wa7ejBRHIQHi4U0s1tGPXH3f5g6j4Mx27/efQ0/NXvu73HSXc4G0wrWsl0OU0UizDTXBjt9v34iTbZNskjqWP+7Ww0fGNhWQy54Lwq8DFW6VgD5shUmXYPeYbQVbN0WmKqTgfuBC1Z3pIrp8Le9C4E7bLISyOcfR/7Cjzx93kt8vnqCo2gQZQw5RwDfE6+VFtnAjMhwS+uq1OURjqyviLZmpgiFO8Z3E/agNg5JzbKbx90V7lFpTTYGBELhvdVDdpBbtEGf1mwQgyv5aVLT8ViB1DTUpOfoVqXeTXuDUxP+lsD3KTUf/f+oJUR7liHbISLyuA3WnIE3I7DMKD4qxGEK2ozHl6irZiwwgW/LPbZrm5HZmQNPPN9c+0XICStelDJfsuvnTfrH0y7n30=</source>
   </file>
   <file path="Services/Validations/DiscountByTotalValue.php" generated-path="Services.Validations.DiscountByTotalValue.html" hash="bdd60019448f30a300ffd67b8d7b1dcf" package="Default">
     <docblock line="0">
@@ -1332,7 +737,7 @@ apply the discount in case it is valid.</long-description>
     </parse_markers>
     <source>eJyVVVFv2jAQfs+v8EMlElQK297oykYL1Sq1UJW0e4mETHIp0ULi2Q4TmvjvOztxEgxtNT+AOPvO333fd+brN7ZmTkY3IBgNgYwZC35IyYIF8G0SggheaJpEVCZ5Ji4dpxCtM5M8LDaQyWCSiDAvMnlp7fvzYEFTmFBJra1T5YOZgvFAmQoWUGY85BnsAv2J1/e7XYd0CV3lW+h9GQwGJKquJtu6EJ5Qh/x1IlpREqZUCBKuIfwlSBITuYaThUKakRVuMZYmEGGlvlOmmi6vd34uaapBkmTDUlAkNPtNS3eZBB4jr85fh+DS8NXqEsULwVO0Cpj49y3lxJBWBfv6m/FkSyWQM1FTWsaLVZqEJC6yUPe5XIZIpuRFKF1TqEnydE4JR60ziTT1RmabXLXrqwN7x4Ze9QcNZbxIweqjPlQxrYqSDZXIv9ABlUPyZrODYUWrkqyAw86tDitRwfWGZJXnqd2SKFZlqavSPsPh9dO9a3XaG72CXBQrraXr6Z/jjWrH9bzLppiGc5tzo2555rC0tsJwuHi+9uf++H75Mr5/ni5v50/Lyd3iZv48871KLLWQEbfGiPdywF64v6bZnE9/F4jmFFR93SPlArjr1bXU6o2YCrtvQD3o7Jx0EHDH87wWYWpxkAXPCNoGmub3jrUd01TAW74Y64kp1TXWsFxx6giJc14OItGD2DLTafnVZO7cIyMz4CFoZSo5HqdPN9OZr3WopTGCtBTG+9GYEqJFpUk52Vf2bDQy3FYZXPmmTP/AXkf6G7QjMrClODPM3NA0LFI0R4RgOEaiJq9PPiFXXeLGaU6l91YX5+Rzy8wlT8oskfHIe20atxmD4aOyVe48xlf7yrrLjOFHs6emgVN8sCx0bdoOqMG/FiybwZ/61XXfO4s3gGxe7Z+JXNd5/6myKuIdDmA5hMJMmakM0UmqTqf6Owbz2MWnO05e3Q5lyQXSjQmvOC8Xzf9Uxzvi2IJPo0g/vgaGcNtMePZ075298w+3ZHbk</source>
   </file>
-  <file path="Services/Validations/DiscountByQuantityOfSameCategory.php" generated-path="Services.Validations.DiscountByQuantityOfSameCategory.html" hash="96e70e3b425d8cd220355a5a56e5d5a8" package="Default">
+  <file path="Services/Validations/DiscountByQuantityOfSameCategory.php" generated-path="Services.Validations.DiscountByQuantityOfSameCategory.html" hash="d7651462a5a8ddc9e115eb246cc220b9" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
@@ -1341,33 +746,32 @@ apply the discount in case it is valid.</long-description>
     <namespace-alias name="Discount">\App\Http\Document\Discount</namespace-alias>
     <namespace-alias name="SaleData">\App\Http\DTO\SaleData</namespace-alias>
     <namespace-alias name="Value">\App\Http\Services\Validations\NamesMap\Value</namespace-alias>
-    <namespace-alias name="Money">\Money\Money</namespace-alias>
-    <class final="false" abstract="false" namespace="App\Http\Services\Validations" line="12" package="Default">
+    <class final="false" abstract="false" namespace="App\Http\Services\Validations" line="11" package="Default">
       <extends/>
       <implements>\App\Http\Services\Validations\DiscountValidationInterface</implements>
       <name>DiscountByQuantityOfSameCategory</name>
       <full_name>\App\Http\Services\Validations\DiscountByQuantityOfSameCategory</full_name>
-      <docblock line="12">
+      <docblock line="11">
         <description>same-category discount validation</description>
         <long-description></long-description>
-        <tag name="package" line="12" description="Default"/>
+        <tag name="package" line="11" description="Default"/>
       </docblock>
-      <property static="false" visibility="private" namespace="App\Http\Services\Validations" line="19" package="Default">
+      <property static="false" visibility="private" namespace="App\Http\Services\Validations" line="18" package="Default">
         <name>$saleData</name>
         <full_name>\App\Http\Services\Validations\DiscountByQuantityOfSameCategory::saleData</full_name>
         <default></default>
-        <docblock line="19">
+        <docblock line="18">
           <description>Sale data</description>
           <long-description></long-description>
-          <tag name="var" line="19" description="" type="\App\Http\DTO\SaleData" variable="">
+          <tag name="var" line="18" description="" type="\App\Http\DTO\SaleData" variable="">
             <type>\App\Http\DTO\SaleData</type>
           </tag>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\Services\Validations" line="21" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\Services\Validations" line="20" package="Default">
         <name>__construct</name>
         <full_name>\App\Http\Services\Validations\DiscountByQuantityOfSameCategory::__construct()</full_name>
-        <docblock line="21">
+        <docblock line="20">
           <description></description>
           <long-description></long-description>
           <tag name="inherited_from" description="\App\Http\Services\Validations\DiscountValidationInterface::__construct()" refers="\App\Http\Services\Validations\DiscountValidationInterface::__construct()" link="/classes/App.Http.Services.Validations.DiscountValidationInterface.html#method___construct"/>
@@ -1378,19 +782,19 @@ apply the discount in case it is valid.</long-description>
           <type>\App\Http\DTO\SaleData</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\Services\Validations" line="31" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\Services\Validations" line="30" package="Default">
         <name>validate</name>
         <full_name>\App\Http\Services\Validations\DiscountByQuantityOfSameCategory::validate()</full_name>
-        <docblock line="31">
+        <docblock line="30">
           <description>Validate the discount</description>
           <long-description>Validate if the sale matches the same-category rule</long-description>
           <tag name="inherited_from" description="\App\Http\Services\Validations\DiscountValidationInterface::validate()" refers="\App\Http\Services\Validations\DiscountValidationInterface::validate()" link="/classes/App.Http.Services.Validations.DiscountValidationInterface.html#method_validate"/>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\Services\Validations" line="58" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\Services\Validations" line="57" package="Default">
         <name>apply</name>
         <full_name>\App\Http\Services\Validations\DiscountByQuantityOfSameCategory::apply()</full_name>
-        <docblock line="58">
+        <docblock line="57">
           <description>Applies the discount</description>
           <long-description>Applies the discount for same-category rule</long-description>
           <tag name="inherited_from" description="\App\Http\Services\Validations\DiscountValidationInterface::apply()" refers="\App\Http\Services\Validations\DiscountValidationInterface::apply()" link="/classes/App.Http.Services.Validations.DiscountValidationInterface.html#method_apply"/>
@@ -1399,12 +803,12 @@ apply the discount in case it is valid.</long-description>
     </class>
     <parse_markers>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="21" code="PPC:ERR-50015">Argument $saleData is missing from the Docblock of __construct</error>
-      <error line="21" code="PPC:ERR-50008">No summary for method __construct()</error>
+      <error line="20" code="PPC:ERR-50015">Argument $saleData is missing from the Docblock of __construct</error>
+      <error line="20" code="PPC:ERR-50008">No summary for method __construct()</error>
     </parse_markers>
-    <source>eJyVVltv2zYUftev4ACjpoJc3D3as7fUSbcAS5zZ7oahLgRGomJissSSlDth9X/fISXKkkx5Kx9siDznO9+5kj/8yLfcS8mOSk5Cim453/yiFN+sqNizkMrN7yRhEVEsS+XE83LZkLnLwnxHU7W5YzLM8lRNOufrxWZFEnpHFOkcueA3T5rGI+F6M6elxmOW0mJjfsH8zcWFhy6QBMGrkCj6mokCRZV1tK+xQOjGCxMiJbLc3hW/5SRVTBWLeAX6c6vOdjyh2o2j7JHUQ6qoiCEy3j8egmUI6HWBtGcIpEi1Yfd/2hOBrNvV5o3554LtwSoayDoo5X7+krAQxXkaapsoCEIIhxJ5qLAFOir5Rqeko9dAbZm8mtljNG3ia4GD16Ve+UeR2tI6fB03ahkWGzGNiXZEhVsqq41mEkSe0LazHaeq5FDsj9FLliVdLyokBuhTRIQgRbAjHNf6eMBFFkFI/IaWXoKqXKTIHl/NXqmyyX2IsD+ppQ+X3WAZ4edSUWLfrxJiCAnKKVFHNiZIwV6XpsQNui2lioT8g6ltq8osSswSqCh8nsclcrmt2wFbWt0oQJZwaeEvWgT0byYBqDcml7V7fgtFrzdv6sOPvQCf0Ay9damyNDA0ztmG6o7ZKx4Szq5BapdpT0lyfYzp0Pe7DjpSPWkJHFxV8fFTI/2tTHUTIKlaGq9pZBMxr/ng3sQ2MSub39EdV4UzxWcs+H5ft8LQTFjVdD3N6hJBcSa+tUkJ4BT4ZMJwKkIYkFDEZjKPx8/3y/n90zp4v1gGq9vH+2B+u77/ebH8M7h7WM0XH57Wp51EIxsz670eVd8YpGM2B0n2hUpoGrhGAGjkPqkwQGA4bFCC0FASbut2cnAjEvVNHNgvjbZq/EPKSptNlnrp1myxnU0txNevaISm02mLs6vyO96W6pOzYkfX/6tfDl5fVB14/b4OPtcX7HxLCTeKNYceJHsp484YBbETGN179oruQEIP9JtvIJtc2HKeodFJam33zEkS5omuDLAkYCc66t2gt6MRWMRxkhGojv9B9xJ936mKASdC0qjpj6MXzMPnWUsK7F/NjA6GpwFcQ9jBFYbr8N3y16GjAquh1LbqnLKnzAyL8RiQ8cg/N3UHKlMk6fFllb+s9bF2ROYvShB433QJNXLVyge8JQE2pV/qRxo+J2vmubFmJlYzFc7BbDx8nwl44Kgy1LH5wKVH/uk1aSzc7oy9CplGzpy4VdcFh5LBzbsQ8qqnEAy669bcHvrd2ul6QKLIvNcsE4mbwWg+gao75uD9C6ZsqXk=</source>
+    <source>eJyVVm1v2zYQ/q5fwQFGTQV5cfcxnt2mTroFWOLMdjcMdSEwEhUTkyWWpNwJq//7jpQoS7Tktvpi+Hj33HOv5C9v+IZ7KdlSyUlI0Q3n69+U4uslFTsWUrn+kyQsIoplqRx7Xi4bOrdZmG9pqta3TIZZnqqxc76ar5ckobdEEeeoC379qGk8EK6FOQVvV2dnHjpDEuQXIVH0JRMFiipnaFebgtKVFyZESmSpvCv+yEmqmCrm8RLsZ9acbXlCNeuD7oHDfaqoiCER3n8egs8Q0N8Z0oEg0CKVwMrf7ohANspKeGV+uWA78IoGss5BKc+fExaiOE9D7RMFQQjRK5GHClugg5FvbEo6+huoDZMXU3uMJk18rbD3XOpVfBSpDa3T54RR67DYqGlMtCUq3FBZCZpFEHlC28E6QVXFodi/Rs9ZlrhRVEgM0CeICEGKYEs4ru3xgIssgpT4DSv9CapykSJ7fDF9ocoW9z7C/rjW3p+7yTLKT6WhxL5fFcQQEpRTog5sTJKCne5EiRt0W0YVCfkXU5tWl1mUmCXQUfg0j3PUFbaeF2xpuVmAKuHSwz+0COi/TAJQb07O6/D8For+Xr2qDz/2AnxCU/S6y5SlgaFxyjd0d8xe8JBwdgla20xHSpLLQ06Hvu8G2FHqcUth39UVHz81yt+qlFsASdXCRE0jW4hZzQf3FraJWfn8iW65KjpLfMKD7/dNK+zIhFVD1zOsXSoozsSPDikBnAIfbRhORQgLEprYLOLr66e7xezucRW8ny+C5c3DXTC7Wd39Ol/8HdzeL2fzD4+r40mikc2ZjV6vqh9M0qGagyT7QiUMDdwaADTqPqkwQGE4bFCC1FASbupx6uBGJOrbOCAvnbZ6/EPKSp9NlvrTo9liO51YiK9f0QhNJpMW567Od6Itzccn1Q6hf2te9l5fVjvw+mMdfK4v2NmGEm4Maw49SPZSxs4aBbUjGD179op2IGEG+t03kE0tbDtP0eiotHZ6ZiQJ80R3BngSIIkOdlfo9WgEHnGcZAS64zvonqOfna4YcCIkjZrxdMzCQ5bS4klrCuxfTI0NhqcBXEO4gyss1+G7xe/DZjKNM5UpkvT4WObPK32sHcj8WQkC7w6H3hGg9Q1POoBN6Zf68YRP6Zo9a7yZTdJMUefCNPG/zwQ8PFSZgtj8wWVE/vH1ZTzcbI2/CplGnbnqNl0VHEqJm3cU5FtvB1hAl619OvTdmroRkCgy7yjLROJmMppPk2r3773/AUywiQI=</source>
   </file>
-  <file path="DTO/Layers/CalculateSubTotal.php" generated-path="DTO.Layers.CalculateSubTotal.html" hash="b299b665c32081361b91fc2cfd0d1917" package="Default">
+  <file path="DTO/Layers/CalculateSubTotal.php" generated-path="DTO.Layers.CalculateSubTotal.html" hash="4765da6ed938d6cab2d409219a8ea70d" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
@@ -1423,12 +827,15 @@ apply the discount in case it is valid.</long-description>
         <long-description>The responsibility of this class is to calculate the subtotal of the sale</long-description>
         <tag name="package" line="13" description="Default"/>
       </docblock>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO\Layers" line="18" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO\Layers" line="20" package="Default">
         <name>exec</name>
         <full_name>\App\Http\DTO\Layers\CalculateSubTotal::exec()</full_name>
-        <docblock line="18">
+        <docblock line="20">
           <description>This method is executed to calculate the subtotal of the sale (Not considering the discounts)</description>
           <long-description>Executes the flow of the layer</long-description>
+          <tag name="throws" line="20" description="" type="\Throwable">
+            <type>\Throwable</type>
+          </tag>
           <tag name="inherited_from" description="\App\Http\DTO\Layers\LayerInterface::exec()" refers="\App\Http\DTO\Layers\LayerInterface::exec()" link="/classes/App.Http.DTO.Layers.LayerInterface.html#method_exec"/>
         </docblock>
         <argument line="0" by_reference="false">
@@ -1440,11 +847,11 @@ apply the discount in case it is valid.</long-description>
     </class>
     <parse_markers>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="18" code="PPC:ERR-50015">Argument $saleData is missing from the Docblock of exec</error>
+      <error line="20" code="PPC:ERR-50015">Argument $saleData is missing from the Docblock of exec</error>
     </parse_markers>
-    <source>eJyNUsFu2zAMvfsreAhQOViQnds1w7YeNqDbujW95SLLTC1AlgSJwhoM+fdRcmy43g7jQaZEvvdImu/e+85XVvYYvVQIH7w/fCbyh7v998O9PGGIN1WV4iLyKA3eSZI3JfTVWTwdyjk87LvgfsnGIGO363UFa/gkjUpGEsJjavaOpOHXHNh3CIHVnY260UbTCdwRqNMRlJExAjvkQE14YkBMDWWOIZXvXA+TbasBMomNWqB7b7BHSxFKV18sYThyx9XvCthKldlyQazYI3Wuzdr4gioRtv9XBIhvjkDlZloM2j6XSKujconF64vItnx9aoxWcExWkXa2SIlxtLCKF28ADXVmo3Ca3bKtplJuh59xff3x5714W/P853lHF1CqDsTEvdk9Iz0E1yZFUdQgI6z8cK0XIkUoWc3pmjflFl6TFN0HGSIGUW92Pnti5CoZTyNW1G/gigu84vr+UpB9nlSmn7Q2uz4Z0t6cXhP+SNISL4yo/0U0m8nkb3aybcVFYwE6L0Y6NReRxj0SE9MMfOa9oDzVae1hhS8Kff6pyylSzpnFZzTVcJ6rP0JdF3M=</source>
+    <source>eJyNUktv2zAMvutX8BCgctAgPbdr2m09rEC3dWt2y0WWmVqALAkWhS0Y8t9HyY8lPVUHmxL5PUjpw11og3CqwxiURvgYwu4LUdg9bL/vntQB+3gjRIpvMi/K4oMidVNSX73Dw658h4Nt2/vfqrbI2PVyKWAJn5XVySpCeEn11pOyfJoT2xahZ3XvoqmNNXQAvwdqTQRtVYzAAXnQM54YEFNNmWMo5T37YbK1GCCz2KQFpgsWO3QUoXT16Aj7PXcs/grgVVzmlQ2xYofU+iZr4x/UibB5nwmQ3zyBzs002Bv3WjKNidonFq9GkUnrnvKk4v+BjYl1+YdUW6Nhn5wm412xIqfRwyKO0UA69JHXYjZ2O1zN9fWnn0/yquLbmGr2vkelW5Azy2rzivTc+yZpirICFWERhm11Ql4EkjNcavi93MI5QdF7Vn3EXlarTciRnHhKxa8JK6tLuGBjF+zrjF11eVaZetZZbbpkyQR7OCf7kZQjfjKyektyMoM5Xm1U08iR/wRwPBnd3ExEml6PnBlG0FEcxT+llANi</source>
   </file>
-  <file path="DTO/Builder/SaleDataBuilder.php" generated-path="DTO.Builder.SaleDataBuilder.html" hash="efca6e88fa6f9d51327973cefe2b6cf2" package="Default">
+  <file path="DTO/Builder/SaleDataBuilder.php" generated-path="DTO.Builder.SaleDataBuilder.html" hash="2121341e9922b196f1da3f0f26cd0429" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
@@ -1453,7 +860,7 @@ apply the discount in case it is valid.</long-description>
     <namespace-alias name="Product">\App\Http\Document\Product</namespace-alias>
     <namespace-alias name="SaleData">\App\Http\DTO\SaleData</namespace-alias>
     <namespace-alias name="RequestDispatcher">\App\Http\Services\helpers\RequestDispatcher</namespace-alias>
-    <namespace-alias name="Request">\Illuminate\Http\Request</namespace-alias>
+    <namespace-alias name="Exception">\Exception</namespace-alias>
     <namespace-alias name="MoneyFormatter">\Money\MoneyFormatter</namespace-alias>
     <namespace-alias name="MoneyParser">\Money\MoneyParser</namespace-alias>
     <namespace-alias name="Throwable">\Throwable</namespace-alias>
@@ -1525,20 +932,17 @@ apply the discount in case it is valid.</long-description>
           <type>\App\Http\Services\helpers\RequestDispatcher</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO\Builder" line="53" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO\Builder" line="51" package="Default">
         <name>build</name>
         <full_name>\App\Http\DTO\Builder\SaleDataBuilder::build()</full_name>
-        <docblock line="53">
+        <docblock line="51">
           <description>Build the sale data passing the request in the parameter</description>
           <long-description></long-description>
-          <tag name="return" line="53" description="" type="\App\Http\DTO\SaleData">
-            <type>\App\Http\DTO\SaleData</type>
-          </tag>
         </docblock>
         <argument line="0" by_reference="false">
-          <name>$request</name>
+          <name>$saleParameters</name>
           <default></default>
-          <type>\Illuminate\Http\Request</type>
+          <type>\App\Http\DTO\Builder\object</type>
         </argument>
       </method>
     </class>
@@ -1548,343 +952,197 @@ apply the discount in case it is valid.</long-description>
       <error line="38" code="PPC:ERR-50015">Argument $moneyFormatter is missing from the Docblock of __construct</error>
       <error line="38" code="PPC:ERR-50015">Argument $requestDispatcher is missing from the Docblock of __construct</error>
       <error line="38" code="PPC:ERR-50008">No summary for method __construct()</error>
-      <error line="53" code="PPC:ERR-50015">Argument $request is missing from the Docblock of build</error>
+      <error line="51" code="PPC:ERR-50015">Argument $saleParameters is missing from the Docblock of build</error>
     </parse_markers>
-    <source>eJyNVVtv2jAUfs+vOA9IJAjE+1jpLmxaH6Z1a/dEUGUcl3hKHNcXOlTx3+skdjBOtuIHUHy+c77v3JL31zznEUMlkRxhAh85T78pxdPV/Y/0k6ZFRsQiirT0TRXWJWEqvRVVprFaBGbjeYcKskIKBaY7IvYUE5nmpOBEyPQXedJEqhU17ArnNVftcFMUuqQMKdL6WVhr/F4xckib36+VKJFSzs2z3CIh3fV9LqpntC2ISWQ+mUQwgVofZEYgbNsczeU8wgWSEpx2m330EoE5jWN9Ji0N8IYBqu0fgpU1OcSHPRLg6bD38+afC7o3mcGo9IUOkzy6BN/i6SrxHyqvWiGbLTBkXSOGmHrdGiYT/aa2AL0tKIZHzbCiFYOHB1wxqYQZobiNZI5XtbMKTc8RXS5hbidcT+2AsgacwEvnNFI5lbOlRwxXQaeGoCc5V/1iBw49EbXPQM1ql2OvU81UgsoJyG6GuRlbynbNrQ0ElDWPZkrNbqt+PwVRWrBu2M87GTSq2ZHYzYjTmjTYU+mUOHhPTcLSRjcZMvLckcX9Kk+Hyzn9Z9GSxTkVb99F0lCtN3bg3DFbRBDOIXbSZ8sdUfHY+YwTQLLLy77VkiAZn8XmY5FxoMVHzpaSqJssDoKvxzQbb+D6HTBdFG/5fzZrtavEYSgO7myXx/upEVNUHfrRnqzl8li/GTXu5qXeD6ad6aJocr2pF4G7b4qPOUbDc9UqMOPzpUS0CNurnWGcJA3SKpNxxxnosUvRxT9Zj4DruYO4+5jAiPzFhNcLEo6KqjGe3Qtjt/oYvQIQrEaW</source>
+    <source>eJyNVclu2zAQvesr5mAgsmHD97pxujhBeyjqNukpCgKaYiIWEsVwcWoE/veQFEUrlNxYBxvivJn3ZhM/XvCCJwxVRHKECXzmPPumFM9WNz+zL5qWORGLJNGya6qxrghT2VrUucZqEZmN5zUqyQopFJmuidhSTGRWkJITIbPf5EkTqVbUsCtcWC7rcPkPE65ozZrXHzUju8z9XtWiQkq1wI5ljYRsj28KUT+jTUmM9PlkksAErCLIjSTYNFmZw3mCSyQltGp9vslLAuZxjvaZNDTAHQPUm78EK29qEZ+2SEBHhz+fu38u6BYpAqOqK3SY5KFN8D2eUIn/UHWqFbP5ykMeSj/E1OvPMJnot7EB6E1JMTxohm034f4e10wqYYYmbSKZp1O1NxWavkWEXOLcDrie2gFlDjyGl+A0UgWVs2WHGM6jTg1BD3LO+8WOHHoirM9AzazLvtcpN5WgCgIyzDA3Y0vZozv1gYAy92qm1Gxzby6iTrglSJsRg5ENvG795Nh5HCqkxK7z5vKSfmNMIow8hwVK+8WcDldterQ2Yz87gYs3XxlpuG7vIqPZFoJwAWmUwmwZvJAMIa5EXQXMOMqpy+XT8t+3dLw4ipwtJVHf83SQYrakOVx8AKbL8r0YX80iPdZidzwWDohTY/7SiCmqdsciPnn7qfH+MKrWwnzAjwXULeCEiPL2zq4Bb++QLmY/PG2NCDNUlxWiZb/nujWNHdK3Twa1MpIjiNKCHeIfrHvAdhohDTcJjEh7KcWToyzGDUy4t9KzdZg/QYDVCowgu6JhPeVZR83e7/4+eQWytlSy</source>
   </file>
-  <file path="DTO/SaleData.php" generated-path="DTO.SaleData.html" hash="90ab4a21372b6b4d26dd6f14f1e1a9a3" package="Default">
+  <file path="DTO/SaleData.php" generated-path="DTO.SaleData.html" hash="53a95a2bfa11626f55784d856b2210ab" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
       <tag name="package" line="0" description="Default"/>
     </docblock>
+    <namespace-alias name="Discount">\App\Http\Document\Discount</namespace-alias>
+    <namespace-alias name="Product">\App\Http\Document\Product</namespace-alias>
     <namespace-alias name="LayerInterface">\App\Http\DTO\Layers\LayerInterface</namespace-alias>
-    <namespace-alias name="SaleDataParameters">\App\Http\DTO\Mapping\SaleDataParameters</namespace-alias>
-    <namespace-alias name="JsonSerializable">\JsonSerializable</namespace-alias>
+    <namespace-alias name="RequestDispatcher">\App\Http\Services\helpers\RequestDispatcher</namespace-alias>
     <namespace-alias name="Money">\Money\Money</namespace-alias>
-    <class final="false" abstract="false" namespace="App\Http\DTO" line="14" package="Default">
-      <extends>\App\Http\DTO\Mapping\SaleDataParameters</extends>
-      <implements>\JsonSerializable</implements>
+    <namespace-alias name="MoneyFormatter">\Money\MoneyFormatter</namespace-alias>
+    <namespace-alias name="MoneyParser">\Money\MoneyParser</namespace-alias>
+    <class final="false" abstract="false" namespace="App\Http\DTO" line="17" package="Default">
+      <extends/>
       <name>SaleData</name>
       <full_name>\App\Http\DTO\SaleData</full_name>
-      <docblock line="14">
+      <docblock line="17">
         <description>Main sale data class</description>
         <long-description>Main sale flow class that contains all necessary parameters for the sale's scope.</long-description>
-        <tag name="package" line="14" description="Default"/>
-        <tag name="inherited_from" description="\App\Http\DTO\Mapping\SaleDataParameters" refers="\App\Http\DTO\Mapping\SaleDataParameters" link="/classes/App.Http.DTO.Mapping.SaleDataParameters.html"/>
+        <tag name="package" line="17" description="Default"/>
       </docblock>
-      <property static="false" visibility="private" namespace="App\Http\DTO" line="19" package="Default">
-        <name>$userEmail</name>
-        <full_name>\App\Http\DTO\SaleData::userEmail</full_name>
-        <default></default>
-        <docblock line="19">
-          <description></description>
-          <long-description></long-description>
-          <tag name="var" line="19" description="&lt;p&gt;User Email&lt;/p&gt;" type="string" variable="$userEmail">
-            <type>string</type>
-          </tag>
-        </docblock>
-      </property>
-      <property static="false" visibility="private" namespace="App\Http\DTO" line="24" package="Default">
-        <name>$products</name>
-        <full_name>\App\Http\DTO\SaleData::products</full_name>
-        <default></default>
-        <docblock line="24">
-          <description></description>
-          <long-description></long-description>
-          <tag name="var" line="24" description="&lt;p&gt;Products&lt;/p&gt;" type="array" variable="$products">
-            <type>array</type>
-          </tag>
-        </docblock>
-      </property>
-      <property static="false" visibility="private" namespace="App\Http\DTO" line="29" package="Default">
-        <name>$subTotal</name>
-        <full_name>\App\Http\DTO\SaleData::subTotal</full_name>
-        <default></default>
-        <docblock line="29">
-          <description></description>
-          <long-description></long-description>
-          <tag name="var" line="29" description="&lt;p&gt;Subtotal&lt;/p&gt;" type="\Money\Money|null" variable="$subTotal">
-            <type>\Money\Money</type>
-            <type>null</type>
-          </tag>
-        </docblock>
-      </property>
       <property static="false" visibility="private" namespace="App\Http\DTO" line="34" package="Default">
-        <name>$total</name>
-        <full_name>\App\Http\DTO\SaleData::total</full_name>
+        <name>$moneyParser</name>
+        <full_name>\App\Http\DTO\SaleData::moneyParser</full_name>
         <default></default>
         <docblock line="34">
           <description></description>
           <long-description></long-description>
-          <tag name="var" line="34" description="&lt;p&gt;Total&lt;/p&gt;" type="\App\Http\DTO\Money/string" variable="$total">
-            <type>\App\Http\DTO\Money/string</type>
-          </tag>
-        </docblock>
-      </property>
-      <property static="false" visibility="private" namespace="App\Http\DTO" line="43" package="Default">
-        <name>$layers</name>
-        <full_name>\App\Http\DTO\SaleData::layers</full_name>
-        <default>array()</default>
-        <docblock line="43">
-          <description>Layers</description>
-          <long-description>Layers are steps of execution based on objects and services that are executed in a specific scope</long-description>
-          <tag name="var" line="43" description="" type="array&lt;mixed,\App\Http\DTO\Layers\LayerInterface&gt;" variable="$layers">
-            <type>array&lt;mixed,\App\Http\DTO\Layers\LayerInterface&gt;</type>
-          </tag>
-        </docblock>
-      </property>
-      <property static="false" visibility="private" namespace="App\Http\DTO" line="18" package="Default">
-        <name>$moneyParser</name>
-        <full_name>\App\Http\DTO\Mapping\SaleDataParameters::moneyParser</full_name>
-        <default></default>
-        <docblock line="18">
-          <description></description>
-          <long-description></long-description>
-          <tag name="var" line="18" description="&lt;p&gt;MoneyParser&lt;/p&gt;" type="\Money\MoneyParser" variable="$moneyParser">
+          <tag name="var" line="34" description="&lt;p&gt;MoneyParser&lt;/p&gt;" type="\Money\MoneyParser" variable="$moneyParser">
             <type>\Money\MoneyParser</type>
           </tag>
-          <tag name="object" line="18" description="MoneyParser"/>
+          <tag name="object" line="34" description="MoneyParser"/>
         </docblock>
       </property>
-      <property static="false" visibility="private" namespace="App\Http\DTO" line="25" package="Default">
+      <property static="false" visibility="private" namespace="App\Http\DTO" line="41" package="Default">
         <name>$moneyFormatter</name>
-        <full_name>\App\Http\DTO\Mapping\SaleDataParameters::moneyFormatter</full_name>
+        <full_name>\App\Http\DTO\SaleData::moneyFormatter</full_name>
         <default></default>
-        <docblock line="25">
+        <docblock line="41">
           <description></description>
           <long-description></long-description>
-          <tag name="var" line="25" description="&lt;p&gt;MoneyFormatter&lt;/p&gt;" type="\Money\MoneyFormatter" variable="">
+          <tag name="var" line="41" description="&lt;p&gt;MoneyFormatter&lt;/p&gt;" type="\Money\MoneyFormatter" variable="">
             <type>\Money\MoneyFormatter</type>
           </tag>
-          <tag name="object" line="25" description="MoneyFormatter"/>
+          <tag name="object" line="41" description="MoneyFormatter"/>
         </docblock>
       </property>
-      <property static="false" visibility="private" namespace="App\Http\DTO" line="33" package="Default">
+      <property static="false" visibility="private" namespace="App\Http\DTO" line="49" package="Default">
         <name>$requestDispatcher</name>
-        <full_name>\App\Http\DTO\Mapping\SaleDataParameters::requestDispatcher</full_name>
+        <full_name>\App\Http\DTO\SaleData::requestDispatcher</full_name>
         <default></default>
-        <docblock line="33">
+        <docblock line="49">
           <description>Request dispatcher is implemented in parameters to make
 requests during the execution of the flow</description>
           <long-description></long-description>
-          <tag name="var" line="33" description="" type="\App\Http\Services\helpers\RequestDispatcher" variable="$requestDispatcher">
+          <tag name="var" line="49" description="" type="\App\Http\Services\helpers\RequestDispatcher" variable="$requestDispatcher">
             <type>\App\Http\Services\helpers\RequestDispatcher</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="private" namespace="App\Http\DTO" line="16" package="Default">
-        <name>$discount</name>
-        <full_name>\App\Http\DTO\Mapping\DiscountParameters::discount</full_name>
+      <property static="false" visibility="private" namespace="App\Http\DTO" line="54" package="Default">
+        <name>$userEmail</name>
+        <full_name>\App\Http\DTO\SaleData::userEmail</full_name>
         <default></default>
-        <docblock line="16">
+        <docblock line="54">
           <description></description>
           <long-description></long-description>
-          <tag name="var" line="16" description="&lt;p&gt;Discount&lt;/p&gt;" type="\Money\Money|string" variable="$discount">
-            <type>\Money\Money</type>
-            <type>string</type>
-          </tag>
-          <tag name="object" line="16" description="Money"/>
-        </docblock>
-      </property>
-      <property static="false" visibility="private" namespace="App\Http\DTO" line="21" package="Default">
-        <name>$strategy</name>
-        <full_name>\App\Http\DTO\Mapping\DiscountParameters::strategy</full_name>
-        <default></default>
-        <docblock line="21">
-          <description></description>
-          <long-description></long-description>
-          <tag name="var" line="21" description="&lt;p&gt;Strategy&lt;/p&gt;" type="string" variable="$strategy">
+          <tag name="var" line="54" description="&lt;p&gt;User Email&lt;/p&gt;" type="string" variable="$userEmail">
             <type>string</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="private" namespace="App\Http\DTO" line="26" package="Default">
-        <name>$promotionalProducts</name>
-        <full_name>\App\Http\DTO\Mapping\DiscountParameters::promotionalProducts</full_name>
+      <property static="false" visibility="private" namespace="App\Http\DTO" line="59" package="Default">
+        <name>$products</name>
+        <full_name>\App\Http\DTO\SaleData::products</full_name>
         <default></default>
-        <docblock line="26">
+        <docblock line="59">
           <description></description>
           <long-description></long-description>
-          <tag name="var" line="26" description="&lt;p&gt;Promotional Products&lt;/p&gt;" type="array|null" variable="$promotionalProducts">
+          <tag name="var" line="59" description="&lt;p&gt;Products&lt;/p&gt;" type="array" variable="$products">
             <type>array</type>
-            <type>null</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="private" namespace="App\Http\DTO" line="33" package="Default">
-        <name>$validDiscounts</name>
-        <full_name>\App\Http\DTO\Mapping\DiscountParameters::validDiscounts</full_name>
-        <default>array()</default>
-        <docblock line="33">
+      <property static="false" visibility="private" namespace="App\Http\DTO" line="64" package="Default">
+        <name>$subTotal</name>
+        <full_name>\App\Http\DTO\SaleData::subTotal</full_name>
+        <default></default>
+        <docblock line="64">
           <description></description>
           <long-description></long-description>
-          <tag name="var" line="33" description="&lt;p&gt;Array of possible valid discounts&lt;/p&gt;" type="array&lt;mixed,\App\Http\Document\Discount&gt;" variable="$validDiscounts">
+          <tag name="var" line="64" description="&lt;p&gt;Subtotal&lt;/p&gt;" type="\Money\Money" variable="$subTotal">
+            <type>\Money\Money</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="private" namespace="App\Http\DTO" line="69" package="Default">
+        <name>$total</name>
+        <full_name>\App\Http\DTO\SaleData::total</full_name>
+        <default></default>
+        <docblock line="69">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="69" description="&lt;p&gt;Total&lt;/p&gt;" type="\App\Http\DTO\Money/string" variable="$total">
+            <type>\App\Http\DTO\Money/string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="private" namespace="App\Http\DTO" line="76" package="Default">
+        <name>$discount</name>
+        <full_name>\App\Http\DTO\SaleData::discount</full_name>
+        <default></default>
+        <docblock line="76">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="76" description="&lt;p&gt;Discount&lt;/p&gt;" type="\Money\Money" variable="$discount">
+            <type>\Money\Money</type>
+          </tag>
+          <tag name="object" line="76" description="Money"/>
+        </docblock>
+      </property>
+      <property static="false" visibility="private" namespace="App\Http\DTO" line="81" package="Default">
+        <name>$strategy</name>
+        <full_name>\App\Http\DTO\SaleData::strategy</full_name>
+        <default></default>
+        <docblock line="81">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="81" description="&lt;p&gt;Strategy&lt;/p&gt;" type="string" variable="$strategy">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="private" namespace="App\Http\DTO" line="86" package="Default">
+        <name>$promotionalProducts</name>
+        <full_name>\App\Http\DTO\SaleData::promotionalProducts</full_name>
+        <default></default>
+        <docblock line="86">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="86" description="&lt;p&gt;Promotional Products&lt;/p&gt;" type="array" variable="$promotionalProducts">
+            <type>array</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="private" namespace="App\Http\DTO" line="93" package="Default">
+        <name>$validDiscounts</name>
+        <full_name>\App\Http\DTO\SaleData::validDiscounts</full_name>
+        <default>array()</default>
+        <docblock line="93">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="93" description="&lt;p&gt;Array of possible valid discounts&lt;/p&gt;" type="array&lt;mixed,\App\Http\Document\Discount&gt;" variable="$validDiscounts">
             <type>array&lt;mixed,\App\Http\Document\Discount&gt;</type>
           </tag>
-          <tag name="array" line="33" description="Discount"/>
+          <tag name="array" line="93" description="Discount"/>
         </docblock>
       </property>
-      <property static="false" visibility="private" namespace="App\Http\DTO" line="38" package="Default">
+      <property static="false" visibility="private" namespace="App\Http\DTO" line="98" package="Default">
         <name>$repeatedProductsCategories</name>
-        <full_name>\App\Http\DTO\Mapping\DiscountParameters::repeatedProductsCategories</full_name>
+        <full_name>\App\Http\DTO\SaleData::repeatedProductsCategories</full_name>
         <default>array()</default>
-        <docblock line="38">
+        <docblock line="98">
           <description></description>
           <long-description></long-description>
-          <tag name="var" line="38" description="&lt;p&gt;Repeated product's categories&lt;/p&gt;" type="array&lt;mixed,\App\Http\Document\Product&gt;" variable="$repeatedProductsCategories">
+          <tag name="var" line="98" description="&lt;p&gt;Repeated product's categories&lt;/p&gt;" type="array&lt;mixed,\App\Http\Document\Product&gt;" variable="$repeatedProductsCategories">
             <type>array&lt;mixed,\App\Http\Document\Product&gt;</type>
           </tag>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO" line="48" package="Default">
-        <name>setUserEmail</name>
-        <full_name>\App\Http\DTO\SaleData::setUserEmail()</full_name>
-        <docblock line="48">
-          <description>Set user email</description>
-          <long-description></long-description>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$userEmail</name>
-          <default></default>
-          <type>\App\Http\DTO\string</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO" line="57" package="Default">
-        <name>getUserEmail</name>
-        <full_name>\App\Http\DTO\SaleData::getUserEmail()</full_name>
-        <docblock line="57">
-          <description>Get user email</description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO" line="67" package="Default">
-        <name>setProducts</name>
-        <full_name>\App\Http\DTO\SaleData::setProducts()</full_name>
-        <docblock line="67">
-          <description>Set products</description>
-          <long-description></long-description>
-          <tag name="param" line="67" description="" type="array" variable="$products">
-            <type>array</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$products</name>
-          <default></default>
-          <type>array</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO" line="78" package="Default">
-        <name>getProducts</name>
-        <full_name>\App\Http\DTO\SaleData::getProducts()</full_name>
-        <docblock line="78">
-          <description>Get products</description>
-          <long-description></long-description>
-          <tag name="return" line="78" description="" type="array">
-            <type>array</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO" line="86" package="Default">
-        <name>addLayer</name>
-        <full_name>\App\Http\DTO\SaleData::addLayer()</full_name>
-        <docblock line="86">
-          <description>Add a layer</description>
-          <long-description></long-description>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$layer</name>
-          <default></default>
-          <type>\App\Http\DTO\Layers\LayerInterface</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO" line="97" package="Default">
-        <name>getLayers</name>
-        <full_name>\App\Http\DTO\SaleData::getLayers()</full_name>
-        <docblock line="97">
-          <description>Get layers</description>
-          <long-description></long-description>
-          <tag name="return" line="97" description="" type="array&lt;mixed,\App\Http\DTO\Layers\LayerInterface&gt;">
+      <property static="false" visibility="private" namespace="App\Http\DTO" line="135" package="Default">
+        <name>$layers</name>
+        <full_name>\App\Http\DTO\SaleData::layers</full_name>
+        <default>array()</default>
+        <docblock line="135">
+          <description>Layers</description>
+          <long-description>Layers are steps of execution based on objects and services that are executed in a specific scope</long-description>
+          <tag name="var" line="135" description="" type="array&lt;mixed,\App\Http\DTO\Layers\LayerInterface&gt;" variable="$layers">
             <type>array&lt;mixed,\App\Http\DTO\Layers\LayerInterface&gt;</type>
           </tag>
         </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO" line="107" package="Default">
-        <name>setSubTotal</name>
-        <full_name>\App\Http\DTO\SaleData::setSubTotal()</full_name>
-        <docblock line="107">
-          <description>Set sub-total</description>
-          <long-description></long-description>
-          <tag name="return" line="107" description="" type="\App\Http\DTO\SaleData">
-            <type>\App\Http\DTO\SaleData</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$subTotal</name>
-          <default></default>
-          <type>\Money\Money</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO" line="118" package="Default">
-        <name>getSubTotal</name>
-        <full_name>\App\Http\DTO\SaleData::getSubTotal()</full_name>
-        <docblock line="118">
-          <description>Get sub-total</description>
-          <long-description></long-description>
-          <tag name="return" line="118" description="" type="\Money\Money|null">
-            <type>\Money\Money</type>
-            <type>null</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO" line="126" package="Default">
-        <name>setTotal</name>
-        <full_name>\App\Http\DTO\SaleData::setTotal()</full_name>
-        <docblock line="126">
-          <description>Set total</description>
-          <long-description></long-description>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$total</name>
-          <default></default>
-          <type>\Money\Money</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO" line="137" package="Default">
-        <name>getTotal</name>
-        <full_name>\App\Http\DTO\SaleData::getTotal()</full_name>
-        <docblock line="137">
-          <description>Get total</description>
-          <long-description></long-description>
-          <tag name="return" line="137" description="" type="\Money\Money|string">
-            <type>\Money\Money</type>
-            <type>string</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO" line="147" package="Default">
-        <name>run</name>
-        <full_name>\App\Http\DTO\SaleData::run()</full_name>
-        <docblock line="147">
-          <description>Run the layers</description>
-          <long-description>Start executing every layer added on the scope.</long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO" line="164" package="Default">
-        <name>jsonSerialize</name>
-        <full_name>\App\Http\DTO\SaleData::jsonSerialize()</full_name>
-        <docblock line="164">
-          <description>Serialize</description>
-          <long-description>Serialize every object value</long-description>
-          <tag name="return" line="164" description="" type="array">
-            <type>array</type>
-          </tag>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO" line="35" package="Default">
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO" line="19" package="Default">
         <name>__construct</name>
-        <full_name>\App\Http\DTO\Mapping\SaleDataParameters::__construct()</full_name>
-        <docblock line="35">
+        <full_name>\App\Http\DTO\SaleData::__construct()</full_name>
+        <docblock line="19">
           <description></description>
           <long-description></long-description>
         </docblock>
@@ -1903,110 +1161,222 @@ requests during the execution of the flow</description>
           <default></default>
           <type>\App\Http\Services\helpers\RequestDispatcher</type>
         </argument>
-        <inherited_from>\App\Http\DTO\Mapping\SaleDataParameters</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO" line="50" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO" line="105" package="Default">
         <name>getMoneyParser</name>
-        <full_name>\App\Http\DTO\Mapping\SaleDataParameters::getMoneyParser()</full_name>
-        <docblock line="50">
+        <full_name>\App\Http\DTO\SaleData::getMoneyParser()</full_name>
+        <docblock line="105">
           <description>Retrieve MoneyParser object</description>
           <long-description></long-description>
-          <tag name="description" line="50" description="MoneyParser is used in sales data scope to parse money values"/>
+          <tag name="description" line="105" description="MoneyParser is used in sales data scope to parse money values"/>
         </docblock>
-        <inherited_from>\App\Http\DTO\Mapping\SaleDataParameters</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO" line="60" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO" line="115" package="Default">
         <name>getMoneyFormatter</name>
-        <full_name>\App\Http\DTO\Mapping\SaleDataParameters::getMoneyFormatter()</full_name>
-        <docblock line="60">
+        <full_name>\App\Http\DTO\SaleData::getMoneyFormatter()</full_name>
+        <docblock line="115">
           <description>Retrieve MoneyFormatter object</description>
           <long-description></long-description>
-          <tag name="description" line="60" description="MoneyFormatter is used in sales data scope to format money values"/>
+          <tag name="description" line="115" description="MoneyFormatter is used in sales data scope to format money values"/>
         </docblock>
-        <inherited_from>\App\Http\DTO\Mapping\SaleDataParameters</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO" line="68" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO" line="123" package="Default">
         <name>getRequestDispatcher</name>
-        <full_name>\App\Http\DTO\Mapping\SaleDataParameters::getRequestDispatcher()</full_name>
-        <docblock line="68">
+        <full_name>\App\Http\DTO\SaleData::getRequestDispatcher()</full_name>
+        <docblock line="123">
           <description>RequestDispatcher</description>
           <long-description></long-description>
         </docblock>
-        <inherited_from>\App\Http\DTO\Mapping\SaleDataParameters</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO" line="47" package="Default">
-        <name>setDiscount</name>
-        <full_name>\App\Http\DTO\Mapping\DiscountParameters::setDiscount()</full_name>
-        <docblock line="47">
-          <description>Set discount</description>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO" line="140" package="Default">
+        <name>setUserEmail</name>
+        <full_name>\App\Http\DTO\SaleData::setUserEmail()</full_name>
+        <docblock line="140">
+          <description>Set user email</description>
           <long-description></long-description>
-          <tag name="param" line="47" description="" type="\Money\Money|string" variable="$discount">
-            <type>\Money\Money</type>
-            <type>string</type>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$userEmail</name>
+          <default></default>
+          <type>\App\Http\DTO\string</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO" line="149" package="Default">
+        <name>getUserEmail</name>
+        <full_name>\App\Http\DTO\SaleData::getUserEmail()</full_name>
+        <docblock line="149">
+          <description>Get user email</description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO" line="159" package="Default">
+        <name>setProducts</name>
+        <full_name>\App\Http\DTO\SaleData::setProducts()</full_name>
+        <docblock line="159">
+          <description>Set products</description>
+          <long-description></long-description>
+          <tag name="param" line="159" description="" type="array" variable="$products">
+            <type>array</type>
           </tag>
-          <tag name="return" line="47" description="" type="\App\Http\DTO\Mapping\DiscountParameters|\App\Http\DTO\SaleData">
-            <type>\App\Http\DTO\Mapping\DiscountParameters</type>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$products</name>
+          <default></default>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO" line="170" package="Default">
+        <name>getProducts</name>
+        <full_name>\App\Http\DTO\SaleData::getProducts()</full_name>
+        <docblock line="170">
+          <description>Get products</description>
+          <long-description></long-description>
+          <tag name="return" line="170" description="" type="array">
+            <type>array</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO" line="178" package="Default">
+        <name>addLayer</name>
+        <full_name>\App\Http\DTO\SaleData::addLayer()</full_name>
+        <docblock line="178">
+          <description>Add a layer</description>
+          <long-description></long-description>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$layer</name>
+          <default></default>
+          <type>\App\Http\DTO\Layers\LayerInterface</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO" line="189" package="Default">
+        <name>getLayers</name>
+        <full_name>\App\Http\DTO\SaleData::getLayers()</full_name>
+        <docblock line="189">
+          <description>Get layers</description>
+          <long-description></long-description>
+          <tag name="return" line="189" description="" type="array&lt;mixed,\App\Http\DTO\Layers\LayerInterface&gt;">
+            <type>array&lt;mixed,\App\Http\DTO\Layers\LayerInterface&gt;</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO" line="199" package="Default">
+        <name>setSubTotal</name>
+        <full_name>\App\Http\DTO\SaleData::setSubTotal()</full_name>
+        <docblock line="199">
+          <description>Set sub-total</description>
+          <long-description></long-description>
+          <tag name="return" line="199" description="" type="\App\Http\DTO\SaleData">
             <type>\App\Http\DTO\SaleData</type>
           </tag>
         </docblock>
         <argument line="0" by_reference="false">
-          <name>$discount</name>
+          <name>$subTotal</name>
           <default></default>
-          <type>\Money\Money|string</type>
+          <type>\Money\Money</type>
         </argument>
-        <inherited_from>\App\Http\DTO\Mapping\DiscountParameters</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO" line="58" package="Default">
-        <name>getDiscount</name>
-        <full_name>\App\Http\DTO\Mapping\DiscountParameters::getDiscount()</full_name>
-        <docblock line="58">
-          <description>Get discount</description>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO" line="210" package="Default">
+        <name>getSubTotal</name>
+        <full_name>\App\Http\DTO\SaleData::getSubTotal()</full_name>
+        <docblock line="210">
+          <description>Get sub-total</description>
           <long-description></long-description>
-          <tag name="return" line="58" description="" type="\Money\Money|string">
+          <tag name="return" line="210" description="" type="\Money\Money">
             <type>\Money\Money</type>
-            <type>string</type>
           </tag>
         </docblock>
-        <inherited_from>\App\Http\DTO\Mapping\DiscountParameters</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO" line="68" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO" line="218" package="Default">
+        <name>setTotal</name>
+        <full_name>\App\Http\DTO\SaleData::setTotal()</full_name>
+        <docblock line="218">
+          <description>Set total</description>
+          <long-description></long-description>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$total</name>
+          <default></default>
+          <type>\Money\Money</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO" line="229" package="Default">
+        <name>getTotal</name>
+        <full_name>\App\Http\DTO\SaleData::getTotal()</full_name>
+        <docblock line="229">
+          <description>Get total</description>
+          <long-description></long-description>
+          <tag name="return" line="229" description="" type="\Money\Money">
+            <type>\Money\Money</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO" line="239" package="Default">
+        <name>run</name>
+        <full_name>\App\Http\DTO\SaleData::run()</full_name>
+        <docblock line="239">
+          <description>Run the layers</description>
+          <long-description>Start executing every layer added on the scope.</long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO" line="252" package="Default">
+        <name>setDiscount</name>
+        <full_name>\App\Http\DTO\SaleData::setDiscount()</full_name>
+        <docblock line="252">
+          <description>Set discount</description>
+          <long-description></long-description>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$discount</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO" line="263" package="Default">
+        <name>getDiscount</name>
+        <full_name>\App\Http\DTO\SaleData::getDiscount()</full_name>
+        <docblock line="263">
+          <description>Get discount</description>
+          <long-description></long-description>
+          <tag name="return" line="263" description="" type="\Money\Money">
+            <type>\Money\Money</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO" line="273" package="Default">
         <name>setStrategy</name>
-        <full_name>\App\Http\DTO\Mapping\DiscountParameters::setStrategy()</full_name>
-        <docblock line="68">
+        <full_name>\App\Http\DTO\SaleData::setStrategy()</full_name>
+        <docblock line="273">
           <description>Set strategy</description>
           <long-description></long-description>
-          <tag name="return" line="68" description="" type="\App\Http\DTO\Mapping\DiscountParameters|\App\Http\DTO\SaleData">
-            <type>\App\Http\DTO\Mapping\DiscountParameters</type>
+          <tag name="return" line="273" description="" type="\App\Http\DTO\SaleData">
             <type>\App\Http\DTO\SaleData</type>
           </tag>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$strategy</name>
           <default></default>
-          <type>\App\Http\DTO\Mapping\string</type>
+          <type>\App\Http\DTO\string</type>
         </argument>
-        <inherited_from>\App\Http\DTO\Mapping\DiscountParameters</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO" line="79" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO" line="284" package="Default">
         <name>getStrategy</name>
-        <full_name>\App\Http\DTO\Mapping\DiscountParameters::getStrategy()</full_name>
-        <docblock line="79">
+        <full_name>\App\Http\DTO\SaleData::getStrategy()</full_name>
+        <docblock line="284">
           <description>Get strategy</description>
           <long-description></long-description>
-          <tag name="return" line="79" description="" type="string">
+          <tag name="return" line="284" description="" type="string">
             <type>string</type>
           </tag>
         </docblock>
-        <inherited_from>\App\Http\DTO\Mapping\DiscountParameters</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO" line="89" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO" line="294" package="Default">
         <name>addValidDiscounts</name>
-        <full_name>\App\Http\DTO\Mapping\DiscountParameters::addValidDiscounts()</full_name>
-        <docblock line="89">
+        <full_name>\App\Http\DTO\SaleData::addValidDiscounts()</full_name>
+        <docblock line="294">
           <description>Add valid discounts</description>
           <long-description></long-description>
-          <tag name="return" line="89" description="" type="\App\Http\DTO\Mapping\DiscountParameters|\App\Http\DTO\SaleData">
-            <type>\App\Http\DTO\Mapping\DiscountParameters</type>
+          <tag name="return" line="294" description="" type="\App\Http\DTO\SaleData">
             <type>\App\Http\DTO\SaleData</type>
           </tag>
         </docblock>
@@ -2015,101 +1385,93 @@ requests during the execution of the flow</description>
           <default></default>
           <type>\App\Http\Document\Discount</type>
         </argument>
-        <inherited_from>\App\Http\DTO\Mapping\DiscountParameters</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO" line="102" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO" line="307" package="Default">
         <name>getValidDiscounts</name>
-        <full_name>\App\Http\DTO\Mapping\DiscountParameters::getValidDiscounts()</full_name>
-        <docblock line="102">
+        <full_name>\App\Http\DTO\SaleData::getValidDiscounts()</full_name>
+        <docblock line="307">
           <description>Get valid discounts</description>
           <long-description></long-description>
-          <tag name="description" line="102" description="The discount is validated on the DiscountVerification layer"/>
-          <tag name="return" line="102" description="" type="array|null">
+          <tag name="description" line="307" description="The discount is validated on the DiscountVerification layer"/>
+          <tag name="return" line="307" description="" type="array">
             <type>array</type>
-            <type>null</type>
           </tag>
         </docblock>
-        <inherited_from>\App\Http\DTO\Mapping\DiscountParameters</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO" line="114" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO" line="317" package="Default">
         <name>setPromotionalProducts</name>
-        <full_name>\App\Http\DTO\Mapping\DiscountParameters::setPromotionalProducts()</full_name>
-        <docblock line="114">
+        <full_name>\App\Http\DTO\SaleData::setPromotionalProducts()</full_name>
+        <docblock line="317">
           <description>Set promotional products</description>
           <long-description></long-description>
-          <tag name="param" line="114" description="" type="array|null" variable="$promotionalProducts">
-            <type>array</type>
-            <type>null</type>
-          </tag>
-          <tag name="return" line="114" description="" type="\App\Http\DTO\Mapping\DiscountParameters|\App\Http\DTO\SaleData">
-            <type>\App\Http\DTO\Mapping\DiscountParameters</type>
+          <tag name="return" line="317" description="" type="\App\Http\DTO\SaleData">
             <type>\App\Http\DTO\SaleData</type>
           </tag>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$promotionalProducts</name>
           <default></default>
-          <type>array|null</type>
+          <type>array</type>
         </argument>
-        <inherited_from>\App\Http\DTO\Mapping\DiscountParameters</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO" line="125" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO" line="328" package="Default">
         <name>getPromotionalProducts</name>
-        <full_name>\App\Http\DTO\Mapping\DiscountParameters::getPromotionalProducts()</full_name>
-        <docblock line="125">
+        <full_name>\App\Http\DTO\SaleData::getPromotionalProducts()</full_name>
+        <docblock line="328">
           <description>Get promotional products</description>
           <long-description></long-description>
-          <tag name="return" line="125" description="" type="array|null">
+          <tag name="return" line="328" description="" type="array">
             <type>array</type>
-            <type>null</type>
           </tag>
         </docblock>
-        <inherited_from>\App\Http\DTO\Mapping\DiscountParameters</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO" line="137" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO" line="338" package="Default">
         <name>setRepeatedProductsCategories</name>
-        <full_name>\App\Http\DTO\Mapping\DiscountParameters::setRepeatedProductsCategories()</full_name>
-        <docblock line="137">
+        <full_name>\App\Http\DTO\SaleData::setRepeatedProductsCategories()</full_name>
+        <docblock line="338">
           <description>This method receives the repeated category as an array with the productId and categoryId</description>
           <long-description></long-description>
-          <tag name="param" line="137" description="" type="array&lt;mixed,\App\Http\Document\Product&gt;" variable="$repeatedProductsCategory">
-            <type>array&lt;mixed,\App\Http\Document\Product&gt;</type>
-          </tag>
-          <tag name="return" line="137" description="" type="\App\Http\DTO\Mapping\DiscountParameters|\App\Http\DTO\SaleData">
-            <type>\App\Http\DTO\Mapping\DiscountParameters</type>
+          <tag name="return" line="338" description="" type="\App\Http\DTO\SaleData">
             <type>\App\Http\DTO\SaleData</type>
           </tag>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$repeatedProductsCategory</name>
           <default></default>
-          <type>array&lt;mixed,\App\Http\Document\Product&gt;</type>
+          <type>array</type>
         </argument>
-        <inherited_from>\App\Http\DTO\Mapping\DiscountParameters</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO" line="148" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\DTO" line="349" package="Default">
         <name>getRepeatedProductsCategories</name>
-        <full_name>\App\Http\DTO\Mapping\DiscountParameters::getRepeatedProductsCategories()</full_name>
-        <docblock line="148">
+        <full_name>\App\Http\DTO\SaleData::getRepeatedProductsCategories()</full_name>
+        <docblock line="349">
           <description>Get repeated products categories</description>
           <long-description></long-description>
-          <tag name="return" line="148" description="" type="array">
+          <tag name="return" line="349" description="" type="array">
             <type>array</type>
           </tag>
         </docblock>
-        <inherited_from>\App\Http\DTO\Mapping\DiscountParameters</inherited_from>
       </method>
     </class>
     <parse_markers>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="48" code="PPC:ERR-50015">Argument $userEmail is missing from the Docblock of setUserEmail</error>
-      <error line="86" code="PPC:ERR-50015">Argument $layer is missing from the Docblock of addLayer</error>
-      <error line="107" code="PPC:ERR-50015">Argument $subTotal is missing from the Docblock of setSubTotal</error>
-      <error line="126" code="PPC:ERR-50015">Argument $total is missing from the Docblock of setTotal</error>
+      <error line="19" code="PPC:ERR-50015">Argument $moneyParser is missing from the Docblock of __construct</error>
+      <error line="19" code="PPC:ERR-50015">Argument $moneyFormatter is missing from the Docblock of __construct</error>
+      <error line="19" code="PPC:ERR-50015">Argument $requestDispatcher is missing from the Docblock of __construct</error>
+      <error line="19" code="PPC:ERR-50008">No summary for method __construct()</error>
+      <error line="140" code="PPC:ERR-50015">Argument $userEmail is missing from the Docblock of setUserEmail</error>
+      <error line="178" code="PPC:ERR-50015">Argument $layer is missing from the Docblock of addLayer</error>
+      <error line="199" code="PPC:ERR-50015">Argument $subTotal is missing from the Docblock of setSubTotal</error>
+      <error line="218" code="PPC:ERR-50015">Argument $total is missing from the Docblock of setTotal</error>
+      <error line="252" code="PPC:ERR-50015">Argument $discount is missing from the Docblock of setDiscount</error>
+      <error line="273" code="PPC:ERR-50015">Argument $strategy is missing from the Docblock of setStrategy</error>
+      <error line="294" code="PPC:ERR-50015">Argument $validDiscounts is missing from the Docblock of addValidDiscounts</error>
+      <error line="317" code="PPC:ERR-50015">Argument $promotionalProducts is missing from the Docblock of setPromotionalProducts</error>
+      <error line="338" code="PPC:ERR-50015">Argument $repeatedProductsCategory is missing from the Docblock of setRepeatedProductsCategories</error>
     </parse_markers>
-    <source>eJydVttu2zAMffdXcECAOsGy7Dld0nXormixommfmj4otty4cGRBkrNlW/59tOSbfImT+qFVZJI6PD6k+OGCr7nDyIZKTjwKl5wvvynFl1f3P88dJ5H21vKa7KiQ5t93pqgI0Ou8aXdDOA/Z83JBInpFFLklAs9Ae2mMf8iYLagISRT+IasoC3ETM7pb6r94+GQ0cmAENyRkIDEO+BgIvIhIifv2qyCKf5lXoNZEgRczhS8lkCgCRj0qJRE74AUMCGKBplS7n0mQXszpOww6cUyYHDnQ34oyv9woU4FwwyO6oUzJRkLOXwfw0Tmkzwg+bokAqQTSAgPMVnzekDCCB1yBXmaGE/2fi3BLFK1YIiNtEYkQZAcDLmI/8RDIbbZoj5abdQTT1P9jCZI2kMnqPlYkgkWyUumiPWJudijiJE9bx4H77miqPZSRXfbL3kQC8CMqyiXEAX4s6iUqjBmsiKQ+4CJevdCUGMJ8QC63IYrBiCT1NA5oiUoiIDn1wiD0jBxq5+l8bOU/PsEgqmKrpWPewQwen5pJLaiC9OsCbX79ZBUhiiBhnk5GUvWQ68BtaGg4LcSpvY300meg1qEcz0u1zSxB5WaCqkQwY2129w20X49H+1xFi+AM4Bq06pkVhF3Hp2RxW9rFd9FVXS+EPj7zOnFrfr1kFpU2q5bTqVR25ZL5a1B9JBcpIObSoYtiG2sT1aXvYwVoxR48mPi+LgLXLoVM7L30mZLAwpllHqdzF7V1g5y5eoH2kWi6yHEUmoMPSRS74bjaLOvoLG4OqHORdVVX98+yyw7bSS169azakE/ltQ98eTv0kVrAr+O1+bShtjPacvU06bK40h69OlQ5X+p1ZPUTVWl7B6g6hid1iKS7hOlBprUqFooIld+KeGnQLcUxSJumhWxuSD0GZfPPAbAiYQ2cOEVR4q3BtSoEiMzbQcVWky9w0IwZznp5+Y/nKTrjPzy3jMMA4+YO9UhVlnIb233v2Ks2fZmBrX7TF/sZX2aEgC2JksZQcHTDfqlMiLTrgz9aGZzJbPQ6g9kc3mQcN+ur+lwY9U2nn+6u3ffN91Mow2jLL7HYEIX90h2O54H+4badNHxrY/ND1EzCVB3bVbbfiu0osxMhlpHqEFu56yau7GyvB9NBFvYCHAifdxpMhd1s263YP+WFvnf+Azum0zU=</source>
+    <source>eJylWN9v2zYQftdfcQ8GpgTN8r7MXYNl3QKsaBC7famLgpboWJ0saSTlzijyv+9IipJIkZKV+iGxpTvyu+9+kr/+Vu2rqCAHyiuSULitqs1fQlSbu/X7myiqef9RmdQHWojNXcaTsi7ETeD9AyvTOhm8Xr/f/E1OlHH9774QlO1wU0duRdkxSyjf7GleSelH+m9NucBdKyKSPWVa4V1Z0NNG/R08eFuyAxHCI/pAGJePo+vLywgu4R3JCuAkp5ASQSDJCef43H61y8tv+hWIPRGQlIXAlxxInkNBESwn7AQVYUgk7sphVzIUpUr9Jw7IV0V/xkWvI73MCp/f4YbR9wjwU9XbPEtgVxeJyMoCvnzBLbhgyGKsBOSnhx8Wh+7HK1uitb0Ran93cgNGYcHcR0r4Ar63Sguxz/jV697GsLRw3HhFOzhLF9BAYQBC6gwearXnSP1TbpSfS3hzJCxIUv9Fo9DqlduvNBEeiWvtHJYdiaCOreHdO4vtn2PbukK+nXu8uZs3DoW0Yy7jkB2qnMqMpClgKPfCU5RwIP9Qpd7wyyGtWVY8qbCl/9GkVpFY7tQDmQEufmnw2ZE0MMnjVi+lmAUS1QLzmP1xIFkOH6Q71Vf/yq1kYEXCGDnBotJVikNTrrh/NSM25nFY8Hq7LgXJYVVvhfziX8yIjS12bSxW68A6vJqYWgoWaVOqwdTssSD075K21X7UP/gfxZ9OsGq+BBho3k765lDK+CP5Q89N5tm0y1ztwHaGlU+fYXEkeZaaBxxuFRIM/6rkPNtiF1ACYOjgLpMausOzg8zZYwmfPgeQNcAlMEYritqpseV3SWDJMsox/fQraKIUW03Svg3lXXA1P5xHih6mR2qVVh02LgUp5QnLKlU4+tJYizApVRGSDZHrXquaoixFlZQCVeMkybUL3WmOT1T0Fo8vfhlU7q5pMSpqVnh6V6iJ2NZ2pfxMgzuFCZt3SnC+0e0Grd126xg13em8PutHa/cQ00BBwvKvEkJ2dn/Xw6PjAv0Q6wbOWoJWXGZs1722RLpAtjHlPpQrUuDNgKlnOampFbSz0EcVTbIdGqqc5et69vwqczTvY3MyTr8LZNeKChknDOiwoTl0cyo+mNYWD9oi8t4OlTbdDc9dA11aPdLnlZAL/jwf7VMfLYLTgEcjwQE13F6SVdmlv/WLmm7c3j7FpymCsaM3SWY7PCz7E8JcKkO2NPoK1BTJrQmIuVMIUWxjHaK6TVPMABWxoxuTNFVJENup0AT7JH06JTBxlo3GfO5yXzUwzLkJOkWiriLnUag3HgtRnPKu+kOgi87iZiQ6V820GDtD5oWf1HYGXfYHzbm8ToH3TIpDPlvkLlSbShuln0zPND1kyqJJaUyGoDBUiZfx9MMcnUOQGGPnsS7U2cybCStBmDCdEBsFjjTspEVl8uquqG4omquJEbCsLgY4cX6hJNlDbGUFEG5KQE9Wsc4or8oC5zyT8levJTqtf3FjCWc7XNcouCv1WTIytvpzZH/zB1bqndSHsWXG9bg9CQXyrz1rLfuHprlxlQYOanNCq4U8Hl02yEAts09zLy5lzTKxe1wM1TJzmlz2j4xzuZwA3xtJxmqZgT5RyyyU/s46cYKcwynm8EfrMBmbb+4pM8CwLaRbsf1sPt8T9vVPS2ssPW3C4FlJqaqjbFOXDIyPlMlhnCit/mDyomnJ4WzcpT46gkNpezcxMdSdmzEPw0uMOHw7EnCy7x5lGbggmevsGTafO8gODB73T9CMIeA1KsCBin2Z4iIJzY7q/EfBXIeYe5OTbGGkgQzfMrFXYo2B96k6QRrZ+/QHnfwYvIwxvg5c14Tq5ujtTnCx+c5nzsWT597pRUEwQshZw3nYfmPNc/Q/TrTwuA==</source>
   </file>
-  <file path="Controllers/CartsController.php" generated-path="Controllers.CartsController.html" hash="1bebc198a7774cb894913fdcca3222e4" package="Default">
+  <file path="Controllers/CartsController.php" generated-path="Controllers.CartsController.html" hash="2f85c3d6d5402b141fe7318c217f2f5e" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
@@ -2120,34 +1482,35 @@ requests during the execution of the flow</description>
     <namespace-alias name="DiscountApplier">\App\Http\DTO\Layers\DiscountApplier</namespace-alias>
     <namespace-alias name="DiscountVerification">\App\Http\DTO\Layers\DiscountVerification</namespace-alias>
     <namespace-alias name="CartDiscountRequest">\App\Http\Requests\CartDiscountRequest</namespace-alias>
+    <namespace-alias name="JsonValidator">\App\Utils\JsonValidator</namespace-alias>
     <namespace-alias name="Exception">\Exception</namespace-alias>
     <namespace-alias name="JsonResponse">\Illuminate\Http\JsonResponse</namespace-alias>
     <namespace-alias name="Response">\Symfony\Component\HttpFoundation\Response</namespace-alias>
-    <class final="false" abstract="false" namespace="App\Http\Controllers" line="18" package="Default">
+    <class final="false" abstract="false" namespace="App\Http\Controllers" line="19" package="Default">
       <extends>\App\Http\Controllers\Controller</extends>
       <name>CartsController</name>
       <full_name>\App\Http\Controllers\CartsController</full_name>
-      <docblock line="18">
+      <docblock line="19">
         <description>Carts controller</description>
         <long-description>Controller which is responsible for sales carts</long-description>
-        <tag name="package" line="18" description="Default"/>
+        <tag name="package" line="19" description="Default"/>
       </docblock>
-      <property static="false" visibility="private" namespace="App\Http\Controllers" line="25" package="Default">
+      <property static="false" visibility="private" namespace="App\Http\Controllers" line="26" package="Default">
         <name>$saleDataBuilder</name>
         <full_name>\App\Http\Controllers\CartsController::saleDataBuilder</full_name>
         <default></default>
-        <docblock line="25">
+        <docblock line="26">
           <description>Sale data builder</description>
           <long-description></long-description>
-          <tag name="var" line="25" description="" type="\App\Http\DTO\Builder\SaleDataBuilder" variable="$saleDataBuilder">
+          <tag name="var" line="26" description="" type="\App\Http\DTO\Builder\SaleDataBuilder" variable="$saleDataBuilder">
             <type>\App\Http\DTO\Builder\SaleDataBuilder</type>
           </tag>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\Controllers" line="27" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\Controllers" line="28" package="Default">
         <name>__construct</name>
         <full_name>\App\Http\Controllers\CartsController::__construct()</full_name>
-        <docblock line="27">
+        <docblock line="28">
           <description></description>
           <long-description></long-description>
         </docblock>
@@ -2157,15 +1520,14 @@ requests during the execution of the flow</description>
           <type>\App\Http\DTO\Builder\SaleDataBuilder</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\Controllers" line="53" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\Controllers" line="52" package="Default">
         <name>calculateDiscount</name>
         <full_name>\App\Http\Controllers\CartsController::calculateDiscount()</full_name>
-        <docblock line="53">
+        <docblock line="52">
           <description>Endpoint that receives a requisition with the user and products bought data.</description>
           <long-description></long-description>
-          <tag name="method" line="53" description="POST" method_name=""/>
-          <tag name="url" line="53" description="api/v1/cart/discount"/>
-          <tag name="body" line="53" description="{&#10;{&#10;&quot;userEmail&quot;: &quot;boitata@boitata.com&quot;,&#10;&quot;products&quot;: [&#10;{&#10;&quot;id&quot;: &quot;b8be61e7-c170-5623-9ff7-00b2d83f91a5&quot;,&#10;&quot;categoryId&quot;: &quot;c4a760a8-dbcf-5254-a0d9-6a4474bd1b62&quot;,&#10;&quot;quantity&quot;: 3,&#10;&quot;unitPrice&quot;: &quot;45.19&quot;&#10;}&#10;]&#10;}&#10;}"/>
+          <tag name="url" line="52" description="api/v1/cart/discount"/>
+          <tag name="body" line="52" description="{&#10;{&#10;&quot;userEmail&quot;: &quot;boitata@boitata.com&quot;,&#10;&quot;products&quot;: [&#10;{&#10;&quot;id&quot;: &quot;b8be61e7-c170-5623-9ff7-00b2d83f91a5&quot;,&#10;&quot;categoryId&quot;: &quot;c4a760a8-dbcf-5254-a0d9-6a4474bd1b62&quot;,&#10;&quot;quantity&quot;: 3,&#10;&quot;unitPrice&quot;: &quot;45.19&quot;&#10;}&#10;]&#10;}&#10;}"/>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$request</name>
@@ -2176,70 +1538,68 @@ requests during the execution of the flow</description>
     </class>
     <parse_markers>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="27" code="PPC:ERR-50015">Argument $saleDataBuilder is missing from the Docblock of __construct</error>
-      <error line="27" code="PPC:ERR-50008">No summary for method __construct()</error>
-      <error line="53" code="PPC:ERR-50015">Argument $request is missing from the Docblock of calculateDiscount</error>
+      <error line="28" code="PPC:ERR-50015">Argument $saleDataBuilder is missing from the Docblock of __construct</error>
+      <error line="28" code="PPC:ERR-50008">No summary for method __construct()</error>
+      <error line="52" code="PPC:ERR-50015">Argument $request is missing from the Docblock of calculateDiscount</error>
     </parse_markers>
-    <source>eJytVltv2jAUfs+vsFClAloKtFx62dilZVq3bq0A7WVMyLGdYinYqS/t0MR/33EukIawizS/xDnn+z4fH5/j5OXreBF7Ai+ZjjFh6G0czz4YE88upTBKRhFT+sLzrC64rqa3s3eWR5Sp2QRH7AobnL1f7CJv8Ao0Zpc4IjbChk1sMJUGR/uhV1wTaYUBX8R/p5kDvzLFQ06w4VKU0GP2YJk2bn1lcnxmTKGjH4TFW+Z1FNklFxBoKvBRSzGG5EihWYqYrJahFCvI0BKsTJgE+B6EaRLBbAv3Ws2mh5rILa4R2aQUbIl5Y0BPC04WiGukUjIPIoZCqZCGBAPVCQCl5ZEIa50KFujsh2GC6oKi99NDMJIA3Ggid1QIQsQoSA8rc+T+N49YodJ5ogP93JCBW8kzVvwRErUDgo0nbhtEnKDQCuLyguZzyIA2yhJT/9M6jUQh3YMbB2bBtT8sodCrirUdfO2Vdz8SNJZcGGQW2ECWCeOPkFgM0wfLNU8ifOJmAQCG4JwVwoLCFiWFeDUKpL1fmCR/R+XELZlZSIrubifTssuqCOGYtx47LXeGLZqVYBkXSLrKt9vcTmoukNES86h2jmqB5AbWf5M9j4hc1l5soHmogPy2K8RponAasH6HDXzSGbT9Xv/4xD8Lw4HfbgfH9PQkPOvgXkESWordS7W6Tsikiwf9Nj71aUBCv3fc6/q4Tc/8Pu52B92AdoL+cYH8YLEw3KyAerK1WsHNneKEOcVu76hzVst963zyfceyfl53pcIi+d2SN3i9otvRgUonjXNUbOpSoRm1KrwlpZe0oCsxV26VdegPk5aqb5a42KPgDzGlye1VF+wJ7VyK9cbfUqvuvn9nZ1fsb4nKgnDW0vlQzFglkJMq5rL+DOTGtx2LG4fwudH4nh2iV0N0OLGEwPvR4YtqsOu5BLmNahf5fdeUR3V+/mE6vZvffnqGKOx4DRVk4Pqtb74F6IDl00apHP7n1rer+MN7Zj6nrnpjTyJCHlXy3oN9LyniopJ0A/a9JCJpJekS7HtJRsEfRBVr6hxVtD8f2vWX6Wj85e3NfDIafx2N56Px+Ha89xyzu3/t/QLLA4XN</source>
+    <source>eJytVltz4jYUfvev0DCZxTDrAAmXhHTppgmZTZtuMkDzsuwwsiyDWiETSU6W6fDfeyTbwRiT7U0vts/5vnOTzpF/+HG1WDkCL6laYULR5Wo1/aT1anoVCS0jzqlUF44Tq5zqenI//SlmPKByOsacXmON0++LfeQdXoON6RXmJOZY03HsTyKN+WHoNVMkioUGHWdv2cyAj1SykBGsWSQK6BF9iqnSxr/UGT4VbqG/acbV9GcViUfMWYB1lHodfiN0tTV7y3m8ZAKySKwbxggqFwlFE8R4vQwjsYbyLUFKhbbAG/Aa2PCmW7jTqNcdVEcmMoXIa71BZsWvAvSyYGSBmEIyITOfUxRGEimoPlCNAaA0HMKxUonBHJ1+01QEKmfR+dNBsGwAZtWR2UcEIWLkJzuZKjL9x2csUWGz0ZHaFaTghn2uJHuGQu2BIHGrjn3OCApjQUxd0GwGFVBaxkS73/NTsxaSHMw60gumvEEBhT6U+DbwjVPMfiiCVcSERnqBNVSZUPYMhcXw+hQzxWyEL0wvAEAR7LNEWASQYhRAvAr5UTxfaFu/42LhYskRXrHGc6thNqoRpIewiPOjYJ3lVN++VIy34RIzXumjih8xDU4+ps9jEi0r71+hWTyA/LJviAXWwplPuy3a80ir1/Q63ZNT7zwMe16z6Z8EZ6fheQt3ciahqeg8kutbSyZt3Os28ZkX+CT0OiedtoebwbnXxe12r+0HLb97kiM/xVhoptdAPd1KY8H0g2SEGovtznHrvJLpNtnL1z3JZvdwFU4PyaZL1uJuSb+jI5m81Poo37mF06TlOvdlzxcVJApokNp5wBLmpYYJBEfsdzA0S/RuZt8bYM7dWu1i14o5jDvcajVthmyxELlMzaANmJi7B93WdkhmvXuHdqZXv08WlPwxtoZu1aVVGMQbRmuFrMtjtvkGNMn3oK3dzDfOfiFMV5oOLW1db2CnkFtwX1ZQw4J6B4G9E1xBX9DeVVO+FSXMsgvlH5PTa+stnozBbGHvJdWxFMhYyh9Od29PvuxJzKrCDa7wnFbRhwGqjmNC4Pu4+r4cbCaVRZYbsxgV+9pUz+Jywc+p/hWutvVNJJdYa5OpNwjth7sLy9W/PI4klrRu/97Pa9O/6ec/JvM3MoG+NeNyXeJknKrcA/yv++ISUXYo+v1Pk8nD7P6XHUTuvG1gImr4Z3Bff2BgiGWvxUb/P0/e1ktS20R1KOtqyHgp7wbkB0mciVLSHcgPksygKiNdmUF2iASbRkpZE6Moo31/024/T4ajz5d3s/Fw9DgczYaj0f3o4D6mPywb5y+X9Vi2</source>
   </file>
-  <file path="Document/Discount.php" generated-path="Document.Discount.html" hash="a1d798295d984eda222f009eb027c720" package="Default">
+  <file path="Document/Discount.php" generated-path="Document.Discount.html" hash="252bdd02b5a9fb1c0586ff34fb3ebfaf" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
       <tag name="package" line="0" description="Default"/>
     </docblock>
-    <namespace-alias name="JsonSerializable">\JsonSerializable</namespace-alias>
-    <class final="false" abstract="false" namespace="App\Http\Document" line="9" package="Default">
+    <class final="false" abstract="false" namespace="App\Http\Document" line="7" package="Default">
       <extends/>
-      <implements>\JsonSerializable</implements>
       <name>Discount</name>
       <full_name>\App\Http\Document\Discount</full_name>
-      <docblock line="9">
+      <docblock line="7">
         <description></description>
         <long-description></long-description>
-        <tag name="description" line="9" description="This class is used to instantiate the discounts calculated in the flow"/>
-        <tag name="package" line="9" description="Default"/>
+        <tag name="description" line="7" description="This class is used to instantiate the discounts calculated in the flow"/>
+        <tag name="package" line="7" description="Default"/>
       </docblock>
-      <property static="false" visibility="private" namespace="App\Http\Document" line="16" package="Default">
+      <property static="false" visibility="private" namespace="App\Http\Document" line="14" package="Default">
         <name>$totalValueWithDiscount</name>
         <full_name>\App\Http\Document\Discount::totalValueWithDiscount</full_name>
         <default>'0'</default>
-        <docblock line="16">
+        <docblock line="14">
           <description>Total value with discount applied</description>
           <long-description></long-description>
-          <tag name="var" line="16" description="" type="string" variable="$totalValueWithDiscount">
+          <tag name="var" line="14" description="" type="string" variable="$totalValueWithDiscount">
             <type>string</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="private" namespace="App\Http\Document" line="23" package="Default">
+      <property static="false" visibility="private" namespace="App\Http\Document" line="21" package="Default">
         <name>$amountDiscounted</name>
         <full_name>\App\Http\Document\Discount::amountDiscounted</full_name>
         <default></default>
-        <docblock line="23">
+        <docblock line="21">
           <description>Amount discounted</description>
           <long-description></long-description>
-          <tag name="var" line="23" description="" type="string" variable="$amountDiscounted">
+          <tag name="var" line="21" description="" type="string" variable="$amountDiscounted">
             <type>string</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="private" namespace="App\Http\Document" line="30" package="Default">
+      <property static="false" visibility="private" namespace="App\Http\Document" line="28" package="Default">
         <name>$typeOf</name>
         <full_name>\App\Http\Document\Discount::typeOf</full_name>
         <default>'none'</default>
-        <docblock line="30">
+        <docblock line="28">
           <description>Type of discount</description>
           <long-description></long-description>
-          <tag name="var" line="30" description="" type="string" variable="$typeOf">
+          <tag name="var" line="28" description="" type="string" variable="$typeOf">
             <type>string</type>
           </tag>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\Document" line="35" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\Document" line="33" package="Default">
         <name>setTotalValueWithDiscount</name>
         <full_name>\App\Http\Document\Discount::setTotalValueWithDiscount()</full_name>
-        <docblock line="35">
+        <docblock line="33">
           <description>Set the total value calculated with discount</description>
           <long-description></long-description>
         </docblock>
@@ -2249,19 +1609,19 @@ requests during the execution of the flow</description>
           <type>\App\Http\Document\string</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\Document" line="46" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\Document" line="44" package="Default">
         <name>getTotalValueWithDiscount</name>
         <full_name>\App\Http\Document\Discount::getTotalValueWithDiscount()</full_name>
-        <docblock line="46">
+        <docblock line="44">
           <description>Get total value with discount</description>
           <long-description></long-description>
-          <tag name="description" line="46" description="Example: &quot;10.32&quot;"/>
+          <tag name="description" line="44" description="Example: &quot;10.32&quot;"/>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\Document" line="54" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\Document" line="52" package="Default">
         <name>setTypeOf</name>
         <full_name>\App\Http\Document\Discount::setTypeOf()</full_name>
-        <docblock line="54">
+        <docblock line="52">
           <description>Set the type of discount</description>
           <long-description></long-description>
         </docblock>
@@ -2271,13 +1631,13 @@ requests during the execution of the flow</description>
           <type>\App\Http\Document\string</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\Document" line="65" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\Document" line="63" package="Default">
         <name>getTypeOf</name>
         <full_name>\App\Http\Document\Discount::getTypeOf()</full_name>
-        <docblock line="65">
+        <docblock line="63">
           <description>Get the type of discount</description>
           <long-description></long-description>
-          <tag name="description" line="65" description="Example: &quot;get-3-pay-2&quot;"/>
+          <tag name="description" line="63" description="Example: &quot;get-3-pay-2&quot;"/>
         </docblock>
       </method>
       <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\Document" line="73" package="Default">
@@ -2286,11 +1646,15 @@ requests during the execution of the flow</description>
         <docblock line="73">
           <description>Set the value of the discount (Not the total price value)</description>
           <long-description></long-description>
+          <tag name="var" line="73" description="" type="string|float" variable="$amountDiscounted">
+            <type>string</type>
+            <type>float</type>
+          </tag>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$amountDiscounted</name>
           <default></default>
-          <type>\App\Http\Document\string</type>
+          <type/>
         </argument>
       </method>
       <method final="false" abstract="false" static="false" visibility="public" namespace="App\Http\Document" line="82" package="Default">
@@ -2304,12 +1668,12 @@ requests during the execution of the flow</description>
     </class>
     <parse_markers>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="9" code="PPC:ERR-50005">No summary for class \App\Http\Document\Discount</error>
-      <error line="35" code="PPC:ERR-50015">Argument $totalValueWithDiscount is missing from the Docblock of setTotalValueWithDiscount</error>
-      <error line="54" code="PPC:ERR-50015">Argument $typeOf is missing from the Docblock of setTypeOf</error>
+      <error line="7" code="PPC:ERR-50005">No summary for class \App\Http\Document\Discount</error>
+      <error line="33" code="PPC:ERR-50015">Argument $totalValueWithDiscount is missing from the Docblock of setTotalValueWithDiscount</error>
+      <error line="52" code="PPC:ERR-50015">Argument $typeOf is missing from the Docblock of setTypeOf</error>
       <error line="73" code="PPC:ERR-50015">Argument $amountDiscounted is missing from the Docblock of setAmountDiscounted</error>
     </parse_markers>
-    <source>eJydVVtv2yAUfvevOKoq1YmUpVvf2l0aKdOmPWwPjbaXShXBJKHCgACnzbb+93KxIwebOKpfEsF34Lsc4OMXuZEZRyXREmECMynvvxsj7+cCVyXh5ibLKk3ghxb8jiiKGP2LlozY4el4nMEYbguisaLSUMFhsaEaMENag/1jCwswAijXBnFDkSFgNgQKqrGouLFQxHDF7HhhQX5uxcSTXXaahVXmNRRoKRlxhHSHS/YvA/t5Pu4bw0IYxGCLWEXgiZrNfkdAUjJKihrY4G+3SIE2ivI1nBtX/NvV/rGlDYEaOvW/UtGtE5PAwie4uLywFkW0ZqWfbcgcp4E8eB5jIwIxqrvpYicJiNV+16PSLfbXKiHVzzlpXHDSo+6OGJ+gaZnfyvcgh8MtqiWjGFYVx76JNDGLXl/z4xGNruEgrdAW7js3ti8nn5NpJRa82S+giKkUD+uE0ZeO/m9Of6rxYtfbh+brM3LNfQ1n7y/fXX04O2rOOmmOlR/8icS3uac8SGnaZ9rfROn8fLPkh301nE/TYnXBG/xPcx2w3vo6uZpItJucEEBQd6LhLSlpg0PLWNbt+xHyn6J9puxZxDV0NJTALLoY8tS9MphKXODy6V47b0mqV/SQ+R1hp8XQz7gvkPCwhJdKLB8JNjBPtBJdc6FIPFpvjJRCu/8lfY7v7kjTY+s5I/moX4UV/hDIPNgLW+de1agR8ZK9AqkTVlg=</source>
+    <source>eJydVF1PwjAUfe+vuCEmAgmC8uYnJBh90geJvvhSuyJNStusd6hR/rtdB8vY1o3Qly3tuR/nnNte35mlIYquuDWUcZga8/6IaN5nmiUrrvCKkGG/T6APk4hbFguDQiuYL4UFJqm14H4SyyNADUJZpAoFRQ645BAJy3Si0EGpZIl0+5ED+bOF1F8u7ZBkWWZbKPkl4Javma4+zDVSCWsqEw5fApd5VqDGSMGjLXCHn6xpDBZjoT7hBNPg1zT2zYXmRTLo0H9NLNZpwwEs3MDp6NTJUGpruvKnu2aa26AePCtjSw2UUdWi8x/DQS/yqo3UHfZ5EaDqz1JqSitew+6Fo3cJC+IXPNzzYb9E8iEFg0WimB8Uy3Feq2u32aLeJey5lY1Fuk7Qzd7gNuhWIOFVniDmmMQqy5Ptbir8H1L+ocErq168GPffdGUkv4TO+ehsfNFpFOczKI6jn+lTIl/sPaRBiFPuaf0Qhf3zw9Ldn6t2f3Yjtg04Qv9wry3SO10H44GhP4MDDMjYHSh4gUpY4GxkXNfFNxC6T7p4p9xdZFtoL3yN/9wzSbHtAal6Ni3hu5UMrQaWA1Irqy/UMabW6tPmU4VRr9Gp+k43ZEP+AVAcFio=</source>
   </file>
   <file path="DTO/Layers/DiscountApplier.php" generated-path="DTO.Layers.DiscountApplier.html" hash="0833e1aa9392dfcde305ef7f99f8620a" package="Default">
     <docblock line="0">
@@ -2358,7 +1722,6 @@ requests during the execution of the flow</description>
       <namespace name="DTO" full_name="App\Http\DTO">
         <namespace name="Builder" full_name="App\Http\DTO\Builder"/>
         <namespace name="Layers" full_name="App\Http\DTO\Layers"/>
-        <namespace name="Mapping" full_name="App\Http\DTO\Mapping"/>
       </namespace>
       <namespace name="Document" full_name="App\Http\Document"/>
       <namespace name="Services" full_name="App\Http\Services">

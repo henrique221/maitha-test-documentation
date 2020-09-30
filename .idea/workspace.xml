@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="25a8c44e-8d9a-4857-8c4e-6b5c8c10bf1a" name="Default Changelist" comment="" />
+    <list default="true" id="25a8c44e-8d9a-4857-8c4e-6b5c8c10bf1a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/coverage/coverage.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/coverage/coverage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phpdoc.tpl.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phpdoc.tpl.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -9,6 +13,9 @@
   </component>
   <component name="ComposerSettings">
     <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1hmX5pIhPmDP63oWiGQqoqXhD73" />
   <component name="ProjectViewState">
@@ -34,7 +41,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1600617061756</updated>
-      <workItem from="1600617063134" duration="9255000" />
+      <workItem from="1600617063134" duration="10602000" />
+      <workItem from="1601312332361" duration="1199000" />
+      <workItem from="1601497415254" duration="93000" />
     </task>
     <servers />
   </component>
